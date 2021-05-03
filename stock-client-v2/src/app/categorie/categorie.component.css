@@ -1,0 +1,10 @@
+.table-responsive {
+  overflow-y: visible !important;
+}
+.clickable{
+  cursor: pointer;
+}
+
+.btn-space {
+  margin-right: 13px;
+}

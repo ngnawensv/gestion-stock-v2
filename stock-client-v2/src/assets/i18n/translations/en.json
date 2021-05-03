@@ -1,0 +1,37 @@
+{
+  "app.component.title": "Stock management",
+  "app.component.home": "Home",
+  "app.component.article": "Article",
+  "app.component.article.ajouter": "Add article",
+  "app.component.article.lister": "List article",
+  "app.component.parametres": "Settings",
+  "app.component.categorie": "Category",
+  "app.component.utilisateur": "User",
+  "app.component.client": "Client",
+  "app.component.fournisseur": "Provider",
+
+  "login.component.login":"Login",
+
+  "register.component.email": "E-mail",
+  "register.component.SignUp":"S'inscrire",
+  "register.component.username": "User name",
+  "register.component.password": "Password",
+
+  "main.page.section.languages": "Language",
+  "main.page.section.languages.title": "Languages",
+  "main.page.section.languages.subtitle": "Lets try to change language!",
+  "main.page.section.languages.english": "English",
+  "main.page.section.languages.french": "French",
+  "main.page.section.languages.home": "Home",
+  "register.component.valided": "Valid",
+
+  "main.page.login.username": "User name",
+  "main.page.login.password": "Password",
+
+  "main.page.app.AdminBoard":"Admin Board",
+  "main.page.app.ModeratorBoard":"Moderator Board",
+  "main.page.app.User":"User",
+  "main.page.app.SignUp":"Sign Up",
+  "main.page.app.Login":"Login",
+  "main.page.app.LogOut":"LogOut"
+}

@@ -1,0 +1,79 @@
+<div id="app">
+  <nav class="navbar navbar-expand-sm bg-info navbar-dark nav-pills nav-fill">
+    <a href="#" class="navbar-brand">{{ 'app.component.title' | translate }}</a>
+    <ul class="navbar-nav mr-auto" routerLinkActive="active">
+      <li class="nav-item">
+        <a href="/home" class="nav-link" routerLink="home">{{ 'app.component.home' | translate }} </a>
+      </li>
+      <li class="nav-item" *ngIf="showAdminBoard">
+        <a href="/admin" class="nav-link" routerLink="admin">{{'main.page.app.AdminBoard' | translate}}</a>
+      </li>
+      <li class="nav-item dropdown" *ngIf="showAdminBoard || showModeratorBoard">
+        <a  class="nav-link" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{'app.component.parametres' | translate}}
+        </a>
+        <div class="dropdown-menu" >
+          <a  href="/categories" class="dropdown-item menu-item btn-info" role="button" routerLink="categories">
+           {{'app.component.categories' | translate}}
+          </a>
+          <a  href="/articles" class="dropdown-item menu-item btn-info" role="button" routerLink="articles">
+            {{'app.component.articles' | translate}}
+          </a>
+        </div>
+
+      </li>
+      <!--<li class="nav-item" *ngIf="showModeratorBoard">
+        <a href="/mod" class="nav-link" routerLink="mod">{{'main.page.app.ModeratorBoard' | translate}}</a>
+      </li>-->
+<!--      <li class="nav-item">-->
+<!--        <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">{{'main.page.app.User' | translate}}</a>-->
+<!--      </li>-->
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+
+      <li class="nav-item">
+        <a href="/register" class="nav-link" routerLink="register">{{'main.page.app.SignUp' | translate}}</a>
+      </li>
+      <li class="nav-item">
+        <a href="/login" class="nav-link" routerLink="login">{{'main.page.app.Login' | translate}}</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a  class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{'main.page.section.languages' | translate}}
+        </a>
+        <div class="dropdown-menu">
+          <a (click)="changeLanguage('fr')"  class="dropdown-item clickable">{{'main.page.section.languages.french' | translate}}</a>
+          <a (click)="changeLanguage('en')"  class="dropdown-item clickable">{{'main.page.section.languages.english' | translate}}</a>
+        </div>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+      <li class="nav-item dropdown">
+        <a href="/profile"  class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img src="#" width="20" height="20" class="rounded-circle">
+          {{ username |translate }}
+        </a>
+        <div class="dropdown-menu clickable" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item clickable" href="/profile" routerLink="profile">Dashboard</a>
+          <a href="/register" class="dropdown-item clickable" routerLink="register">Users</a>
+          <a class="dropdown-item clickable"(click)="logout()">{{'main.page.app.LogOut' | translate}}</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a  class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{'main.page.section.languages' | translate}}
+        </a>
+        <div class="dropdown-menu">
+          <a (click)="changeLanguage('fr')"  class="dropdown-item clickable">{{'main.page.section.languages.french' | translate}}</a>
+          <a (click)="changeLanguage('en')"  class="dropdown-item clickable">{{'main.page.section.languages.english' | translate}}</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container spacer">
+    <router-outlet></router-outlet>
+  </div>
+</div>

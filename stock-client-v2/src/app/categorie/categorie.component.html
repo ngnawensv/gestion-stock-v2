@@ -1,0 +1,64 @@
+<hr>
+<h5 class="card-title"> Categories</h5>
+<hr>
+<div class="card">
+<div class="card-header bg-info">
+  <div >
+  <a  class="btn btn-info" role="button" (click)="getAllCategories()" routerLinkActive="active">List</a>
+  <a  href="/categories/add" class="btn btn-info" role="button" routerLink="add">Add</a>
+  <a  href="/categories" class="btn btn-info" role="button" routerLink="categories">Import</a>
+  <a  href="/categories" class="btn btn-info" role="button" routerLink="categories">Export</a>
+  </div>
+</div>
+  <div class="card-body">
+    <div class="list row" >
+      <div class="col-md-6" *ngIf="categories">
+      <div class="input-group mb-3">
+        <input  type="text"  class="form-control" (keyup)="searchTitle()"  placeholder="Search by name" [(ngModel)]="nom"/>
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" (click)="searchTitle()"> Search</button>
+        </div>
+      </div>
+    </div>
+    <table class="table table-striped">
+      <thead class="bg-secondary">
+      <tr>
+        <th>Num</th>
+        <th>Code</th>
+        <th>Nom</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <tr *ngFor="let categorie of categories;let i= index">
+        <td>{{i+1}}</td>
+        <td>{{categorie.code}}</td>
+        <td>{{categorie.nom}}</td>
+        <td>
+          <button type="button" class="btn btn-info btn-space" (click)="editCategorie1(categorie.id)">Edit</button>
+          <button type="button" class="btn btn-danger btn-space" (click)="deleteCategorie(categorie.id)">Delete</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    </div>
+    <!--<div class="submit-form" *ngIf="currentCategorie">
+      <form>
+        <div class="form-group">
+          <label for="code">Code</label>
+          <input type="text" class="form-control" id="code" [(ngModel)]="currentCategorie.code" name="code"/>
+        </div>
+        <div class="form-group">
+          <label for="nom">Nom</label>
+          <input type="text" class="form-control" id="nom" [(ngModel)]="currentCategorie.nom" name="nom"/>
+        </div>
+        <button (click)="updateCategorie(currentCategorie)" class="btn btn-success btn-space">Update</button>
+        <button (click)="retourArriere()" class="btn btn-warning btn-space">Back</button>
+      </form>
+    </div>-->
+</div>
+</div>
+<!--  <a class="btn btn-info"> Belrose 2020</a>-->
+  <div *ngIf="categories" class="card-footer text-muted">@2020 Belrose</div>
+

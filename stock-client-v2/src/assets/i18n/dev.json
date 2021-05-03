@@ -1,0 +1,36 @@
+{
+  "app.component.title": "Gestion des stocks",
+  "app.component.home": "Accueil",
+  "app.component.article": "Article",
+  "app.component.article.ajouter": "ajouter article",
+  "app.component.article.lister": "Lister article",
+  "app.component.parametres": "Paramètres",
+  "app.component.categories": "Catégories",
+  "app.component.articles": "Articles",
+  "app.component.utilisateur": "Utilisateur",
+  "app.component.client": "Client",
+  "app.component.fournisseur": "Fournisseur",
+
+  "login.component.login":"Connexion",
+
+  "register.component.email": "E-mail",
+  "register.component.SignUp":"S'inscrire",
+  "register.component.username": "Nom d'utilisateur",
+  "register.component.password": "Mot de passe",
+  "register.component.valided": "Valider",
+
+  "main.page.section.languages": "Langue",
+  "main.page.section.languages.english": "Anglais",
+  "main.page.section.languages.french": "Français",
+  "main.page.section.languages.home": "Accueil",
+  "main.page.section.languages.title": "Langages",
+  "main.page.section.languages.subtitle": "Essayons de changer de langue!",
+  "main.page.login.username": "Nom d'utilisateur",
+  "main.page.login.password": "Mot de passe",
+  "main.page.app.AdminBoard":"Administration",
+  "main.page.app.ModeratorBoard":"Modérateurs",
+  "main.page.app.User":"Utilisateur",
+  "main.page.app.SignUp":"S'inscrire",
+  "main.page.app.Login":"Connexion",
+  "main.page.app.LogOut":"Déconnexion"
+}

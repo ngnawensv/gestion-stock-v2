@@ -1,0 +1,38 @@
+<div class="card">
+  <div class="card-header bg-info">Update article</div>
+  <div class="card-body">
+    <div class="submit-form">
+      <div *ngIf="!submited">
+        <div class="form-group">
+          <label for="nom">Nom</label>
+          <input type="text" class="form-control" id="nom" required [(ngModel)]="article.nom" name="nom"/>
+        </div>
+        <div class="form-group">
+          <label for="prixAchat">Prix d'achat</label>
+          <input type="text" class="form-control" id="prixAchat" required [(ngModel)]="article.prixAchat" name="prixAchat"/>
+        </div>
+        <div class="form-group">
+          <label for="prixVente">Prix de vente</label>
+          <input type="text" class="form-control" id="prixVente" required [(ngModel)]="article.prixVente" name="prixVente"/>
+        </div>
+        <div class="form-group">
+          <label for="quantite">Quantité</label>
+          <input class="form-control" id="quantite" required [(ngModel)]="article.quantite" name="quantite"/>
+        </div>
+        <div class="form-group">
+          <label for="categorie">Categories</label>
+          <select [(ngModel)]="idCategorieOfArticleSelected" (ngModelChange)="onCategorieSelected($event)" class="form-control" id="categorie" name="categorie">
+            <option *ngFor="let cat of listOfCategories" [value]="cat.id">
+              {{cat.nom}}
+            </option>
+          </select>
+        </div>
+        <button (click)="updateArticle(article)" class="btn btn-success btn-space">Update</button>
+        <!--<button (click)="retourArriere()" class="btn btn-warning btn-space">Back</button>-->
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card-footer text-muted">Belrose 2020</div>
+
+

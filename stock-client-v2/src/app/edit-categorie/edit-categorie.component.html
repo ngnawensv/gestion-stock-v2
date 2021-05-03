@@ -1,0 +1,28 @@
+<div class="card">
+  <div class="card-header bg-info">Update category</div>
+  <div class="card-body">
+    <div class="submit-form">
+      <div *ngIf="!submited">
+        <div class="form-group">
+          <label for="code">Code</label>
+          <input type="text" class="form-control" id="code" required [(ngModel)]="categorie.code" name="code"/>
+        </div>
+        <div class="form-group">
+          <label for="nom">Nom</label>
+          <input class="form-control" id="nom" required [(ngModel)]="categorie.nom" name="nom"/>
+        </div>
+        <button (click)="updateCategorie(categorie)" class="btn btn-success btn-space">update</button>
+       <!-- <button (click)="retourArriere()" class="btn btn-warning btn-space">Back</button>-->
+      </div>
+
+      <div *ngIf="submited">
+        <h4>You submitted successfully!</h4>
+<!--        <button class="btn btn-success btn-space" (click)="newCategorie()">Add</button>-->
+       <!-- <button (click)="retourArriere()" class="btn btn-warning">Back</button>-->
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card-footer text-muted">Belrose 2020</div>
+
+
