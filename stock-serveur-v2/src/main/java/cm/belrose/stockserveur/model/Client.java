@@ -28,21 +28,17 @@ public class Client extends Auditable<String> implements Serializable {
     private String nom;
     private String prenom;
     private String genre;
-    @Column(name = "date_naissance")
     private LocalDate dateNaissance;
-    @Column(name = "lieu_naissance")
     private String lieuNaissance;
     private String email;
-    @Column(name = "num_tel")
-    private String numTel;
+    private String numeroTelephone;
     private String photo;
     @Embedded
     private Adresse adresse;
+    //Ce champs est juste mis pour simplifier les choses
+    private Long entrepriseId;
     @NotAudited
     @OneToMany(mappedBy = "client")
     private List<CommandeClient> commandeClientList;
-    //Ce champs est juste mis pour simplifier les choses
-    //@Column(name = "entreprise_id")
-    private Long entrepriseId;
 
 }

@@ -26,7 +26,6 @@ public class LigneVenteDto {
         if(entity==null){
             return null;
         }
-        //Construction d'un objet de type CategorieDto (Categorie==>CategorieDto)
         return LigneVenteDto.builder()
                 .id(entity.getId())
                 .article(ArticleDto.fromEntity(entity.getArticle()))

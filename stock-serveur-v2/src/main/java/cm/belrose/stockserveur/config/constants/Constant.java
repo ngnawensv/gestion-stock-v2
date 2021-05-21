@@ -13,6 +13,7 @@ public interface Constant {
     String APP_ROOT = "api2";
     String ARTICLE_ENDPOINT=APP_ROOT+"/articles";
     String CATEGORIE_ENDPOINT=APP_ROOT+"/categories";
+    String ENTREPRISE_ENDPOINT=APP_ROOT+"/entreprises";
     String AUTHENTICATION_ENDPOINT=APP_ROOT+"/authenticate";
 
 

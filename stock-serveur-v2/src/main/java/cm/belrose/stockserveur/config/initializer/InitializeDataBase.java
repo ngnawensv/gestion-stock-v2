@@ -48,7 +48,7 @@ public class InitializeDataBase implements CommandLineRunner {
         Optional<Entreprise> default_entreprise = entrepriseRepository.findEntrepriseByNom(Constant.DEFAULT_ENTREPRISE);
         Entreprise entreprise = new Entreprise();
         if (default_entreprise.isEmpty()) {
-            entreprise = new Entreprise(1l, Constant.DEFAULT_ENTREPRISE, null,null,null,null);
+            entreprise = new Entreprise(1l, Constant.DEFAULT_ENTREPRISE, null,null,null,null,null,null,null,null);
             entrepriseRepository.save(entreprise);
             log.info("Default entreprise is successful save......");
         } else {
@@ -83,7 +83,7 @@ public class InitializeDataBase implements CommandLineRunner {
         // Creation of default category ........
         Optional<Categorie> default_categorie = categorieRepository.findCategorieByCode(Constant.DEFAULT_CATEGORIE_CODE);
         if (!default_categorie.isPresent()) {
-            Categorie defaultCategorie = new Categorie(1l, Constant.DEFAULT_CATEGORIE_CODE, "Default categorie", 1l, null);
+            Categorie defaultCategorie = new Categorie(1l, Constant.DEFAULT_CATEGORIE_CODE, "Default categorie", 1l);
             categorieRepository.save(defaultCategorie);
             log.info("Default category is successful create!!!!");
         } else {

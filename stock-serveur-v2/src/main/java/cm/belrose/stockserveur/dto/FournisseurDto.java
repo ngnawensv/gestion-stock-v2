@@ -43,7 +43,7 @@ public class FournisseurDto {
                 .dateNaissance(entity.getDateNaissance())
                 .lieuNaissance(entity.getLieuNaissance())
                 .email(entity.getEmail())
-                .numTel(entity.getNumTel())
+                .numTel(entity.getNumeroTelephone())
                 .photo(entity.getPhoto())
                 .entrepriseId(entity.getEntrepriseId())
                 .adresse(AdresseDto.fromEntity(entity.getAdresse()))
@@ -64,7 +64,7 @@ public class FournisseurDto {
         fournisseur.setDateNaissance(dto.getDateNaissance());
         fournisseur.setLieuNaissance(dto.getLieuNaissance());
         fournisseur.setEmail(dto.getEmail());
-        fournisseur.setNumTel(dto.getNumTel());
+        fournisseur.setNumeroTelephone(dto.getNumTel());
         fournisseur.setPhoto(dto.getPhoto());
         fournisseur.setEntrepriseId(dto.getEntrepriseId());
         fournisseur.setAdresse(AdresseDto.toEntity(dto.getAdresse()));

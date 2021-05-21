@@ -3,6 +3,7 @@ package cm.belrose.stockserveur.exceptions.handlers;
 import cm.belrose.stockserveur.exceptions.EntityNotFoundException;
 import cm.belrose.stockserveur.exceptions.ErrorCodes;
 import cm.belrose.stockserveur.exceptions.InvalidEntityException;
+import cm.belrose.stockserveur.exceptions.InvalidOperationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -68,6 +69,18 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
                 .httpCode(badRequest.value())
                 .message(exception.getMessage())
                 .errors(Collections.singletonList("Login et/ou Password incorrect"))
+                .build();
+        return new ResponseEntity<>(errorDto,badRequest);
+    }
+
+    @ExceptionHandler( InvalidOperationException.class)
+    public ResponseEntity<ErrorDto> handlerException(InvalidOperationException exception, WebRequest webRequest){
+        final  HttpStatus badRequest=HttpStatus.BAD_REQUEST;
+        ErrorDto errorDto=ErrorDto.builder()
+                .code(exception.getErrorCodes())
+                .httpCode(badRequest.value())
+                .message(exception.getMessage())
+                .errors(exception.getErrors())
                 .build();
         return new ResponseEntity<>(errorDto,badRequest);
     }

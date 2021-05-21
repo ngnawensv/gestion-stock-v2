@@ -27,18 +27,15 @@ public class CommandeClient extends Auditable<String> implements Serializable {
       @GeneratedValue(strategy = GenerationType.IDENTITY)
       private Long id;
       private String code;
-      @Column(name = "date_commande")
       private Instant dateCommande;
+      private EtatCommande etatCommande;
+      private Long entrepriseId;  //Ce champs est juste mis pour simplifier les choses
       @NotAudited
       @ManyToOne
-      @JoinColumn(name = "client_id")
       private Client client;
       @NotAudited
-      @OneToMany(mappedBy = "commandeClient")
-      private List<LigneCommandeClient> ligneCommandeClientList;
-      //Ce champs est juste mis pour simplifier les choses
-      //@Column(name = "entreprise_id")
-      private Long entrepriseId;
+      @OneToMany (mappedBy = "commandeClient")
+      private List<LigneCommandeClient> ligneCommandeClients;
 
 
 }

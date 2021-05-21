@@ -34,16 +34,11 @@ public class AuthenticationController {
     private JwtUtil jwtUtil;
 
     @PostMapping("/authenticate")
-    public ResponseEntity<AuthenticationResponse> authenticate (@RequestBody AuthenticationRequest request) throws Exception {
+    public ResponseEntity<AuthenticationResponse> authenticate(@RequestBody AuthenticationRequest request) throws Exception {
         log.info("Inside the authenticate method...........");
-       // try{
-            authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(request.getLogin(),request.getPassword()));
-//        }catch (BadCredentialsException e){
-//            throw new Exception("Incorrect username or password", e);
-//        }
-
-        final UserDetails userDetails=userDetailsServiceImpl.loadUserByUsername(request.getLogin());
-        final String jwt=jwtUtil.generateToken((ExtendedUser)userDetails);
+        authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(request.getLogin(), request.getPassword()));
+        final UserDetails userDetails = userDetailsServiceImpl.loadUserByUsername(request.getLogin());
+        final String jwt = jwtUtil.generateToken((ExtendedUser) userDetails);
         return ResponseEntity.ok(AuthenticationResponse.builder().accessToken(jwt).build());
     }
 }

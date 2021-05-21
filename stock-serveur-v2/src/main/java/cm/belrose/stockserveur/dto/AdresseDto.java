@@ -6,7 +6,7 @@ import lombok.Data;
 
 
 /**
- * @author Ngnawen
+ * @author NGNAWEN
  * @since 05/03/2021
  * Cette classe contient principalement deux méthodes qui serviront à la persistence (toEntity())
  * et à la récupération(fromEntity()) des données
@@ -33,32 +33,25 @@ public class AdresseDto {
         }
         //Construction d'un objet de type AdresseDto (Adresse==>AdresseDto)
         return AdresseDto.builder()
-                .adresse1(entity.getAdresse1())
-                .adresse2(entity.getAdresse2())
                 .codePostale(entity.getCodePostale())
                 .ville(entity.getVille())
                 .pays(entity.getPays())
                 .build();
-
     }
 
     /**
      * Cette méthode permet de faire le mapping du dto vers l'entité
-     * @param dto
-     * @return
      */
     public static Adresse toEntity(AdresseDto dto){
         if(dto==null){
             return null;
         }
         //Construction d'un objet de type Adresse (AdresseDto==>Adresse)
-        Adresse adresse=new Adresse();
-        adresse.setAdresse1(dto.getAdresse1());
-        adresse.setAdresse2(dto.getAdresse2());
-        adresse.setCodePostale(dto.getCodePostale());
-        adresse.setPays(dto.getPays());
-        adresse.setVille(dto.getVille());
-        return adresse;
+        return Adresse.builder()
+                .codePostale(dto.getCodePostale())
+                .pays(dto.getPays())
+                .ville(dto.getVille())
+                .build();
 
     }
 }

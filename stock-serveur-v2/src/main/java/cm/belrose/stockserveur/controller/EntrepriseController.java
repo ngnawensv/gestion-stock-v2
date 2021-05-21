@@ -26,7 +26,17 @@ public class EntrepriseController implements EntrepriseApi {
 
     @Override
     public EntrepriseDto findEntrepriseByCode(String code) {
-        return entrepriseService.findEntrepriseByCode(code);
+        return entrepriseService.findEntrepriseByCodeFiscal(code);
+    }
+
+    @Override
+    public EntrepriseDto findEntrepriseByNom(String nom) {
+        return entrepriseService.findEntrepriseByNom(nom);
+    }
+
+    @Override
+    public EntrepriseDto findEntrepriseByEmail(String email) {
+        return entrepriseService.findEntrepriseByEmail(email);
     }
 
     @Override

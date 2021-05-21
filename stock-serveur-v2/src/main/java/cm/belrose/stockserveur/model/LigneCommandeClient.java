@@ -6,6 +6,7 @@ import org.hibernate.envers.NotAudited;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.math.BigDecimal;
 
 /**
  * Le 09/11/2020
@@ -23,15 +24,14 @@ public class LigneCommandeClient extends Auditable<String> implements Serializab
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private BigDecimal quantite;
+    private BigDecimal prixUnitaire;
     @NotAudited
     @ManyToOne
-    @JoinColumn(name = "article_id")
     private Article article;
     @ManyToOne
-    @JoinColumn(name = "commandeclient_id")
     private CommandeClient commandeClient;
     //Ce champs est juste mis pour simplifier les choses
-    //@Column(name = "entreprise_id")
     private Long entrepriseId;
 
 }

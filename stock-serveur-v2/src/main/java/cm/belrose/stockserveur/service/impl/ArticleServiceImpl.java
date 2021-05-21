@@ -2,13 +2,15 @@ package cm.belrose.stockserveur.service.impl;
 
 import cm.belrose.stockserveur.config.constants.Constant;
 import cm.belrose.stockserveur.dto.ArticleDto;
+import cm.belrose.stockserveur.dto.LigneCommandeClientDto;
+import cm.belrose.stockserveur.dto.LigneCommandeFournisseurDto;
+import cm.belrose.stockserveur.dto.LigneVenteDto;
 import cm.belrose.stockserveur.exceptions.EntityNotFoundException;
 import cm.belrose.stockserveur.exceptions.ErrorCodes;
 import cm.belrose.stockserveur.exceptions.InvalidEntityException;
 import cm.belrose.stockserveur.model.Article;
 import cm.belrose.stockserveur.model.Categorie;
-import cm.belrose.stockserveur.repository.ArticleRepository;
-import cm.belrose.stockserveur.repository.CategorieRepository;
+import cm.belrose.stockserveur.repository.*;
 import cm.belrose.stockserveur.service.ArticleService;
 import cm.belrose.stockserveur.validator.ArticleValidator;
 import lombok.extern.slf4j.Slf4j;
@@ -33,7 +35,14 @@ import java.util.stream.Collectors;
 public class ArticleServiceImpl implements ArticleService {
 
     @Autowired
-    ArticleRepository articleRepository;
+    private ArticleRepository articleRepository;
+    @Autowired
+    private LigneVenteRepository ligneVenteRepository;
+    @Autowired
+    private LigneCommandeFournisseurRepository ligneCommandeFournisseurRepository;
+    @Autowired
+    private LigneCommandeClientRepository ligneCommandeClientRepository;
+
 
 
     @Override
@@ -80,7 +89,33 @@ public class ArticleServiceImpl implements ArticleService {
                 .collect(Collectors.toList());
     }
 
+    @Override
+    public List<LigneVenteDto> findHistoriqueVentes(Long idArticle) {
+        return ligneVenteRepository.findAllByArticleId(idArticle).stream()
+                .map(ligneVente -> LigneVenteDto.fromEntity(ligneVente))
+                .collect(Collectors.toList());
+    }
 
+    @Override
+    public List<LigneCommandeClientDto> findHistoriqueCommandeClient(Long idArticle) {
+        return ligneCommandeClientRepository.findAllByArticleId(idArticle).stream()
+                .map(ligneCommandeClient-> LigneCommandeClientDto.fromEntity(ligneCommandeClient))
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<LigneCommandeFournisseurDto> findHistoriqueCommandeFournisseur(Long idArticle) {
+        return ligneCommandeFournisseurRepository.findAllByArticleId(idArticle).stream()
+                .map(ligneCommandeFournisseur-> LigneCommandeFournisseurDto.fromEntity(ligneCommandeFournisseur))
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<ArticleDto> findAllArticleByIdCategorie(Long idCategorie) {
+        return articleRepository.findAllByCategorieId(idCategorie).stream()
+                .map(article-> ArticleDto.fromEntity(article))
+                .collect(Collectors.toList());
+    }
 
     @Override
     public void delete(Long id) {

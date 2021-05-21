@@ -2,8 +2,8 @@ package cm.belrose.stockserveur.exceptions;
 
 /**
  * @author Ngnawen
- * @since  07/08/2021
- *
+ * @since 07/08/2021
+ * <p>
  * Cette enumeration permet de definir les code d'erreurs
  */
 public enum ErrorCodes {
@@ -27,9 +27,11 @@ public enum ErrorCodes {
 
     COMMANDE_CLIENT_NOT_FOUND(6000),
     COMMANDE_CLIENT_NOT_VALID(6001),
+    COMMANDE_CLIENT_NON_MODIFIABLE(6001),
 
     COMMANDE_FOURNISSEUR_NOT_FOUND(7000),
     COMMANDE_FOURNISSEUR_NOT_VALID(7001),
+    COMMANDE_FOURNISSEUR_NON_MODIFIABLE(6001),
 
     LIGNE_COMMANDE_CLIENT_NOT_FOUND(8000),
     LIGNE_COMMANDE_CLIENT_NOT_VALID(8001),
@@ -55,14 +57,17 @@ public enum ErrorCodes {
     ROLE_NOT_FOUND(15000),
     ROLE_NOT_VALID(15001),
 
-    BAD_CREDENTIALS(16000);
+    BAD_CREDENTIALS(16000),
+    //Liste des exceptions techniques
+    UPDATE_PHOTO_EXCEPTION(17000),
+    UNKNOWN_CONTEXT (17001);
 
     private int code;
-    ErrorCodes(int code){
-        this.code=code;
+    ErrorCodes(int code) {
+        this.code = code;
     }
 
-    public int getCode(){
+    public int getCode() {
         return code;
     }
 }

@@ -14,7 +14,10 @@ import java.util.Optional;
 @Repository
 public interface ArticleRepository extends JpaRepository<Article, Long>{
 
+    Optional<Article> findArticleByCode(String code);
+
     List<Article> findByDesignationContaining(String designation);
 
-    Optional<Article> findArticleByCode(String code);
+    List<Article> findAllByCategorieId(Long idCategorie);
+
 }

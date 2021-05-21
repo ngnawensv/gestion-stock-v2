@@ -16,12 +16,13 @@ import java.util.List;
  *
  */
 @Data
+//@EqualsAndHashCode(callSuper = false)
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Audited
 @Entity
-@Table(name = "categories")
+@Table(name = "categorie")
 public class Categorie extends Auditable<String> implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,8 +32,8 @@ public class Categorie extends Auditable<String> implements Serializable {
     //Ce champs est juste mis pour simplifier les choses
    // @Column(name = "entreprise_id")
     private Long entrepriseId;
-    @NotAudited
-    @OneToMany(mappedBy = "categorie")
-    private List<Article> articleList;
+    //@NotAudited
+    //@OneToMany(mappedBy = "categorie")
+   // private List<Article> articleList;
 
 }

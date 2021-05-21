@@ -26,4 +26,5 @@ public class FlickrServiceImpl implements FlickrService {
         String photoId=flickr.getUploader().upload(photo,uploadMetaData);
         return flickr.getPhotosInterface().getPhoto(photoId).getMedium640Url();
     }
+
 }

@@ -10,7 +10,7 @@ import java.util.List;
 public class EntrepriseValidator {
     public static List<String> validator(EntrepriseDto dto){
         List<String> errors=new ArrayList<>();
-        if(dto==null||!StringUtils.hasLength(dto.getNom())){
+        if(dto==null||!StringUtils.hasLength(dto.getCodeFiscal())){
             errors.add("Veuillez renseigner le code de l'entreprise");
         }
         return errors;

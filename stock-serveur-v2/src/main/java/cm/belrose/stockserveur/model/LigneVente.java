@@ -12,6 +12,7 @@ import java.math.BigDecimal;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode(callSuper = true)
 @Entity
 @Table(name = "ligneVentes")
 public class LigneVente extends Auditable<String> implements Serializable {
@@ -19,16 +20,12 @@ public class LigneVente extends Auditable<String> implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private BigDecimal quantite;
-    @Column(name = "prix_unitaire")
     private BigDecimal prixUniataire;
+    private Long entrepriseId; //Ce champs est juste mis pour simplifier les choses
     @NotAudited
     @ManyToOne
-    @JoinColumn(name = "article_id")
     private Article article;
+    @NotAudited
     @ManyToOne
-    @JoinColumn(name = "vente_id")
     private Vente vente;
-    //Ce champs est juste mis pour simplifier les choses
-    //@Column(name = "entreprise_id")
-    private Long entrepriseId;
 }

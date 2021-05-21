@@ -1,0 +1,106 @@
+<div class="row mb-1 mr-0 custom-border">
+    <div class="col-md-1 border-right p-1 text-center">
+        <img src="assets/article.png" width="100px" height="100px" />
+    </div>
+
+    <!-- Détails article -->
+    <div class="col-md-5 custom-border-right mt-1 mb-1">
+        <div class="col">
+            <div class="row">
+                <div class="col-md-1">
+                    <i class="fas fa-info-circle blue-color"></i>
+                </div>
+                <div class="col-md-11">Nom</div>
+            </div>
+            <div class="row">
+                <div class="col-md-1">
+                    <i class="fas fa-info-circle blue-color"></i>
+                </div>
+                <div class="col-md-11">Prenom</div>
+            </div>
+            <div class="row">
+                <div class="col-md-1">
+                    <i class="fas fa-phone-alt blue-color"></i>
+                </div>
+                <div class="col-md-11">0237 00 22 00 11</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Détails commande -->
+    <div class="col-md-3 custom-border-right mt-1 mb-1">
+        <div class="col">
+            <div class="row">
+                <div class="col-md-1">
+                    <i class="fas fa-qrcode blue-color"></i>
+                </div>
+                <div class="col-md-11">CMD-123456</div>
+            </div>
+            <div class="row">
+                <div class="col-md-1">
+                    <i class="fas fa-calendar-check blue-color"></i>
+                </div>
+                <div class="col-md-11">12.12.2021</div>
+            </div>
+            <div class="row">
+                <div class="col-md-1">
+                    <i class="fas fa-cart-arrow-down blue-color"></i>
+                </div>
+                <div class="col-md-11">LIVREE</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Boutons d'action -->
+    <div class="col-md-3 mt-1 mb-1">
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModal">
+          <i class="fas fa-pencil-alt blue-color"></i>&nbsp;Modifier
+        </button>
+            </div>
+            <div class="col-md-6 text-center">
+                <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModal">
+          <i class="fas fa-trash-alt blue-color"></i>&nbsp;Supprimer
+        </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        Correction de stock
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Quantité" />
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control">
+                <option>Correction positive</option>
+                <option>Correction negative</option>
+              </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">
+            <i class="fas fa-ban"></i>&nbsp;Annuler
+          </button>
+                    <button type="button" class="btn btn-primary">
+            <i class="fas fa-save"></i>&nbsp;Enregistrer
+          </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

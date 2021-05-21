@@ -27,7 +27,7 @@ public class JwtUtil {
         return extractClaim(token, Claims::getExpiration);
     }
 
-    //retrieve idEntreprise from jwt token
+    //retrieve idEntreprise from jwt token.Nous avons ajouter ceci parceque nous voulons ajouter entrepriseId dans le token
     public String extractIdEntreprise(String token) {
         final Claims claims = extractAllClaims(token);
         return claims.get("entrepriseId", String.class);

@@ -26,7 +26,6 @@ import java.util.function.Consumer;
  * @author Ngnawen Samuel
  */
 //@CrossOrigin(origins = "*", maxAge = 3600)
-//@RequestMapping("/api")
 @RestController
 @Slf4j
 public class CategorieController implements CategorieApi {
@@ -45,7 +44,7 @@ public class CategorieController implements CategorieApi {
     }
 
     @Override
-    public CategorieDto findCategorieByCode(String code) {
+    public CategorieDto findByCode(String code) {
         return categorieService.findCategorieByCode(code);
     }
 

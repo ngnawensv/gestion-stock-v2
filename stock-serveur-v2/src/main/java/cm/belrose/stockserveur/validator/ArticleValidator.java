@@ -16,7 +16,7 @@ public class ArticleValidator {
             errors.add("Veuillez renseigner le prix d'achat de l'article");
             errors.add("Veuillez renseigner le prix unitaire HT de l'article");
             errors.add("Veuillez renseigner la TVA de l'article");
-            errors.add("Veuillez renseigner lep rix de vente  de l'article");
+            errors.add("Veuillez renseigner le prix de vente  de l'article");
             errors.add("Veuillez selectionner une categorie");
             return errors;
         }

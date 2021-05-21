@@ -17,8 +17,8 @@ public class CategorieDto {
     private String code;
     private String libelle;
     private Long entrepriseId;
-    @JsonIgnore
-    private List<ArticleDto> articleList;
+    //@JsonIgnore
+   // private List<ArticleDto> articleList;
 
     /**
      * Cette Methode permet de faire le mapping entre l'entité Categorie et le DTO CategorieDto
@@ -41,7 +41,7 @@ public class CategorieDto {
     }
 
     /**
-     * Cette methode  permet de construire un Entite à partir d'un DTO
+     * Cette methode  permet de construire un entity à partir d'un dto
      * @param dto
      * @return
      */
@@ -50,12 +50,18 @@ public class CategorieDto {
             return null;
         }
         //Construction d'un objet de type Categorie (CategorieDto==>Categorie)
-        Categorie categorie=new Categorie();
-        categorie.setId(dto.getId());
-        categorie.setCode(dto.getCode());
-        categorie.setEntrepriseId(dto.getEntrepriseId());
-        categorie.setLibelle(dto.getLibelle());
-        return categorie;
+//        Categorie categorie=new Categorie();
+//        categorie.setId(dto.getId());
+//        categorie.setCode(dto.getCode());
+//        categorie.setEntrepriseId(dto.getEntrepriseId());
+//        categorie.setLibelle(dto.getLibelle());
+//        return categorie;
+        return Categorie.builder()
+                .id(dto.getId())
+                .code(dto.getCode())
+                .entrepriseId(dto.getEntrepriseId())
+                .libelle(dto.getLibelle())
+                .build();
 
     }
 }

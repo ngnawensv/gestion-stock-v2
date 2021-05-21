@@ -1,56 +1,76 @@
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {APP_INITIALIZER, NgModule} from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {LoginComponent} from "./login/login.component";
-import {RegisterComponent} from "./register/register.component";
-import {HomeComponent} from "./home/home.component";
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {HttpClient, HttpClientModule} from "@angular/common/http";
-import {TranslateModule, TranslateService} from "@ngx-translate/core";
-import {authInterceptorProviders} from "./_helpers/auth.interceptor";
-import {initApp} from "./_i18nutils/initApp";
-import { AdminComponent } from './admin/admin.component';
-import { ArticleComponent } from './article/article.component';
-import { ParametreComponent } from './parametre/parametre.component';
-import { CategorieComponent } from './categorie/categorie.component';
-import { AddCategorieComponent } from './add-categorie/add-categorie.component';
-import {DataTablesModule} from "angular-datatables";
-import { UpdateCategorieComponent } from './update-categorie/update-categorie.component';
-import { AddArticleComponent } from './add-article/add-article.component';
-import { EditCategorieComponent } from './edit-categorie/edit-categorie.component';
-import { EditArticleComponent } from './edit-article/edit-article.component';
+import { PageLoginComponent } from './pages/page-login/page-login.component';
+import { PageInscriptionComponent } from './pages/page-inscription/page-inscription.component';
+import { PageDashboardComponent } from './pages/page-dashboard/page-dashboard.component';
+import { PageStatistiquesComponent } from './pages/page-statistiques/page-statistiques.component';
+import { MenuComponent } from './composants/menu/menu.component';
+import { HeaderComponent } from './header/header.component';
+import { PageArticleComponent } from './pages/articles/page-article/page-article.component';
+import { DetailArticleComponent } from './composants/detail-article/detail-article.component';
+import { PaginationComponent } from './composants/pagination/pagination.component';
+import { BoutonActionComponent } from './composants/bouton-action/bouton-action.component';
+import { NouvelArticleComponent } from './pages/articles/nouvel-article/nouvel-article.component';
+import { PageMouvementStockComponent } from './pages/mouvement-stock/page-mouvement-stock/page-mouvement-stock.component';
+import { DetailMouvementStockArticleComponent } from './composants/detail-mouvement-stock-article/detail-mouvement-stock-article.component';
+import { DetailMouvementStockComponent } from './composants/detail-mouvement-stock/detail-mouvement-stock.component';
+import { DetailsClientFournisseurComponent } from './composants/details-client-fournisseur/details-client-fournisseur.component';
+import { PageClientComponent } from './pages/client/page-client/page-client.component';
+import { PageFournisseurComponent } from './pages/fournisseur/page-fournisseur/page-fournisseur.component';
+import { NouveauClientFournisseurComponent } from './composants/nouveau-client-fournisseur/nouveau-client-fournisseur.component';
+import { DetailCommandeClientFournisseurComponent } from './composants/detail-commande-client-fournisseur/detail-commande-client-fournisseur.component';
+import { DetailCommandeComponent } from './composants/detail-commande/detail-commande.component';
+import { PageCommandeClientFournisseurComponent } from './pages/page-commande-client-fournisseur/page-commande-client-fournisseur.component';
+import { NouvelleCommandeClientFournisseurComponent } from './composants/nouvelle-commande-client-fournisseur/nouvelle-commande-client-fournisseur.component';
+import { PageCategoriesComponent } from './pages/categories/page-categories/page-categories.component';
+import { PageUserComponent } from './pages/users/page-user/page-user.component';
+import { DetailUserComponent } from './composants/detail-user/detail-user.component';
+import { NouvelUserComponent } from './pages/users/nouvel-user/nouvel-user.component';
+import { NouvelleCategorieComponent } from './pages/categories/nouvelle-categorie/nouvelle-categorie.component';
+import { PageProfilComponent } from './pages/profil/page-profil/page-profil.component';
+import { ChangerMotDePasseComponent } from './pages/profil/changer-mot-de-passe/changer-mot-de-passe.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    RegisterComponent,
-    HomeComponent,
-    AdminComponent,
-    ArticleComponent,
-    ParametreComponent,
-    CategorieComponent,
-    AddCategorieComponent,
-    UpdateCategorieComponent,
-    AddArticleComponent,
-    EditCategorieComponent,
-    EditArticleComponent
+    PageLoginComponent,
+    PageInscriptionComponent,
+    PageDashboardComponent,
+    PageStatistiquesComponent,
+    MenuComponent,
+    HeaderComponent,
+    PageArticleComponent,
+    DetailArticleComponent,
+    PaginationComponent,
+    BoutonActionComponent,
+    NouvelArticleComponent,
+    PageMouvementStockComponent,
+    DetailMouvementStockArticleComponent,
+    DetailMouvementStockComponent,
+    DetailsClientFournisseurComponent,
+    PageClientComponent,
+    PageFournisseurComponent,
+    NouveauClientFournisseurComponent,
+    DetailCommandeClientFournisseurComponent,
+    DetailCommandeComponent,
+    PageCommandeClientFournisseurComponent,
+    NouvelleCommandeClientFournisseurComponent,
+    PageCategoriesComponent,
+    PageUserComponent,
+    DetailUserComponent,
+    NouvelUserComponent,
+    NouvelleCategorieComponent,
+    PageProfilComponent,
+    ChangerMotDePasseComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    HttpClientModule,
-    DataTablesModule,
-    ReactiveFormsModule,
-    TranslateModule.forRoot() //Module import for i18n see https://levelup.gitconnected.com/angular-internationalization-i18n-with-ngx-translate-8f89005cb337
+    AppRoutingModule
   ],
-  providers: [
-    {provide: APP_INITIALIZER, useFactory: initApp, deps: [HttpClient, TranslateService], multi: true},
-    authInterceptorProviders
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-

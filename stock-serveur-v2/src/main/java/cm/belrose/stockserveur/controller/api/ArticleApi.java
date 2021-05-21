@@ -1,6 +1,9 @@
 package cm.belrose.stockserveur.controller.api;
 
 import cm.belrose.stockserveur.dto.ArticleDto;
+import cm.belrose.stockserveur.dto.LigneCommandeClientDto;
+import cm.belrose.stockserveur.dto.LigneCommandeFournisseurDto;
+import cm.belrose.stockserveur.dto.LigneVenteDto;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
@@ -14,6 +17,7 @@ import static cm.belrose.stockserveur.config.constants.Constant.APP_ROOT;
 import static cm.belrose.stockserveur.config.constants.Constant.ARTICLE_ENDPOINT;
 
 @Api(ARTICLE_ENDPOINT)
+@RequestMapping()
 public interface ArticleApi {
 
     @PostMapping(value=ARTICLE_ENDPOINT, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
@@ -57,8 +61,6 @@ public interface ArticleApi {
     })
     ArticleDto findByCode(@PathVariable("code") String code);
 
-
-
     @GetMapping(value=ARTICLE_ENDPOINT,produces = MediaType.APPLICATION_JSON_VALUE)
     @ApiOperation(value = "Renvoie d'une liste des articles",
             notes = "Cette methode permet de rechercher et renvoyer  la liste des categorie de la base de données" ,
@@ -68,7 +70,17 @@ public interface ArticleApi {
     })
     List<ArticleDto> findAll();
 
+    @GetMapping(value=ARTICLE_ENDPOINT+"/historique/vente/{idArticle}",produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<LigneVenteDto> findHistoriqueVentes(@PathVariable("idArticle") Long idArticle);
 
+    @GetMapping(value=ARTICLE_ENDPOINT+"/historique/commandeclient/{idArticle}",produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<LigneCommandeClientDto> findHistoriqueCommandeClient(@PathVariable("idArticle") Long idArticle);
+
+    @GetMapping(value=ARTICLE_ENDPOINT+"/historique/commandefournisseur/{idArticle}",produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<LigneCommandeFournisseurDto> findHistoriqueCommandeFournisseur(@PathVariable("idArticle") Long idArticle);
+
+    @GetMapping(value=ARTICLE_ENDPOINT+"/historique/filtre/categorie/{idCategorie}",produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<ArticleDto> findAllArticleByIdCategorie(@PathVariable("idCategorie") Long idCategorie);
 
     @DeleteMapping(value=ARTICLE_ENDPOINT+"/{id}")
     @ApiOperation(value = "Suppression d'un article",

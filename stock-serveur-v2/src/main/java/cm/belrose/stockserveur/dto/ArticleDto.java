@@ -32,12 +32,9 @@ public class ArticleDto {
                 .id(entity.getId())
                 .code(entity.getCode())
                 .designation(entity.getDesignation())
-                .prixAchat(entity.getPrixAchat())
                 .prixUnitaireHt(entity.getPrixUnitaireHt())
                 .prixUnitaireTtc(entity.getPrixUnitaireTtc())
-                .prixVente(entity.getPrixVente())
                 .tauxTva(entity.getTauxTva())
-                .quantite(entity.getQuantite())
                 .entrepriseId(entity.getEntrepriseId())
                 .photo(entity.getPhoto())
                 .categorieDto(CategorieDto.fromEntity(entity.getCategorie()))
@@ -54,9 +51,6 @@ public class ArticleDto {
         Article article=new Article();
         article.setId(dto.getId());
         article.setDesignation(dto.getDesignation());
-        article.setPrixAchat(dto.getPrixAchat());
-        article.setQuantite(dto.getQuantite());
-        article.setPrixVente(dto.getPrixVente());
         article.setCode(dto.getCode());
         article.setPrixUnitaireHt(dto.getPrixUnitaireHt());
         article.setTauxTva(dto.getTauxTva());

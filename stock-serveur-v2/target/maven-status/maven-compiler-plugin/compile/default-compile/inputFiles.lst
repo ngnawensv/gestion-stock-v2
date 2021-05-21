@@ -9,6 +9,7 @@ C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\service\impl\RolesServiceImpl.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\dto\auth\AuthenticationRequest.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\model\MouvementStock.java
+C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\controller\api\RolesApi.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\config\security\SecurityConfiguration.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\controller\api\CommandeClientApi.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\repository\ArticleRepository.java
@@ -31,6 +32,7 @@ C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\model\LigneVente.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\validator\FournisseurValidator.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\dto\ArticleDto.java
+C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\controller\RolesController.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\dto\RolesDto.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\model\auth\ExtendedUser.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\validator\RoleValidator.java
@@ -66,7 +68,6 @@ C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\service\impl\VenteServiceImpl.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\controller\CommandeFournisseurController.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\model\Vente.java
-C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\controller\api\RoleApi.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\repository\FournissseurRepository.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\service\VenteService.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\repository\CategorieRepository.java
@@ -74,7 +75,6 @@ C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\model\Users.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\model\MouvementStockType.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\payload\response\MessageResponse.java
-C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\repository\RoleRepository.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\service\impl\UsersServiceImpl.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\model\RoleEnum.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\service\EntrepriseService.java
@@ -85,6 +85,7 @@ C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\payload\request\SignupRequest.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\model\CommandeClient.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\repository\CommandeFournisseurRepository.java
+C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\repository\RolesRepository.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\validator\LigneVenteValidator.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\controller\api\MouvementStockApi.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\repository\LigneCommandeClientRepository.java
@@ -100,6 +101,7 @@ C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\dto\LigneCommandeClientDto.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\repository\LigneCommandeFournisseurRepository.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\service\impl\ArticleServiceImpl.java
+C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\controller\api\UsersApi.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\payload\request\LoginRequest.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\repository\CommandeClientRepository.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\dto\CommandeClientDto.java
@@ -109,9 +111,8 @@ C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\dto\CategorieDto.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\validator\ClientValidator.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\controller\api\ClientApi.java
-C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\controller\RoleController.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\service\impl\CommandeFournisseurServiceImpl.java
-C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\controller\UserController.java
+C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\controller\UsersController.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\controller\api\VenteApi.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\controller\api\ArticleApi.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\model\LigneCommandeFournisseur.java
@@ -126,7 +127,6 @@ C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\service\impl\FlickrServiceImpl.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\service\impl\FournisseurServiceImpl.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\config\initializer\InitializeDataBase.java
-C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\controller\api\UserApi.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\repository\LigneVenteRepository.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\controller\CategorieController.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\service\FlickrService.java

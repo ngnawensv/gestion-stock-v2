@@ -37,12 +37,12 @@ public class Users extends Auditable<String> implements Serializable {
     private String genre;
     private String photo;
     private Instant dateNaissance;
+    private String numeroTelephone;
     @NotAudited
     @Embedded
     private Adresse adresse;
     @NotAudited
     @ManyToOne
-    //@JoinColumn(name = "entreprise_id")
     private Entreprise entreprise;
 
     /**

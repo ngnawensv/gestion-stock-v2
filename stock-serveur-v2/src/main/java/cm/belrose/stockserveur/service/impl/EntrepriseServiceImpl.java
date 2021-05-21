@@ -25,12 +25,13 @@ import java.time.Instant;
 import java.util.*;
 import java.util.stream.Collectors;
 
+/**
+ * @author NGNAWEN
+ */
 @Service
 @Transactional
 @Slf4j
 public class EntrepriseServiceImpl implements EntrepriseService {
-
-
     @Autowired
     private EntrepriseRepository entrepriseRepository;
     @Autowired
@@ -50,23 +51,6 @@ public class EntrepriseServiceImpl implements EntrepriseService {
         return EntrepriseDto.fromEntity(entrepriseRepository.save(EntrepriseDto.toEntity(dto)));
     }
 
-    private UsersDto fromEntreprise(EntrepriseDto dto){
-        return UsersDto.builder()
-                .adresse(dto.getAdresse())
-                .nom(dto.getNom())
-                .prenom(dto.getCodeFiscal())
-                .email(dto.getEmail())
-                .password(passwordEncoder.encode(generatedRandomPassword()))
-                .entreprise(dto)
-                .dateNaissance(Instant.now())
-                .photo(dto.getLogo())
-                .build();
-    }
-
-    private String generatedRandomPassword(){
-        return Constant.DEFAULT_ADMIN_PASSWORD;
-    }
-
     @Override
     public EntrepriseDto findById(Long id) {
         if(id==null){
@@ -76,12 +60,25 @@ public class EntrepriseServiceImpl implements EntrepriseService {
         return entrepriseRepository.findById(id)
                 .map(EntrepriseDto::fromEntity)
                 .orElseThrow(
-                ()->new EntityNotFoundException("Aucune entreprise avec l'ID="+id+"n'a été trouvé dans la BD",
+                ()->new EntityNotFoundException("Aucune entreprise avec l'ID = "+id+" n'a été trouvé dans la BD",
                         ErrorCodes.ENTREPRISE_NOT_FOUND));
     }
 
     @Override
-    public EntrepriseDto findEntrepriseByCode(String nom) {
+    public EntrepriseDto findEntrepriseByCodeFiscal(String code) {
+        if(!StringUtils.hasLength(code)){
+            log.error("Categorie CODE is null");
+            return null;
+        }
+        return entrepriseRepository.findEntrepriseByNom(code)
+                .map(EntrepriseDto::fromEntity)
+                .orElseThrow(
+                ()->new EntityNotFoundException("Aucune entreprise avec le NOM = "+code+" n'a été trouvé dans la BD",
+                        ErrorCodes.ENTREPRISE_NOT_FOUND));
+    }
+
+    @Override
+    public EntrepriseDto findEntrepriseByNom(String nom) {
         if(!StringUtils.hasLength(nom)){
             log.error("Categorie CODE is null");
             return null;
@@ -89,8 +86,21 @@ public class EntrepriseServiceImpl implements EntrepriseService {
         return entrepriseRepository.findEntrepriseByNom(nom)
                 .map(EntrepriseDto::fromEntity)
                 .orElseThrow(
-                ()->new EntityNotFoundException("Aucune entreprise avec le NOM = "+nom+" n'a été trouvé dans la BD",
-                        ErrorCodes.ENTREPRISE_NOT_FOUND));
+                        ()->new EntityNotFoundException("Aucune entreprise avec le NOM = "+nom+" n'a été trouvé dans la BD",
+                                ErrorCodes.ENTREPRISE_NOT_FOUND));
+    }
+
+    @Override
+    public EntrepriseDto findEntrepriseByEmail(String email) {
+        if(!StringUtils.hasLength(email)){
+            log.error("Categorie CODE is null");
+            return null;
+        }
+        return entrepriseRepository.findEntrepriseByNom(email)
+                .map(EntrepriseDto::fromEntity)
+                .orElseThrow(
+                        ()->new EntityNotFoundException("Aucune entreprise avec le NOM = "+email+" n'a été trouvé dans la BD",
+                                ErrorCodes.ENTREPRISE_NOT_FOUND));
     }
 
     @Override

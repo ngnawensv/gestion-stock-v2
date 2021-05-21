@@ -1,9 +1,6 @@
 package cm.belrose.stockserveur.dto;
 
-import cm.belrose.stockserveur.model.Client;
-import cm.belrose.stockserveur.model.CommandeFournisseur;
-import cm.belrose.stockserveur.model.Entreprise;
-import cm.belrose.stockserveur.model.Fournisseur;
+import cm.belrose.stockserveur.model.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Builder;
 import lombok.Data;
@@ -18,7 +15,9 @@ public class CommandeFournisseurDto {
     private String code;
     private Instant dateCommande;
     private Fournisseur fournisseur;
+    private EtatCommande etatCommande;
     private Long entrepriseId;
+    @JsonIgnore
     private List<LigneCommandeFournisseurDto> ligneCommandeFournisseurList;
 
     public static CommandeFournisseurDto fromEntity(CommandeFournisseur entity){
@@ -48,6 +47,9 @@ public class CommandeFournisseurDto {
         commandeFournisseur.setDateCommande(dto.getDateCommande());
         commandeFournisseur.setFournisseur(dto.getFournisseur());
         return commandeFournisseur;
+    }
 
+    public Boolean isCommandeLivree(){
+        return EtatCommande.LIVREE.equals(this.etatCommande);
     }
 }

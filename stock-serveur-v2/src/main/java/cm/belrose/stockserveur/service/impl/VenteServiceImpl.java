@@ -1,16 +1,17 @@
 package cm.belrose.stockserveur.service.impl;
 
+import cm.belrose.stockserveur.dto.ArticleDto;
 import cm.belrose.stockserveur.dto.LigneVenteDto;
+import cm.belrose.stockserveur.dto.MouvementStockDto;
 import cm.belrose.stockserveur.dto.VenteDto;
 import cm.belrose.stockserveur.exceptions.EntityNotFoundException;
 import cm.belrose.stockserveur.exceptions.ErrorCodes;
 import cm.belrose.stockserveur.exceptions.InvalidEntityException;
-import cm.belrose.stockserveur.model.Article;
-import cm.belrose.stockserveur.model.LigneVente;
-import cm.belrose.stockserveur.model.Vente;
+import cm.belrose.stockserveur.model.*;
 import cm.belrose.stockserveur.repository.ArticleRepository;
 import cm.belrose.stockserveur.repository.LigneVenteRepository;
 import cm.belrose.stockserveur.repository.VenteRepository;
+import cm.belrose.stockserveur.service.MouvementStockService;
 import cm.belrose.stockserveur.service.VenteService;
 import cm.belrose.stockserveur.validator.VenteValidator;
 import lombok.extern.slf4j.Slf4j;
@@ -18,6 +19,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -33,6 +35,8 @@ public class VenteServiceImpl implements VenteService {
     private VenteRepository venteRepository;
     @Autowired
     private LigneVenteRepository ligneVenteRepository;
+    @Autowired
+    private MouvementStockService mouvementStockService;
 
     @Override
     public VenteDto save(VenteDto dto) {
@@ -60,6 +64,7 @@ public class VenteServiceImpl implements VenteService {
             LigneVente ligneVente = LigneVenteDto.toEntity(ligneVentedto);
             ligneVente.setVente(saveVente);
             ligneVenteRepository.save(ligneVente);
+            updateMouvementStock(ligneVente);
         });
         return VenteDto.fromEntity(saveVente);
     }
@@ -102,5 +107,18 @@ public class VenteServiceImpl implements VenteService {
             return ;
         }
         venteRepository.deleteById(id);
+    }
+
+    private void updateMouvementStock(LigneVente lig){
+            MouvementStockDto mouvementStockDto=MouvementStockDto.builder()
+                    .article(ArticleDto.fromEntity(lig.getArticle()))
+                    .dateMouvement(Instant.now())
+                    .typeMouvementStock(TypeMouvementStock.SORTIE)
+                    .sourceMouvementStock(SourceMouvementStock.VENTE)
+                    .quantite(lig.getQuantite())
+                    .entrepriseId(lig.getEntrepriseId())
+                    .build();
+            mouvementStockService.entreeStock(mouvementStockDto);
+
     }
 }

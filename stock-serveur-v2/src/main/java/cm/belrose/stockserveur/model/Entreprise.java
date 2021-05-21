@@ -5,6 +5,12 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
+
+/**
+ * @author NGNAWEN
+ * @since 10/04/2021
+ */
 @Data
 @Builder
 @AllArgsConstructor
@@ -15,10 +21,15 @@ public class Entreprise extends Auditable<String> implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nom;
     private String codeFiscal;
+    private String nom;
     private String email;
     private String logo;
+    private String siteWeb;
+    private String numeroTelephone;
+    private String description;
     @Embedded
     private Adresse adresse;
+    @OneToMany(mappedBy = "entreprise")
+    private List<Users> usersList;
 }

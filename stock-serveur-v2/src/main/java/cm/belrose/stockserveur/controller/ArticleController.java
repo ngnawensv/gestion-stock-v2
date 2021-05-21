@@ -2,6 +2,9 @@ package cm.belrose.stockserveur.controller;
 
 import cm.belrose.stockserveur.controller.api.ArticleApi;
 import cm.belrose.stockserveur.dto.ArticleDto;
+import cm.belrose.stockserveur.dto.LigneCommandeClientDto;
+import cm.belrose.stockserveur.dto.LigneCommandeFournisseurDto;
+import cm.belrose.stockserveur.dto.LigneVenteDto;
 import cm.belrose.stockserveur.model.Article;
 import cm.belrose.stockserveur.payload.response.MessageResponse;
 import cm.belrose.stockserveur.service.ArticleService;
@@ -55,6 +58,26 @@ public class ArticleController  implements ArticleApi {
     @Override
     public List<ArticleDto> findAll() {
         return articleService.findAll();
+    }
+
+    @Override
+    public List<LigneVenteDto> findHistoriqueVentes(Long idArticle) {
+        return articleService.findHistoriqueVentes(idArticle);
+    }
+
+    @Override
+    public List<LigneCommandeClientDto> findHistoriqueCommandeClient(Long idArticle) {
+        return articleService.findHistoriqueCommandeClient(idArticle);
+    }
+
+    @Override
+    public List<LigneCommandeFournisseurDto> findHistoriqueCommandeFournisseur(Long idArticle) {
+        return articleService.findHistoriqueCommandeFournisseur(idArticle);
+    }
+
+    @Override
+    public List<ArticleDto> findAllArticleByIdCategorie(Long idCategorie) {
+        return articleService.findAllArticleByIdCategorie(idCategorie);
     }
 
     @Override

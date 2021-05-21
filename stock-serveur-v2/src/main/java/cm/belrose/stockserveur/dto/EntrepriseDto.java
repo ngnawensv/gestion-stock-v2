@@ -3,23 +3,37 @@ package cm.belrose.stockserveur.dto;
 import cm.belrose.stockserveur.model.Adresse;
 import cm.belrose.stockserveur.model.Client;
 import cm.belrose.stockserveur.model.Entreprise;
+import cm.belrose.stockserveur.model.Users;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Embedded;
+import javax.persistence.OneToMany;
+import java.util.List;
+
+/**
+ * @author NGNAWEN
+ * @since
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 public class EntrepriseDto {
     private Long id;
-    private String nom;
     private String codeFiscal;
+    private String nom;
     private String email;
     private String logo;
+    private String siteWeb;
+    private String numeroTelephone;
+    private String description;
     private AdresseDto adresse;
+    @JsonIgnore
+    private List<UsersDto> usersList;
 
     public static EntrepriseDto fromEntity(Entreprise entity){
         if(entity==null){
@@ -31,6 +45,9 @@ public class EntrepriseDto {
                 .nom(entity.getNom())
                 .codeFiscal(entity.getCodeFiscal())
                 .email(entity.getEmail())
+                .numeroTelephone(entity.getNumeroTelephone())
+                .siteWeb(entity.getSiteWeb())
+                .description(entity.getDescription())
                 .logo(entity.getLogo())
                 .adresse(AdresseDto.fromEntity(entity.getAdresse()))
                 .build();
@@ -42,14 +59,17 @@ public class EntrepriseDto {
             return null;
         }
         //Construction d'un objet de type Entreprise (EntrepriseDto==>Entreprise)
-        Entreprise entreprise=new Entreprise();
-        entreprise.setId(dto.getId());
-        entreprise.setNom(dto.getNom());
-        entreprise.setCodeFiscal(dto.getCodeFiscal());
-        entreprise.setEmail(dto.getEmail());
-        entreprise.setLogo(dto.getLogo());
-        entreprise.setAdresse(AdresseDto.toEntity(dto.getAdresse()));
-        return entreprise;
+        return Entreprise.builder()
+                .id(dto.getId())
+                .nom(dto.getNom())
+                .codeFiscal(dto.getCodeFiscal())
+                .numeroTelephone(dto.getNumeroTelephone())
+                .siteWeb(dto.getSiteWeb())
+                .description(dto.getDescription())
+                .email(dto.getEmail())
+                .logo(dto.getLogo())
+                .adresse(AdresseDto.toEntity(dto.getAdresse()))
+                .build();
 
     }
 }

@@ -42,7 +42,7 @@ public class ClientDto {
                 .dateNaissance(entity.getDateNaissance())
                 .lieuNaissance(entity.getLieuNaissance())
                 .email(entity.getEmail())
-                .numTel(entity.getNumTel())
+                .numTel(entity.getNumeroTelephone())
                 .photo(entity.getPhoto())
                 .entrepriseId(entity.getEntrepriseId())
                 .adresse(AdresseDto.fromEntity(entity.getAdresse()))
@@ -63,7 +63,7 @@ public class ClientDto {
         client.setDateNaissance(dto.getDateNaissance());
         client.setLieuNaissance(dto.lieuNaissance);
         client.setEmail(dto.getEmail());
-        client.setNumTel(dto.getNumTel());
+        client.setNumeroTelephone(dto.getNumTel());
         client.setPhoto(dto.getPhoto());
         client.setEntrepriseId(dto.getEntrepriseId());
         client.setAdresse(AdresseDto.toEntity(dto.getAdresse()));

@@ -7,6 +7,7 @@ cm\belrose\stockserveur\controller\api\VenteApi.class
 cm\belrose\stockserveur\repository\CommandeClientRepository.class
 cm\belrose\stockserveur\dto\auth\AuthenticationRequest.class
 cm\belrose\stockserveur\model\RoleEnum.class
+cm\belrose\stockserveur\controller\api\UsersApi.class
 cm\belrose\stockserveur\dto\EntrepriseDto$EntrepriseDtoBuilder.class
 cm\belrose\stockserveur\model\Categorie$CategorieBuilder.class
 cm\belrose\stockserveur\service\VenteService.class
@@ -15,10 +16,10 @@ cm\belrose\stockserveur\model\SousCategorie.class
 cm\belrose\stockserveur\dto\EntrepriseDto.class
 cm\belrose\stockserveur\service\impl\ClientServiceImpl.class
 cm\belrose\stockserveur\config\audit\AuditorAwareImpl.class
+cm\belrose\stockserveur\controller\UsersController.class
 cm\belrose\stockserveur\dto\ArticleDto$ArticleDtoBuilder.class
 cm\belrose\stockserveur\service\RolesService.class
 cm\belrose\stockserveur\repository\LigneCommandeClientRepository.class
-cm\belrose\stockserveur\controller\api\UserApi.class
 cm\belrose\stockserveur\model\LigneVente$LigneVenteBuilder.class
 cm\belrose\stockserveur\dto\CommandeClientDto.class
 cm\belrose\stockserveur\dto\LigneCommandeClientDto.class
@@ -55,6 +56,7 @@ cm\belrose\stockserveur\service\ClientService.class
 cm\belrose\stockserveur\model\SousCategorie$SousCategorieBuilder.class
 cm\belrose\stockserveur\dto\ClientDto.class
 cm\belrose\stockserveur\exceptions\handlers\ErrorDto$ErrorDtoBuilder.class
+cm\belrose\stockserveur\repository\RolesRepository.class
 cm\belrose\stockserveur\dto\SousCategorieDto.class
 cm\belrose\stockserveur\model\LigneVente.class
 cm\belrose\stockserveur\dto\ClientDto$ClientDtoBuilder.class
@@ -65,6 +67,7 @@ cm\belrose\stockserveur\model\Users$UsersBuilder.class
 cm\belrose\stockserveur\validator\CommandeFournisseurValidator.class
 cm\belrose\stockserveur\payload\response\MessageResponse.class
 cm\belrose\stockserveur\exceptions\handlers\ErrorDto.class
+cm\belrose\stockserveur\controller\RolesController.class
 cm\belrose\stockserveur\validator\ArticleValidator.class
 cm\belrose\stockserveur\payload\response\JwtResponse.class
 cm\belrose\stockserveur\validator\RoleValidator.class
@@ -80,7 +83,6 @@ cm\belrose\stockserveur\model\Users.class
 cm\belrose\stockserveur\controller\api\ClientApi.class
 cm\belrose\stockserveur\model\Adresse.class
 cm\belrose\stockserveur\model\Client.class
-cm\belrose\stockserveur\repository\RoleRepository.class
 cm\belrose\stockserveur\dto\MouvementStockDto.class
 cm\belrose\stockserveur\validator\UserValidator.class
 cm\belrose\stockserveur\dto\LigneVenteDto.class
@@ -92,7 +94,6 @@ cm\belrose\stockserveur\model\CommandeFournisseur.class
 cm\belrose\stockserveur\model\MouvementStockType.class
 cm\belrose\stockserveur\service\impl\CategorieServiceImpl.class
 cm\belrose\stockserveur\dto\LigneCommandeFournisseurDto.class
-cm\belrose\stockserveur\controller\RoleController.class
 cm\belrose\stockserveur\dto\SousCategorieDto$SousCategorieDtoBuilder.class
 cm\belrose\stockserveur\repository\CommandeFournisseurRepository.class
 cm\belrose\stockserveur\service\impl\CommandeFournisseurServiceImpl.class
@@ -146,9 +147,9 @@ cm\belrose\stockserveur\validator\VenteValidator.class
 cm\belrose\stockserveur\controller\CommandeClientController.class
 cm\belrose\stockserveur\dto\LigneVenteDto$LigneVenteDtoBuilder.class
 cm\belrose\stockserveur\repository\CategorieRepository.class
+cm\belrose\stockserveur\controller\api\RolesApi.class
 cm\belrose\stockserveur\dto\ArticleDto.class
 cm\belrose\stockserveur\controller\ArticleController.class
-cm\belrose\stockserveur\controller\UserController.class
 cm\belrose\stockserveur\dto\FournisseurDto.class
 cm\belrose\stockserveur\config\jwt\JwtRequestFilter.class
 cm\belrose\stockserveur\model\CommandeFournisseur$CommandeFournisseurBuilder.class
@@ -156,7 +157,6 @@ cm\belrose\stockserveur\dto\LigneCommandeFournisseurDto$LigneCommandeFournisseur
 cm\belrose\stockserveur\controller\MouvementStockController.class
 cm\belrose\stockserveur\dto\RolesDto.class
 cm\belrose\stockserveur\StockserveurApplication.class
-cm\belrose\stockserveur\controller\api\RoleApi.class
 cm\belrose\stockserveur\payload\request\SignupRequest.class
 cm\belrose\stockserveur\config\audit\Auditable.class
 cm\belrose\stockserveur\payload\request\LoginRequest.class

@@ -14,7 +14,6 @@ import java.util.List;
  *
  */
 public class CategorieValidator {
-
     public static List<String> validator(CategorieDto dto){
         List<String> errors=new ArrayList<>();
         if(dto==null||!StringUtils.hasLength(dto.getCode())){

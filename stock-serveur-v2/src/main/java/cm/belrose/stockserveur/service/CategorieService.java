@@ -7,7 +7,6 @@ import java.util.List;
 
 /**
  * Le 11/11/2020
- *
  * @author Ngnawen Samuel
  */
 public interface CategorieService {
@@ -22,9 +21,4 @@ public interface CategorieService {
 
     void delete(Long id);
 
-    Article update(CategorieDto dto);
-
-    void deleteAll();
-
-    List<Article> findByNomContaining(String libelle);
 }

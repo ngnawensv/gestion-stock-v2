@@ -7,12 +7,15 @@ import lombok.Builder;
 import lombok.Data;
 
 import javax.persistence.ManyToOne;
+import java.math.BigDecimal;
 
 @Builder
 @Data
 public class LigneCommandeClientDto {
     private Long id;
     private ArticleDto article;
+    private BigDecimal quantite;
+    private BigDecimal prixUnitaire;
     private CommandeClientDto commandeClient;
     private Long entrepriseId;
 

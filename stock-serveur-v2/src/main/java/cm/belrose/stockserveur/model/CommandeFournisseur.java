@@ -30,6 +30,7 @@ public class CommandeFournisseur extends Auditable<String> implements Serializab
     private String code;
     @Column(name = "date_commande")
     private Instant dateCommande;
+    private EtatCommande etatCommande;
     @NotAudited
     @ManyToOne
     @JoinColumn(name = "fournisseur_id")

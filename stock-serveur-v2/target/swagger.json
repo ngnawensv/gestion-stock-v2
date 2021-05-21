@@ -244,7 +244,7 @@
       "get" : {
         "summary" : "Recherche  d'une categorie",
         "description" : "Cette methode permet de rechercher une categorie par son code",
-        "operationId" : "findCategorieByCode",
+        "operationId" : "findByCode",
         "produces" : [ "application/json" ],
         "responses" : {
           "200" : {
@@ -555,6 +555,14 @@
         "operationId" : "save",
         "consumes" : [ "application/json" ],
         "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/EntrepriseDto"
+          }
+        } ],
         "responses" : {
           "200" : {
             "description" : "successful operation",
@@ -672,7 +680,6 @@
     },
     "/api2/roles" : {
       "get" : {
-        "tags" : [ "api2roles" ],
         "operationId" : "findAll",
         "produces" : [ "application/json" ],
         "responses" : {
@@ -688,18 +695,9 @@
         }
       },
       "post" : {
-        "tags" : [ "api2roles" ],
         "operationId" : "save",
         "consumes" : [ "application/json" ],
         "produces" : [ "application/json" ],
-        "parameters" : [ {
-          "in" : "body",
-          "name" : "body",
-          "required" : false,
-          "schema" : {
-            "$ref" : "#/definitions/RolesDto"
-          }
-        } ],
         "responses" : {
           "default" : {
             "description" : "successful operation"
@@ -709,16 +707,8 @@
     },
     "/api2/roles/{id}" : {
       "get" : {
-        "tags" : [ "api2roles" ],
         "operationId" : "findById",
         "produces" : [ "application/json" ],
-        "parameters" : [ {
-          "name" : "id",
-          "in" : "path",
-          "required" : true,
-          "type" : "integer",
-          "format" : "int64"
-        } ],
         "responses" : {
           "200" : {
             "description" : "successful operation",
@@ -839,6 +829,7 @@
     },
     "/api2/users" : {
       "get" : {
+        "tags" : [ "api2users" ],
         "operationId" : "findAll",
         "produces" : [ "application/json" ],
         "responses" : {
@@ -869,16 +860,8 @@
     },
     "/api2/users/{id}" : {
       "get" : {
-        "tags" : [ "api2users" ],
         "operationId" : "findById",
         "produces" : [ "application/json" ],
-        "parameters" : [ {
-          "name" : "id",
-          "in" : "path",
-          "required" : true,
-          "type" : "integer",
-          "format" : "int64"
-        } ],
         "responses" : {
           "200" : {
             "description" : "successful operation",
@@ -889,15 +872,7 @@
         }
       },
       "delete" : {
-        "tags" : [ "api2users" ],
         "operationId" : "delete",
-        "parameters" : [ {
-          "name" : "id",
-          "in" : "path",
-          "required" : true,
-          "type" : "integer",
-          "format" : "int64"
-        } ],
         "responses" : {
           "default" : {
             "description" : "successful operation"
@@ -1210,12 +1185,6 @@
         "entrepriseId" : {
           "type" : "integer",
           "format" : "int64"
-        },
-        "articleList" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "#/definitions/Article"
-          }
         }
       }
     },
@@ -1494,8 +1463,17 @@
         "nom" : {
           "type" : "string"
         },
+        "codeFiscal" : {
+          "type" : "string"
+        },
+        "email" : {
+          "type" : "string"
+        },
         "logo" : {
           "type" : "string"
+        },
+        "adresse" : {
+          "$ref" : "#/definitions/AdresseDto"
         }
       }
     },
