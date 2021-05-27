@@ -25,6 +25,11 @@ public class UsersController implements UsersApi {
     }
 
     @Override
+    public UsersDto findByEmail(String email) {
+        return usersService.findUsersByEmail(email);
+    }
+
+    @Override
     public List<UsersDto> findAll() {
         return usersService.findAll();
     }

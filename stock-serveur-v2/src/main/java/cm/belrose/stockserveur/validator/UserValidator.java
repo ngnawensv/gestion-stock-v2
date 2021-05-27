@@ -40,7 +40,7 @@ public class UserValidator {
         if(dto.getAdresse()==null){
             errors.add("Veuillez renseigner l'adresse de l'utilisateur");
         }else{
-            if(!StringUtils.hasLength(dto.getAdresse().getAdresse1())){
+            if(!StringUtils.hasLength(dto.getAdresse().getRue())){
                 errors.add("Le champs adresse 1 de l'utilisateur");
             }
             if(!StringUtils.hasLength(dto.getAdresse().getCodePostale())){

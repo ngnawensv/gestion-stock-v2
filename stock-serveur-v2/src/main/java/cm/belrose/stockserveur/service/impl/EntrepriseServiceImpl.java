@@ -48,9 +48,32 @@ public class EntrepriseServiceImpl implements EntrepriseService {
             log.error(" Entreprise non valide {}", dto);
             throw new InvalidEntityException("L'entreprise n'est pas valide", ErrorCodes.ENTREPRISE_NOT_VALID, errors);
         }
-        return EntrepriseDto.fromEntity(entrepriseRepository.save(EntrepriseDto.toEntity(dto)));
+        EntrepriseDto saveEntreprise=EntrepriseDto.fromEntity(entrepriseRepository.save(EntrepriseDto.toEntity(dto)));
+        UsersDto usersDto= fromEntreprise(saveEntreprise);
+        RolesDto rolesDto=RolesDto.fromEntity(rolesRepository.findByName(RoleEnum.ROLE_ADMIN).get());
+        Set<RolesDto> rolesDtoSet=new HashSet<>();
+        rolesDtoSet.add(rolesDto);
+        usersDto.setRoles(rolesDtoSet);
+        UsersDto savedUser=usersService.save(usersDto);
+
+        return saveEntreprise;
     }
 
+    private UsersDto fromEntreprise(EntrepriseDto dto) {
+        return UsersDto.builder()
+                .adresse(dto.getAdresse())
+                .nom(dto.getNom())
+                .prenom(dto.getCodeFiscal())
+                .email(dto.getEmail())
+                .password(generateRandomPassword())
+                .entreprise(dto)
+                .dateNaissance(Instant.now())
+                .photo(dto.getLogo())
+                .build();
+    }
+    private String generateRandomPassword() {
+        return passwordEncoder.encode(Constant.DEFAULT_ADMIN_PASSWORD);
+    }
     @Override
     public EntrepriseDto findById(Long id) {
         if(id==null){

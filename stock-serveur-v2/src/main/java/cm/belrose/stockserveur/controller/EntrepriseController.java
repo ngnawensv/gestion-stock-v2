@@ -4,10 +4,12 @@ import cm.belrose.stockserveur.controller.api.EntrepriseApi;
 import cm.belrose.stockserveur.dto.EntrepriseDto;
 import cm.belrose.stockserveur.service.EntrepriseService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 public class EntrepriseController implements EntrepriseApi {
 

@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: cm.belrose.stockserveur.service.impl.CategorieServiceImplTest
 -------------------------------------------------------------------------------
-Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.105 s - in cm.belrose.stockserveur.service.impl.CategorieServiceImplTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.209 s - in cm.belrose.stockserveur.service.impl.CategorieServiceImplTest

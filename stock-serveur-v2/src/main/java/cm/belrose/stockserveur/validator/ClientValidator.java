@@ -40,8 +40,8 @@ public class ClientValidator {
         if(dto.getAdresse()==null){
             errors.add("Veuillez renseigner l'adresse du client");
         }else{
-            if(!StringUtils.hasLength(dto.getAdresse().getAdresse1())){
-                errors.add("Le champs adresse 1 du client");
+            if(!StringUtils.hasLength(dto.getAdresse().getRue())){
+                errors.add("Le champs rue du client");
             }
             if(!StringUtils.hasLength(dto.getAdresse().getCodePostale())){
                 errors.add("Le champs code postale du client");

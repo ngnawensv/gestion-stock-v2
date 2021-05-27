@@ -1,5 +1,6 @@
 package cm.belrose.stockserveur.controller;
 
+import cm.belrose.stockserveur.controller.api.AuthenticationApi;
 import cm.belrose.stockserveur.dto.auth.AuthenticationRequest;
 import cm.belrose.stockserveur.dto.auth.AuthenticationResponse;
 import cm.belrose.stockserveur.model.auth.ExtendedUser;
@@ -12,17 +13,14 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import static cm.belrose.stockserveur.config.constants.Constant.APP_ROOT;
 
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
-@RequestMapping(APP_ROOT)
 @Slf4j
-public class AuthenticationController {
+public class AuthenticationController implements AuthenticationApi {
 
     @Autowired
     private AuthenticationManager authenticationManager;
@@ -33,12 +31,12 @@ public class AuthenticationController {
     @Autowired
     private JwtUtil jwtUtil;
 
-    @PostMapping("/authenticate")
+    @Override
     public ResponseEntity<AuthenticationResponse> authenticate(@RequestBody AuthenticationRequest request) throws Exception {
-        log.info("Inside the authenticate method...........");
         authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(request.getLogin(), request.getPassword()));
         final UserDetails userDetails = userDetailsServiceImpl.loadUserByUsername(request.getLogin());
         final String jwt = jwtUtil.generateToken((ExtendedUser) userDetails);
+        log.info("Token is successful generate......................");
         return ResponseEntity.ok(AuthenticationResponse.builder().accessToken(jwt).build());
     }
 }

@@ -53,7 +53,7 @@ public class Users extends Auditable<String> implements Serializable {
     @JoinTable(	name = "users_roles",
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id"))
-    private Set<Roles> roles = new HashSet<>();
+    private Set<Roles> roles;
 
     public Users(String username, String email, String password, Entreprise entreprise, Set<Roles> roles) {
         this.username = username;

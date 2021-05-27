@@ -24,9 +24,8 @@ class EntrepriseServiceImplTest {
     @Test
     public void shouldSaveEntrepriseWithSuccess(){
         AdresseDto adresseDto=AdresseDto.builder()
-                .adresse1("Adresse")
-                .adresse2("Adresse 2")
                 .codePostale("Code postale")
+                .rue("rue")
                 .pays("Pays")
                 .ville("Ville")
                 .build();
@@ -35,6 +34,9 @@ class EntrepriseServiceImplTest {
                 .nom("nom_entr1")
                 .email("email_entr1")
                 .logo("logo_entr1")
+                .siteWeb("siteWeb")
+                .numeroTelephone("numeroTelephone")
+                .description("description")
                 .adresse(adresseDto)
                 .build();
 
@@ -47,6 +49,9 @@ class EntrepriseServiceImplTest {
         assertEquals(expectedEntreprise.getNom(),saveEntreprise.getNom());
         assertEquals(expectedEntreprise.getEmail(),saveEntreprise.getEmail());
         assertEquals(expectedEntreprise.getLogo(),saveEntreprise.getLogo());
+        assertEquals(expectedEntreprise.getSiteWeb(),saveEntreprise.getSiteWeb());
+        assertEquals(expectedEntreprise.getNumeroTelephone(),saveEntreprise.getNumeroTelephone());
+        assertEquals(expectedEntreprise.getDescription(),saveEntreprise.getDescription());
         assertEquals(expectedEntreprise.getAdresse(),saveEntreprise.getAdresse());
 
     }

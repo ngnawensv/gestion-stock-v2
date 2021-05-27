@@ -1,14 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: cm.belrose.stockserveur.GestionstockmvcApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 16.238 s <<< FAILURE! - in cm.belrose.stockserveur.GestionstockmvcApplicationTests
-contextLoads  Time elapsed: 0.001 s  <<< ERROR!
-java.lang.IllegalStateException: Failed to load ApplicationContext
-Caused by: java.lang.IllegalStateException: Failed to execute CommandLineRunner
-Caused by: org.springframework.dao.InvalidDataAccessResourceUsageException: could not prepare statement; SQL [insert into stock_audit_v2.revinfo (rev, revtstmp) values (null, ?)]; nested exception is org.hibernate.exception.SQLGrammarException: could not prepare statement
-Caused by: org.hibernate.exception.SQLGrammarException: could not prepare statement
-Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: 
-Schéma "stock_audit_v2" non trouvé
-Schema "stock_audit_v2" not found; SQL statement:
-insert into stock_audit_v2.revinfo (rev, revtstmp) values (null, ?) [90079-198]
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.843 s - in cm.belrose.stockserveur.GestionstockmvcApplicationTests

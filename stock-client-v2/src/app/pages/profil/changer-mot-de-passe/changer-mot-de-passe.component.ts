@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Api2categoriesService } from 'src/gs-api/src/services';
 
 @Component({
   selector: 'app-changer-mot-de-passe',
@@ -8,9 +9,15 @@ import { Router } from '@angular/router';
 })
 export class ChangerMotDePasseComponent implements OnInit {
 
-  constructor(private route:Router) { }
+  constructor(
+    private utili:Api2categoriesService,
+    private route:Router
+    ) { }
 
   ngOnInit(): void {
+    this.utili.findAll().subscribe(res=>{
+
+    })
   }
 
   cancelClick():void{

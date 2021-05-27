@@ -17,10 +17,10 @@ import static cm.belrose.stockserveur.config.constants.Constant.APP_ROOT;
 import static cm.belrose.stockserveur.config.constants.Constant.ARTICLE_ENDPOINT;
 
 @Api(ARTICLE_ENDPOINT)
-@RequestMapping()
+//@RequestMapping()
 public interface ArticleApi {
 
-    @PostMapping(value=ARTICLE_ENDPOINT, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value=ARTICLE_ENDPOINT)
     @ApiOperation(value = "Enregistrement d'un article",
             notes = "Cette methode permet d'enregistrer un article" , response = ArticleDto.class)
     @ApiResponses(value = {
@@ -31,7 +31,7 @@ public interface ArticleApi {
 
 
 
-    @PutMapping(value=ARTICLE_ENDPOINT, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping(value=ARTICLE_ENDPOINT)
     @ApiOperation(value = "Modification d'un article",
             notes = "Cette methode permet de modifier un article" , response = ArticleDto.class)
     @ApiResponses(value = {
@@ -41,7 +41,7 @@ public interface ArticleApi {
 
 
 
-    @GetMapping(value=ARTICLE_ENDPOINT+"/{id}",produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value=ARTICLE_ENDPOINT+"/{id}")
     @ApiOperation(value = "Recherche d'un article",
             notes = "Cette methode permet de rechercher un article par son ID" , response = ArticleDto.class)
     @ApiResponses(value = {
@@ -52,7 +52,7 @@ public interface ArticleApi {
 
 
 
-    @GetMapping(value=ARTICLE_ENDPOINT+"/{code}",produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value=ARTICLE_ENDPOINT+"/{code}")
     @ApiOperation(value = "Recherche  d'un article",
             notes = "Cette methode permet de rechercher un article par son code" , response = ArticleDto.class)
     @ApiResponses(value = {
@@ -61,7 +61,7 @@ public interface ArticleApi {
     })
     ArticleDto findByCode(@PathVariable("code") String code);
 
-    @GetMapping(value=ARTICLE_ENDPOINT,produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value=ARTICLE_ENDPOINT)
     @ApiOperation(value = "Renvoie d'une liste des articles",
             notes = "Cette methode permet de rechercher et renvoyer  la liste des categorie de la base de données" ,
             responseContainer = "List<ArticleDto>")
@@ -70,16 +70,16 @@ public interface ArticleApi {
     })
     List<ArticleDto> findAll();
 
-    @GetMapping(value=ARTICLE_ENDPOINT+"/historique/vente/{idArticle}",produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value=ARTICLE_ENDPOINT+"/historique/vente/{idArticle}")
     public List<LigneVenteDto> findHistoriqueVentes(@PathVariable("idArticle") Long idArticle);
 
-    @GetMapping(value=ARTICLE_ENDPOINT+"/historique/commandeclient/{idArticle}",produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value=ARTICLE_ENDPOINT+"/historique/commandeclient/{idArticle}")
     public List<LigneCommandeClientDto> findHistoriqueCommandeClient(@PathVariable("idArticle") Long idArticle);
 
-    @GetMapping(value=ARTICLE_ENDPOINT+"/historique/commandefournisseur/{idArticle}",produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value=ARTICLE_ENDPOINT+"/historique/commandefournisseur/{idArticle}")
     public List<LigneCommandeFournisseurDto> findHistoriqueCommandeFournisseur(@PathVariable("idArticle") Long idArticle);
 
-    @GetMapping(value=ARTICLE_ENDPOINT+"/historique/filtre/categorie/{idCategorie}",produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value=ARTICLE_ENDPOINT+"/historique/filtre/categorie/{idCategorie}")
     public List<ArticleDto> findAllArticleByIdCategorie(@PathVariable("idCategorie") Long idCategorie);
 
     @DeleteMapping(value=ARTICLE_ENDPOINT+"/{id}")

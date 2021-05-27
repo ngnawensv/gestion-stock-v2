@@ -16,10 +16,9 @@ import lombok.Data;
 @Builder
 @Data
 public class AdresseDto {
-    private String adresse1;
-    private String adresse2;
-    private String ville;
     private String codePostale;
+    private String rue;
+    private String ville;
     private String pays;
 
     /**
@@ -34,6 +33,7 @@ public class AdresseDto {
         //Construction d'un objet de type AdresseDto (Adresse==>AdresseDto)
         return AdresseDto.builder()
                 .codePostale(entity.getCodePostale())
+                .rue(entity.getRue())
                 .ville(entity.getVille())
                 .pays(entity.getPays())
                 .build();
@@ -49,6 +49,7 @@ public class AdresseDto {
         //Construction d'un objet de type Adresse (AdresseDto==>Adresse)
         return Adresse.builder()
                 .codePostale(dto.getCodePostale())
+                .rue(dto.getRue())
                 .pays(dto.getPays())
                 .ville(dto.getVille())
                 .build();

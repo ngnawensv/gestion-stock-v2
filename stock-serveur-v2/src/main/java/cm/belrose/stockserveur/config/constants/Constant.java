@@ -15,6 +15,7 @@ public interface Constant {
     String CATEGORIE_ENDPOINT=APP_ROOT+"/categories";
     String ENTREPRISE_ENDPOINT=APP_ROOT+"/entreprises";
     String AUTHENTICATION_ENDPOINT=APP_ROOT+"/authenticate";
+    String USER_ENDPOINT=APP_ROOT+"/users";
 
 
 }

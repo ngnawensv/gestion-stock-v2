@@ -11,7 +11,7 @@ import static cm.belrose.stockserveur.config.constants.Constant.AUTHENTICATION_E
 
 @Api(AUTHENTICATION_ENDPOINT)
 public interface AuthenticationApi {
-    @PostMapping(AUTHENTICATION_ENDPOINT+"/authentication")
-    ResponseEntity<AuthenticationResponse> authentication(@RequestBody AuthenticationRequest request);
+    @PostMapping(AUTHENTICATION_ENDPOINT)
+    public ResponseEntity<AuthenticationResponse> authenticate(@RequestBody AuthenticationRequest request) throws Exception;
 
 }

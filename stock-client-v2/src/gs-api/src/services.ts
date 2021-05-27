@@ -1,0 +1,14 @@
+export { ApiService } from './services/api.service';
+export { Api2articlesService } from './services/api-2articles.service';
+export { Api2authenticateService } from './services/api-2authenticate.service';
+export { Api2categoriesService } from './services/api-2categories.service';
+export { Api2clientsService } from './services/api-2clients.service';
+export { Api2commandesFournisseursService } from './services/api-2commandes-fournisseurs.service';
+export { Api2commandesclientsService } from './services/api-2commandesclients.service';
+export { Api2entreprisesService } from './services/api-2entreprises.service';
+export { Api2fournisseursService } from './services/api-2fournisseurs.service';
+export { Api2mouvementstockService } from './services/api-2mouvementstock.service';
+export { Api2rolesService } from './services/api-2roles.service';
+export { Api2souscategoriesService } from './services/api-2souscategories.service';
+export { Api2usersService } from './services/api-2users.service';
+export { Api2ventesService } from './services/api-2ventes.service';

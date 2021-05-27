@@ -21,11 +21,15 @@
   }, {
     "name" : "api2commandesclients"
   }, {
-    "name" : "api2commandesfournisseurs"
+    "name" : "api2commandesFournisseurs"
   }, {
     "name" : "api2entreprises"
   }, {
     "name" : "api2fournisseurs"
+  }, {
+    "name" : "api2mouvementstock"
+  }, {
+    "name" : "api2photos"
   }, {
     "name" : "api2roles"
   }, {
@@ -41,7 +45,6 @@
         "summary" : "Renvoie d'une liste des articles",
         "description" : "Cette methode permet de rechercher et renvoyer  la liste des categorie de la base de données",
         "operationId" : "findAll",
-        "produces" : [ "application/json" ],
         "responses" : {
           "200" : {
             "description" : "Liste des aticles / Liste vide",
@@ -58,8 +61,6 @@
         "summary" : "Enregistrement d'un article",
         "description" : "Cette methode permet d'enregistrer un article",
         "operationId" : "save",
-        "consumes" : [ "application/json" ],
-        "produces" : [ "application/json" ],
         "responses" : {
           "200" : {
             "description" : "Article créee avec succès",
@@ -77,8 +78,6 @@
         "summary" : "Modification d'un article",
         "description" : "Cette methode permet de modifier un article",
         "operationId" : "update",
-        "consumes" : [ "application/json" ],
-        "produces" : [ "application/json" ],
         "parameters" : [ {
           "in" : "body",
           "name" : "body",
@@ -97,13 +96,84 @@
         }
       }
     },
+    "/api2/articles/historique/commandeclient/{idArticle}" : {
+      "get" : {
+        "operationId" : "findHistoriqueCommandeClient",
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/LigneCommandeClientDto"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api2/articles/historique/commandefournisseur/{idArticle}" : {
+      "get" : {
+        "tags" : [ "api2articles" ],
+        "operationId" : "findHistoriqueCommandeFournisseur",
+        "parameters" : [ {
+          "name" : "idArticle",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/LigneCommandeFournisseurDto"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api2/articles/historique/filtre/categorie/{idCategorie}" : {
+      "get" : {
+        "operationId" : "findAllArticleByIdCategorie",
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/ArticleDto"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api2/articles/historique/vente/{idArticle}" : {
+      "get" : {
+        "operationId" : "findHistoriqueVentes",
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/LigneVenteDto"
+              }
+            }
+          }
+        }
+      }
+    },
     "/api2/articles/{code}" : {
       "get" : {
         "tags" : [ "api2articles" ],
         "summary" : "Recherche  d'un article",
         "description" : "Cette methode permet de rechercher un article par son code",
         "operationId" : "findByCode",
-        "produces" : [ "application/json" ],
         "parameters" : [ {
           "name" : "code",
           "in" : "path",
@@ -129,7 +199,6 @@
         "summary" : "Recherche d'un article",
         "description" : "Cette methode permet de rechercher un article par son ID",
         "operationId" : "findById",
-        "produces" : [ "application/json" ],
         "parameters" : [ {
           "name" : "id",
           "in" : "path",
@@ -171,10 +240,10 @@
         }
       }
     },
-    "/api2/authenticate/authentication" : {
+    "/api2/authenticate" : {
       "post" : {
         "tags" : [ "api2authenticate" ],
-        "operationId" : "authentication",
+        "operationId" : "authenticate",
         "parameters" : [ {
           "in" : "body",
           "name" : "body",
@@ -235,12 +304,15 @@
             }
           },
           "400" : {
-            "description" : "Objet catégorie non valide"
+            "description" : "Catégorie à enregistré non valide"
+          },
+          "500" : {
+            "description" : "Erreur d'enregistrement de la catégorie"
           }
         }
       }
     },
-    "/api2/categories/{code}" : {
+    "/api2/categories/code/{code}" : {
       "get" : {
         "summary" : "Recherche  d'une categorie",
         "description" : "Cette methode permet de rechercher une categorie par son code",
@@ -361,83 +433,51 @@
         }
       }
     },
-    "/api2/commandeClients" : {
+    "/api2/commandesFournisseurs/all" : {
       "get" : {
-        "tags" : [ "api2commandesclients" ],
         "operationId" : "findAll",
-        "produces" : [ "application/json" ],
         "responses" : {
           "200" : {
             "description" : "successful operation",
             "schema" : {
               "type" : "array",
               "items" : {
-                "$ref" : "#/definitions/CommandeClientDto"
+                "$ref" : "#/definitions/CommandeFournisseurDto"
               }
             }
           }
         }
-      },
+      }
+    },
+    "/api2/commandesFournisseurs/create" : {
       "post" : {
-        "tags" : [ "api2commandesclients" ],
         "operationId" : "save",
-        "consumes" : [ "application/json" ],
-        "produces" : [ "application/json" ],
-        "parameters" : [ {
-          "in" : "body",
-          "name" : "body",
-          "required" : false,
-          "schema" : {
-            "$ref" : "#/definitions/CommandeClientDto"
-          }
-        } ],
         "responses" : {
           "200" : {
             "description" : "successful operation",
             "schema" : {
-              "$ref" : "#/definitions/CommandeClientDto"
+              "$ref" : "#/definitions/CommandeFournisseurDto"
             }
           }
         }
       }
     },
-    "/api2/commandeClients/{code}" : {
-      "get" : {
-        "operationId" : "findCommandeClientByCode",
-        "produces" : [ "application/json" ],
-        "responses" : {
-          "200" : {
-            "description" : "successful operation",
-            "schema" : {
-              "$ref" : "#/definitions/CommandeClientDto"
-            }
-          }
-        }
-      }
-    },
-    "/api2/commandeClients/{id}" : {
-      "get" : {
-        "tags" : [ "api2commandesclients" ],
-        "operationId" : "findById",
-        "produces" : [ "application/json" ],
-        "parameters" : [ {
-          "name" : "id",
-          "in" : "path",
-          "required" : true,
-          "type" : "integer",
-          "format" : "int64"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "successful operation",
-            "schema" : {
-              "$ref" : "#/definitions/CommandeClientDto"
-            }
-          }
-        }
-      },
+    "/api2/commandesFournisseurs/delete/article/{idCommande}/{idLigneCommande}" : {
       "delete" : {
-        "tags" : [ "api2commandesclients" ],
+        "operationId" : "deleteArticle",
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/CommandeFournisseurDto"
+            }
+          }
+        }
+      }
+    },
+    "/api2/commandesFournisseurs/delete/{id}" : {
+      "delete" : {
+        "tags" : [ "api2commandesFournisseurs" ],
         "operationId" : "delete",
         "parameters" : [ {
           "name" : "id",
@@ -453,26 +493,47 @@
         }
       }
     },
-    "/api2/commandeFournisseurs" : {
+    "/api2/commandesFournisseurs/lignesCommande/{idCommande}" : {
       "get" : {
-        "operationId" : "findAll",
-        "produces" : [ "application/json" ],
+        "tags" : [ "api2commandesFournisseurs" ],
+        "operationId" : "findAllLignesCommandesFournisseurByCommandeFournisseurId",
+        "parameters" : [ {
+          "name" : "idCommande",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        } ],
         "responses" : {
           "200" : {
             "description" : "successful operation",
             "schema" : {
               "type" : "array",
               "items" : {
-                "$ref" : "#/definitions/CommandeFournisseurDto"
+                "$ref" : "#/definitions/LigneCommandeFournisseurDto"
               }
             }
           }
         }
-      },
-      "post" : {
-        "operationId" : "save",
-        "consumes" : [ "application/json" ],
-        "produces" : [ "application/json" ],
+      }
+    },
+    "/api2/commandesFournisseurs/upadate/client/{idCommande}/{idFournisseur}" : {
+      "patch" : {
+        "tags" : [ "api2commandesFournisseurs" ],
+        "operationId" : "updateFournisseur",
+        "parameters" : [ {
+          "name" : "idCommande",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        }, {
+          "name" : "idClient",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        } ],
         "responses" : {
           "200" : {
             "description" : "successful operation",
@@ -483,11 +544,49 @@
         }
       }
     },
-    "/api2/commandeFournisseurs/{code}" : {
+    "/api2/commandesFournisseurs/update/article/{idCommande}/{idLigneCommande}/{idArticle}" : {
+      "patch" : {
+        "operationId" : "updateArticle",
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/CommandeFournisseurDto"
+            }
+          }
+        }
+      }
+    },
+    "/api2/commandesFournisseurs/update/etat/{idCommande}/{etatCommande}" : {
+      "patch" : {
+        "operationId" : "updateEtatCommande",
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/CommandeFournisseurDto"
+            }
+          }
+        }
+      }
+    },
+    "/api2/commandesFournisseurs/update/quantite/{idCommande}/{idLigneCommande}/{idQuantite}" : {
+      "patch" : {
+        "operationId" : "updateQuantiteCommande",
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/CommandeFournisseurDto"
+            }
+          }
+        }
+      }
+    },
+    "/api2/commandesFournisseurs/{code}" : {
       "get" : {
-        "tags" : [ "api2commandesfournisseurs" ],
-        "operationId" : "findCommandeClientByCode",
-        "produces" : [ "application/json" ],
+        "tags" : [ "api2commandesFournisseurs" ],
+        "operationId" : "findCommandeFournisseurByCode",
         "parameters" : [ {
           "name" : "code",
           "in" : "path",
@@ -504,11 +603,10 @@
         }
       }
     },
-    "/api2/commandeFournisseurs/{id}" : {
+    "/api2/commandesFournisseurs/{id}" : {
       "get" : {
-        "tags" : [ "api2commandesfournisseurs" ],
+        "tags" : [ "api2commandesFournisseurs" ],
         "operationId" : "findById",
-        "produces" : [ "application/json" ],
         "parameters" : [ {
           "name" : "id",
           "in" : "path",
@@ -524,84 +622,53 @@
             }
           }
         }
-      },
-      "delete" : {
-        "operationId" : "delete",
-        "responses" : {
-          "default" : {
-            "description" : "successful operation"
-          }
-        }
       }
     },
-    "/api2/entreprises" : {
+    "/api2/commandesclients/all" : {
       "get" : {
         "operationId" : "findAll",
-        "produces" : [ "application/json" ],
         "responses" : {
           "200" : {
             "description" : "successful operation",
             "schema" : {
               "type" : "array",
               "items" : {
-                "$ref" : "#/definitions/EntrepriseDto"
+                "$ref" : "#/definitions/CommandeClientDto"
               }
             }
           }
         }
-      },
+      }
+    },
+    "/api2/commandesclients/create" : {
       "post" : {
-        "tags" : [ "api2entreprises" ],
         "operationId" : "save",
-        "consumes" : [ "application/json" ],
-        "produces" : [ "application/json" ],
-        "parameters" : [ {
-          "in" : "body",
-          "name" : "body",
-          "required" : false,
-          "schema" : {
-            "$ref" : "#/definitions/EntrepriseDto"
-          }
-        } ],
         "responses" : {
           "200" : {
             "description" : "successful operation",
             "schema" : {
-              "$ref" : "#/definitions/EntrepriseDto"
+              "$ref" : "#/definitions/CommandeClientDto"
             }
           }
         }
       }
     },
-    "/api2/entreprises/{code}" : {
-      "get" : {
-        "operationId" : "findEntrepriseByCode",
-        "produces" : [ "application/json" ],
-        "responses" : {
-          "200" : {
-            "description" : "successful operation",
-            "schema" : {
-              "$ref" : "#/definitions/EntrepriseDto"
-            }
-          }
-        }
-      }
-    },
-    "/api2/entreprises/{id}" : {
-      "get" : {
-        "operationId" : "findById",
-        "produces" : [ "application/json" ],
-        "responses" : {
-          "200" : {
-            "description" : "successful operation",
-            "schema" : {
-              "$ref" : "#/definitions/EntrepriseDto"
-            }
-          }
-        }
-      },
+    "/api2/commandesclients/delete/article/{idCommande}/{idLigneCommande}" : {
       "delete" : {
-        "tags" : [ "api2entreprises" ],
+        "operationId" : "deleteArticle",
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/CommandeClientDto"
+            }
+          }
+        }
+      }
+    },
+    "/api2/commandesclients/delete/{id}" : {
+      "delete" : {
+        "tags" : [ "api2commandesclients" ],
         "operationId" : "delete",
         "parameters" : [ {
           "name" : "id",
@@ -613,6 +680,278 @@
         "responses" : {
           "default" : {
             "description" : "successful operation"
+          }
+        }
+      }
+    },
+    "/api2/commandesclients/lignesCommande/{idCommande}" : {
+      "get" : {
+        "tags" : [ "api2commandesclients" ],
+        "operationId" : "findAllLignesCommandesClientByCommandeClientId",
+        "parameters" : [ {
+          "name" : "idCommande",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/LigneCommandeClientDto"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api2/commandesclients/upadate/client/{idCommande}/{idClient}" : {
+      "patch" : {
+        "operationId" : "updateClient",
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/CommandeClientDto"
+            }
+          }
+        }
+      }
+    },
+    "/api2/commandesclients/update/article/{idCommande}/{idLigneCommande}/{idArticle}" : {
+      "patch" : {
+        "operationId" : "updateArticle",
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/CommandeClientDto"
+            }
+          }
+        }
+      }
+    },
+    "/api2/commandesclients/update/etat/{idCommande}/{etatCommande}" : {
+      "patch" : {
+        "tags" : [ "api2commandesclients" ],
+        "operationId" : "updateEtatCommande",
+        "parameters" : [ {
+          "name" : "idCommande",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        }, {
+          "name" : "etatCommande",
+          "in" : "path",
+          "required" : true,
+          "type" : "string",
+          "enum" : [ "LIVREE", "VALIDEE", "EN_COURS" ]
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/CommandeClientDto"
+            }
+          }
+        }
+      }
+    },
+    "/api2/commandesclients/update/quantite/{idCommande}/{idLigneCommande}/{idQuantite}" : {
+      "patch" : {
+        "operationId" : "updateQuantiteCommande",
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/CommandeClientDto"
+            }
+          }
+        }
+      }
+    },
+    "/api2/commandesclients/{code}" : {
+      "get" : {
+        "tags" : [ "api2commandesclients" ],
+        "operationId" : "findCommandeClientByCode",
+        "parameters" : [ {
+          "name" : "code",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/CommandeClientDto"
+            }
+          }
+        }
+      }
+    },
+    "/api2/commandesclients/{id}" : {
+      "get" : {
+        "operationId" : "findById",
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/CommandeClientDto"
+            }
+          }
+        }
+      }
+    },
+    "/api2/entreprises" : {
+      "get" : {
+        "summary" : "Liste toutes les entreprises",
+        "description" : "Cette methode permet de retourner la liste de toutes les entreprise",
+        "operationId" : "findAll",
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "Entreprise retrouvée dans la base de données",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/EntrepriseDto"
+              }
+            }
+          },
+          "404" : {
+            "description" : "Entreprise inexistente dans la base de données avec le code fourni"
+          }
+        }
+      }
+    },
+    "/api2/entreprises/create" : {
+      "post" : {
+        "tags" : [ "api2entreprises" ],
+        "summary" : "Enregistrement d'une entreprise",
+        "description" : "Cette methode permet d'enregistrer un entreprise",
+        "operationId" : "save",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/EntrepriseDto"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Entreprise enregistré avec succès",
+            "schema" : {
+              "$ref" : "#/definitions/EntrepriseDto"
+            }
+          },
+          "404" : {
+            "description" : "Entreprise à enregistré non valide"
+          },
+          "500" : {
+            "description" : "Erreur d'enregistrement de l'entreprise"
+          }
+        }
+      }
+    },
+    "/api2/entreprises/{code}" : {
+      "get" : {
+        "summary" : "Recherche  d'une entreprise",
+        "description" : "Cette methode permet de rechercher une entreprise par son code",
+        "operationId" : "findEntrepriseByCode",
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "Entreprise retrouvée dans la base de données",
+            "schema" : {
+              "$ref" : "#/definitions/EntrepriseDto"
+            }
+          },
+          "404" : {
+            "description" : "Entreprise inexistente dans la base de données avec le code fourni"
+          }
+        }
+      }
+    },
+    "/api2/entreprises/{email}" : {
+      "get" : {
+        "summary" : "Recherche  d'une entreprise",
+        "description" : "Cette methode permet de rechercher une entreprise par son email",
+        "operationId" : "findEntrepriseByEmail",
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "Entreprise retrouvée dans la base de données",
+            "schema" : {
+              "$ref" : "#/definitions/EntrepriseDto"
+            }
+          },
+          "404" : {
+            "description" : "Entreprise inexistente dans la base de données avec l'email fourni"
+          }
+        }
+      }
+    },
+    "/api2/entreprises/{id}" : {
+      "get" : {
+        "summary" : "Recherche  d'une entreprise",
+        "description" : "Cette methode permet de rechercher une entreprise par son ID",
+        "operationId" : "findById",
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "Entreprise retrouvée dans la base de données",
+            "schema" : {
+              "$ref" : "#/definitions/EntrepriseDto"
+            }
+          },
+          "404" : {
+            "description" : "Entreprise inexistente dans la base de données avec l'ID fourni"
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "api2entreprises" ],
+        "summary" : "Suppression d'une entreprise",
+        "description" : "Cette methode permet de supprimer une entreprise à partir de son ID",
+        "operationId" : "delete",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Entreprise supprimé avec succès",
+            "schema" : {
+              "$ref" : "#/definitions/EntrepriseDto"
+            }
+          }
+        }
+      }
+    },
+    "/api2/entreprises/{nom}" : {
+      "get" : {
+        "summary" : "Recherche  d'une entreprise",
+        "description" : "Cette methode permet de rechercher une entreprise par son nom",
+        "operationId" : "findEntrepriseByNom",
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "200" : {
+            "description" : "Entreprise retrouvée dans la base de données",
+            "schema" : {
+              "$ref" : "#/definitions/EntrepriseDto"
+            }
+          },
+          "404" : {
+            "description" : "Entreprise inexistente dans la base de données avec le nom fourni"
           }
         }
       }
@@ -674,6 +1013,135 @@
         "responses" : {
           "default" : {
             "description" : "successful operation"
+          }
+        }
+      }
+    },
+    "/api2/mouvementstock/correctionneg" : {
+      "post" : {
+        "tags" : [ "api2mouvementstock" ],
+        "operationId" : "correctionStockNeg",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/MouvementStockDto"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/MouvementStockDto"
+            }
+          }
+        }
+      }
+    },
+    "/api2/mouvementstock/correctionpos" : {
+      "post" : {
+        "tags" : [ "api2mouvementstock" ],
+        "operationId" : "correctionStockPos",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/MouvementStockDto"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/MouvementStockDto"
+            }
+          }
+        }
+      }
+    },
+    "/api2/mouvementstock/entree" : {
+      "post" : {
+        "tags" : [ "api2mouvementstock" ],
+        "operationId" : "entreeStock",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/MouvementStockDto"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/MouvementStockDto"
+            }
+          }
+        }
+      }
+    },
+    "/api2/mouvementstock/filter/article/{idArticle}" : {
+      "get" : {
+        "operationId" : "mouvementStockArticle",
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/MouvementStockDto"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api2/mouvementstock/sortie" : {
+      "post" : {
+        "operationId" : "sortieStock",
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/MouvementStockDto"
+            }
+          }
+        }
+      }
+    },
+    "/api2/mouvementstock/stockreel/{idArticle}" : {
+      "get" : {
+        "tags" : [ "api2mouvementstock" ],
+        "operationId" : "stockReelArticle",
+        "parameters" : [ {
+          "name" : "idArticle",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "type" : "number"
+            }
+          }
+        }
+      }
+    },
+    "/api2/photos/{id}/{title}/{context}" : {
+      "post" : {
+        "operationId" : "savePhoto",
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "type" : "object"
+            }
           }
         }
       }
@@ -830,11 +1298,12 @@
     "/api2/users" : {
       "get" : {
         "tags" : [ "api2users" ],
+        "summary" : "Lister les utilisateurs",
+        "description" : "Cette methode permet de lister tous les utilisateurs de la BD",
         "operationId" : "findAll",
-        "produces" : [ "application/json" ],
         "responses" : {
           "200" : {
-            "description" : "successful operation",
+            "description" : "Liste des utilisateurs ou liste vide",
             "schema" : {
               "type" : "array",
               "items" : {
@@ -845,29 +1314,54 @@
         }
       },
       "post" : {
+        "summary" : "Enregistrement d'un utilisateur",
+        "description" : "Cette methode permet d'enregistrer un utilisateur",
         "operationId" : "save",
-        "consumes" : [ "application/json" ],
-        "produces" : [ "application/json" ],
         "responses" : {
           "200" : {
-            "description" : "successful operation",
+            "description" : "Utilisateur créee avec succès",
             "schema" : {
               "$ref" : "#/definitions/UsersDto"
             }
+          },
+          "400" : {
+            "description" : "Objet utilisateur non valide"
+          }
+        }
+      }
+    },
+    "/api2/users/find/{email}" : {
+      "get" : {
+        "summary" : "Recherche  d'un utilisateur",
+        "description" : "Cette methode permet de rechercher un utilisateur par son email",
+        "operationId" : "findByEmail",
+        "responses" : {
+          "200" : {
+            "description" : "Utilisateur a été retrouvé dans la BD",
+            "schema" : {
+              "$ref" : "#/definitions/UsersDto"
+            }
+          },
+          "404" : {
+            "description" : "Aucun utilisateur n'existe dans la BD avec l'email fourni"
           }
         }
       }
     },
     "/api2/users/{id}" : {
       "get" : {
+        "summary" : "Recherche  d'un utilisateur",
+        "description" : "Cette methode permet de rechercher un utilisateur par son id",
         "operationId" : "findById",
-        "produces" : [ "application/json" ],
         "responses" : {
           "200" : {
-            "description" : "successful operation",
+            "description" : "Utilisateur a été retrouvé dans la BD",
             "schema" : {
               "$ref" : "#/definitions/UsersDto"
             }
+          },
+          "404" : {
+            "description" : "Aucun utilisateur n'existe dans la BD avec l'email fourni"
           }
         }
       },
@@ -970,43 +1464,19 @@
           }
         }
       }
-    },
-    "api2/authenticate" : {
-      "post" : {
-        "operationId" : "authenticate",
-        "parameters" : [ {
-          "in" : "body",
-          "name" : "body",
-          "required" : false,
-          "schema" : {
-            "$ref" : "#/definitions/AuthenticationRequest"
-          }
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "successful operation",
-            "schema" : {
-              "$ref" : "#/definitions/AuthenticationResponse"
-            }
-          }
-        }
-      }
     }
   },
   "definitions" : {
     "Adresse" : {
       "type" : "object",
       "properties" : {
-        "adresse1" : {
+        "codePostale" : {
           "type" : "string"
         },
-        "adresse2" : {
+        "rue" : {
           "type" : "string"
         },
         "ville" : {
-          "type" : "string"
-        },
-        "codePostale" : {
           "type" : "string"
         },
         "pays" : {
@@ -1017,16 +1487,13 @@
     "AdresseDto" : {
       "type" : "object",
       "properties" : {
-        "adresse1" : {
+        "codePostale" : {
           "type" : "string"
         },
-        "adresse2" : {
+        "rue" : {
           "type" : "string"
         },
         "ville" : {
-          "type" : "string"
-        },
-        "codePostale" : {
           "type" : "string"
         },
         "pays" : {
@@ -1070,25 +1537,33 @@
         "prixUnitaireTtc" : {
           "type" : "number"
         },
-        "prixAchat" : {
-          "type" : "number"
-        },
-        "prixVente" : {
-          "type" : "number"
-        },
-        "quantite" : {
-          "type" : "number",
-          "format" : "double"
-        },
         "photo" : {
           "type" : "string"
-        },
-        "categorie" : {
-          "$ref" : "#/definitions/Categorie"
         },
         "entrepriseId" : {
           "type" : "integer",
           "format" : "int64"
+        },
+        "categorie" : {
+          "$ref" : "#/definitions/Categorie"
+        },
+        "ligneVentes" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/LigneVente"
+          }
+        },
+        "ligneCommandeClients" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/LigneCommandeClient"
+          }
+        },
+        "ligneCommandeFournisseurs" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/LigneCommandeFournisseur"
+          }
         }
       }
     },
@@ -1247,7 +1722,7 @@
         "email" : {
           "type" : "string"
         },
-        "numTel" : {
+        "numeroTelephone" : {
           "type" : "string"
         },
         "photo" : {
@@ -1256,15 +1731,15 @@
         "adresse" : {
           "$ref" : "#/definitions/Adresse"
         },
+        "entrepriseId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
         "commandeClientList" : {
           "type" : "array",
           "items" : {
             "$ref" : "#/definitions/CommandeClient"
           }
-        },
-        "entrepriseId" : {
-          "type" : "integer",
-          "format" : "int64"
         }
       }
     },
@@ -1337,18 +1812,22 @@
           "type" : "integer",
           "format" : "int64"
         },
-        "client" : {
-          "$ref" : "#/definitions/Client"
-        },
-        "ligneCommandeClientList" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "#/definitions/LigneCommandeClient"
-          }
+        "etatCommande" : {
+          "type" : "string",
+          "enum" : [ "LIVREE", "VALIDEE", "EN_COURS" ]
         },
         "entrepriseId" : {
           "type" : "integer",
           "format" : "int64"
+        },
+        "client" : {
+          "$ref" : "#/definitions/Client"
+        },
+        "ligneCommandeClients" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/LigneCommandeClient"
+          }
         }
       }
     },
@@ -1369,15 +1848,16 @@
         "client" : {
           "$ref" : "#/definitions/Client"
         },
+        "etatCommande" : {
+          "type" : "string",
+          "enum" : [ "LIVREE", "VALIDEE", "EN_COURS" ]
+        },
         "entrepriseId" : {
           "type" : "integer",
           "format" : "int64"
         },
-        "ligneCommandeClientList" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "#/definitions/LigneCommandeClientDto"
-          }
+        "commandeLivree" : {
+          "type" : "boolean"
         }
       }
     },
@@ -1408,6 +1888,10 @@
         "dateCommande" : {
           "type" : "integer",
           "format" : "int64"
+        },
+        "etatCommande" : {
+          "type" : "string",
+          "enum" : [ "LIVREE", "VALIDEE", "EN_COURS" ]
         },
         "fournisseur" : {
           "$ref" : "#/definitions/Fournisseur"
@@ -1441,15 +1925,16 @@
         "fournisseur" : {
           "$ref" : "#/definitions/Fournisseur"
         },
+        "etatCommande" : {
+          "type" : "string",
+          "enum" : [ "LIVREE", "VALIDEE", "EN_COURS" ]
+        },
         "entrepriseId" : {
           "type" : "integer",
           "format" : "int64"
         },
-        "ligneCommandeFournisseurList" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "#/definitions/LigneCommandeFournisseurDto"
-          }
+        "commandeLivree" : {
+          "type" : "boolean"
         }
       }
     },
@@ -1460,16 +1945,25 @@
           "type" : "integer",
           "format" : "int64"
         },
-        "nom" : {
+        "codeFiscal" : {
           "type" : "string"
         },
-        "codeFiscal" : {
+        "nom" : {
           "type" : "string"
         },
         "email" : {
           "type" : "string"
         },
         "logo" : {
+          "type" : "string"
+        },
+        "siteWeb" : {
+          "type" : "string"
+        },
+        "numeroTelephone" : {
+          "type" : "string"
+        },
+        "description" : {
           "type" : "string"
         },
         "adresse" : {
@@ -1517,7 +2011,7 @@
         "email" : {
           "type" : "string"
         },
-        "numTel" : {
+        "numeroTelephone" : {
           "type" : "string"
         },
         "photo" : {
@@ -1526,15 +2020,15 @@
         "adresse" : {
           "$ref" : "#/definitions/Adresse"
         },
-        "commandeFournisseurList" : {
+        "entrepriseId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "commandeFournisseurs" : {
           "type" : "array",
           "items" : {
             "$ref" : "#/definitions/CommandeFournisseur"
           }
-        },
-        "entrepriseId" : {
-          "type" : "integer",
-          "format" : "int64"
         }
       }
     },
@@ -1600,6 +2094,12 @@
           "type" : "integer",
           "format" : "int64"
         },
+        "quantite" : {
+          "type" : "number"
+        },
+        "prixUnitaire" : {
+          "type" : "number"
+        },
         "article" : {
           "$ref" : "#/definitions/Article"
         },
@@ -1621,6 +2121,12 @@
         },
         "article" : {
           "$ref" : "#/definitions/ArticleDto"
+        },
+        "quantite" : {
+          "type" : "number"
+        },
+        "prixUnitaire" : {
+          "type" : "number"
         },
         "commandeClient" : {
           "$ref" : "#/definitions/CommandeClientDto"
@@ -1652,15 +2158,21 @@
           "type" : "integer",
           "format" : "int64"
         },
+        "quantite" : {
+          "type" : "number"
+        },
+        "prixUnitaire" : {
+          "type" : "number"
+        },
+        "entrepriseId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
         "article" : {
           "$ref" : "#/definitions/Article"
         },
         "commandeFournisseur" : {
           "$ref" : "#/definitions/CommandeFournisseur"
-        },
-        "entrepriseId" : {
-          "type" : "integer",
-          "format" : "int64"
         }
       }
     },
@@ -1683,6 +2195,45 @@
         }
       }
     },
+    "LigneVente" : {
+      "type" : "object",
+      "properties" : {
+        "createdBy" : {
+          "type" : "string"
+        },
+        "updatedBy" : {
+          "type" : "string"
+        },
+        "createdDate" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "updateDate" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "id" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "quantite" : {
+          "type" : "number"
+        },
+        "prixUniataire" : {
+          "type" : "number"
+        },
+        "entrepriseId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "article" : {
+          "$ref" : "#/definitions/Article"
+        },
+        "vente" : {
+          "$ref" : "#/definitions/Vente"
+        }
+      }
+    },
     "LigneVenteDto" : {
       "type" : "object",
       "properties" : {
@@ -1701,6 +2252,37 @@
         },
         "prixUniataire" : {
           "type" : "number"
+        },
+        "entrepriseId" : {
+          "type" : "integer",
+          "format" : "int64"
+        }
+      }
+    },
+    "MouvementStockDto" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "article" : {
+          "$ref" : "#/definitions/ArticleDto"
+        },
+        "quantite" : {
+          "type" : "number"
+        },
+        "dateMouvement" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "typeMouvementStock" : {
+          "type" : "string",
+          "enum" : [ "SORTIE", "ENTREE", "CORRECTION_POS", "CORRECTION_NEG" ]
+        },
+        "sourceMouvementStock" : {
+          "type" : "string",
+          "enum" : [ "COMMANDE_CLIENT", "COMMANDE_FOURNISSEUR", "VENTE" ]
         },
         "entrepriseId" : {
           "type" : "integer",
@@ -1786,6 +2368,49 @@
           "uniqueItems" : true,
           "items" : {
             "$ref" : "#/definitions/RolesDto"
+          }
+        }
+      }
+    },
+    "Vente" : {
+      "type" : "object",
+      "properties" : {
+        "createdBy" : {
+          "type" : "string"
+        },
+        "updatedBy" : {
+          "type" : "string"
+        },
+        "createdDate" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "updateDate" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "id" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "code" : {
+          "type" : "string"
+        },
+        "dateVente" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "commentaire" : {
+          "type" : "string"
+        },
+        "entrepriseId" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "ligneVenteList" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/LigneVente"
           }
         }
       }

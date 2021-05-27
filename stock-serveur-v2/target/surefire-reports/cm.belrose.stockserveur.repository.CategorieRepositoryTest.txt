@@ -1,10 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: cm.belrose.stockserveur.repository.CategorieRepositoryTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 9.379 s <<< FAILURE! - in cm.belrose.stockserveur.repository.CategorieRepositoryTest
-shouldSaveCategorieOnRepositoryWithSuccess  Time elapsed: 0.153 s  <<< ERROR!
-org.springframework.dao.DataIntegrityViolationException: not-null property references a null or transient value : cm.belrose.stockserveur.model.Categorie.createdBy; nested exception is org.hibernate.PropertyValueException: not-null property references a null or transient value : cm.belrose.stockserveur.model.Categorie.createdBy
-	at cm.belrose.stockserveur.repository.CategorieRepositoryTest.shouldSaveCategorieOnRepositoryWithSuccess(CategorieRepositoryTest.java:28)
-Caused by: org.hibernate.PropertyValueException: not-null property references a null or transient value : cm.belrose.stockserveur.model.Categorie.createdBy
-	at cm.belrose.stockserveur.repository.CategorieRepositoryTest.shouldSaveCategorieOnRepositoryWithSuccess(CategorieRepositoryTest.java:28)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.29 s - in cm.belrose.stockserveur.repository.CategorieRepositoryTest

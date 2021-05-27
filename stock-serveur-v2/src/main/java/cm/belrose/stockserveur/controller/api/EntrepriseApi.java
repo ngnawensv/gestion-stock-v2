@@ -29,7 +29,7 @@ public interface EntrepriseApi {
             @ApiResponse(code = 404,message = "Entreprise à enregistré non valide"),
             @ApiResponse(code = 500,message = "Erreur d'enregistrement de l'entreprise"),
     })
-    @PostMapping(value=ENTREPRISE_ENDPOINT+"/create", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value=ENTREPRISE_ENDPOINT+"/create")
     EntrepriseDto save(@RequestBody EntrepriseDto dto);
 
     @ApiOperation(

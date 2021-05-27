@@ -1,60 +1,87 @@
 <div class="container my-container">
-    <div class="card justify-content-md-center">
-        <div class="card-header text-center"> <h3>S'inscrire</h3></div>
-        <div class="card-body">
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInput" placeholder="nom">
-                <label for="floatingInput">Nom</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInput" placeholder="prenom">
-                <label for="floatingInput">Prénom</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput" placeholder="email">
-                <label for="floatingInput">Email</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInput" placeholder="username">
-                <label for="floatingInput">username</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInput" placeholder="genre">
-                <label for="floatingInput">Genre</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInput" placeholder="telephone">
-                <label for="floatingInput">Téléphone</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInput" placeholder="codePostale">
-                <label for="floatingInput">Code postale</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInput" placeholder="rue">
-                <label for="floatingInput">Rue</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInput" placeholder="ville">
-                <label for="floatingInput">Ville</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInput" placeholder="pays">
-                <label for="floatingInput">Pays</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="password" class="form-control" id="floatingInput" placeholder="MotDePasse">
-                <label for="floatingInput">Mot de passe</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="password" class="form-control" id="floatingInput" placeholder="ConfirmerMotDePasse">
-                <label for="floatingInput">Confirmer mot de passe</label>
-            </div>
-            <div class="form-floating d-flex justify-content-between">
-                <a [routerLink]="['/login']" class="btn btn-link"> Se connecter</a>
-                <button type="button" class="btn btn-primary"><i class="fas fa-check"></i> S'inscrire</button>
-            </div>
-        </div>
+  <div class="card justify-content-md-center">
+    <div class="card-header text-center">
+      <h3>S'inscrire</h3>
     </div>
-
+    <div class="card-body">
+      <div class="alert alert-danger" *ngIf="errorMessage.length>0">
+        <div *ngFor="let msg of errorMessage">
+          <span >{{msg}}</span>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="row mb-3">
+          <div class="col form-floating mb-3 custom-border-right">
+            <!-- <label for="floatingInput">Nom</label> -->
+            <input type="text" class="form-control" id="nom" placeholder="Nom"
+              [(ngModel)]="entrepriseDto.nom" />
+          </div>
+          <div class="col">
+            <!-- <label for="floatingInput">Prenom</label> -->
+            <input type="text" class="form-control" id="codeFiscal" placeholder="Code Fiscal"
+              [(ngModel)]="entrepriseDto.codeFiscal" />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col form-floating mb-3 custom-border-right">
+            <!-- <label for="floatingInput">Nom</label> -->
+            <input type="email" class="form-control" id="email" placeholder="Email"
+              [(ngModel)]="entrepriseDto.email" />
+          </div>
+          <div class="col">
+            <!-- <label for="floatingInput">Prenom</label> -->
+            <input type="text" class="form-control" id="siteWeb" placeholder="Site web"
+              [(ngModel)]="entrepriseDto.siteWeb" />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col form-floating mb-3 custom-border-right">
+            <!-- <label for="floatingInput">Nom</label> -->
+            <input type="text" class="form-control" id="numeroTelephone" placeholder="Numéro de téléphone"
+              [(ngModel)]="entrepriseDto.numeroTelephone" />
+          </div>
+          <div class="col">
+            <!-- <label for="floatingInput">Prenom</label> -->
+            <input type="text" class="form-control" id="pays" placeholder="Pays"
+              [(ngModel)]="adresse.pays" />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col form-floating mb-3 custom-border-right">
+            <!-- <label for="floatingInput">Nom</label> -->
+            <input type="text" class="form-control" id="codePostale" placeholder="Code postale"
+              [(ngModel)]="adresse.codePostale" />
+          </div>
+          <div class="col">
+            <!-- <label for="floatingInput">Prenom</label> -->
+            <input type="text" class="form-control" id="rue" placeholder="Rue"
+              [(ngModel)]="adresse.rue" />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col form-floating mb-3 custom-border-right">
+            <!-- <label for="floatingInput">Nom</label> -->
+            <input type="text" class="form-control" id="ville" placeholder="Ville"
+              [(ngModel)]="adresse.ville" />
+          </div>
+          <div class="col">
+            <!-- <label for="floatingInput">Prenom</label>
+            <input type="text" class="form-control" id="floatingInput" placeholder="codeFiscal"
+              [(ngModel)]="entrepriseDto.codeFiscal" /> -->
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <textarea type="text" class="form-control" id="description" placeholder="Description" [(ngModel)]="entrepriseDto.description"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="form-floating d-flex justify-content-between">
+        <a [routerLink]="['/login']" class="btn btn-link"> Se connecter</a>
+        <button type="button" class="btn btn-primary" (click)="inscrire()">
+          <i class="fas fa-check"></i> S'inscrire
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
