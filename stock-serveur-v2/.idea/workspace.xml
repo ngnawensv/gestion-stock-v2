@@ -2,393 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b1794a9-96e7-4ae5-be17-e34defd38c0c" name="Default Changelist" comment="Creation of the super user at the start of the application">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_11_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_11_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_11_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_11_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_11_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_11_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_flickr4java_flickr4java_3_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_scribejava_scribejava_apis_6_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_scribejava_scribejava_core_6_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_20_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_h2database_h2_1_4_198.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_activation_jakarta_activation_1_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_3_4_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_0_9_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_core_2_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_schema_2_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spi_2_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spring_web_2_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger2_2_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_common_2_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_ui_2_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_annotations_1_5_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_models_1_5_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_persistence_jakarta_persistence_api_2_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_transaction_jakarta_transaction_api_1_3_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_2_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_10_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_23.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_10_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_13_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_13_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_43.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_43.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_18_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_dom4j_dom4j_2_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jakarta_el_3_0_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_2_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_4_28_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_envers_5_4_28_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_7_0_0_Alpha4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_27_0_GA.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_2_3_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_4_1_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_junit5_api_5_0_0_ALPHA.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_junit5_engine_5_0_0_ALPHA.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_junit_commons_5_0_0_ALPHA.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_junit_engine_api_5_0_0_ALPHA.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_7_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_7_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_7_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_7_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_7_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_7_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mapstruct_mapstruct_1_2_0_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_3_6_28.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_3_6_28.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_0_0_ALPHA.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_30.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_30.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_4_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_4_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_2_4_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_4_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_4_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_4_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_4_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_4_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_4_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_4_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_4_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_4_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_4_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_4_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_4_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_4_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_envers_2_4_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_4_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_core_1_2_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_metadata_1_2_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_4_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_4_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_4_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_3_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_5_3_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_3_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_3_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_3_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_3_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_3_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_3_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_3_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_3_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_3_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_3_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_3_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_27.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HELP.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/StockserveurApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/config/audit/Auditable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/config/audit/AuditingConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/config/audit/AuditorAwareImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/config/constants/Constant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/config/flickr/FlickrConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/config/flickr/FlickrConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/config/initializer/InitializeDataBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/config/jwt/JwtRequestFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/config/security/SecurityConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/config/swagger/SwaggerConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/ArticleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/AuthenticationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/CategorieController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/ClientController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/CommandeClientController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/CommandeFournisseurController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/EntrepriseController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/FournisseurController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/MouvementStockController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/PhotoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/RolesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/SousCategorieController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/UsersController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/VenteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/ArticleApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/AuthenticationApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/CategorieApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/ClientApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/CommandeClientApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/CommandeFournisseurApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/EntrepriseApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/FournisseurApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/MouvementStockApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/PhotoApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/RolesApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/SousCategorieApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/UsersApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/VenteApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/dto/AdresseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/dto/ArticleDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/dto/CategorieDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/dto/ClientDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/dto/CommandeClientDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/dto/CommandeFournisseurDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/dto/EntrepriseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/dto/FournisseurDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/dto/LigneCommandeClientDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/dto/LigneCommandeFournisseurDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/dto/LigneVenteDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/dto/MouvementStockDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/dto/RolesDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/dto/SousCategorieDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/dto/UsersDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/dto/VenteDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/dto/auth/AuthenticationRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/dto/auth/AuthenticationResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/exceptions/EntityNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/exceptions/ErrorCodes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/exceptions/InvalidEntityException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/exceptions/InvalidOperationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/exceptions/handlers/ErrorDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/exceptions/handlers/RestExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/interceptor/Interceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/model/Adresse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/model/Article.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/model/Categorie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/model/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/model/CommandeClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/model/CommandeFournisseur.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/model/Entreprise.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/model/EtatCommande.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/model/Fournisseur.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/model/LigneCommandeClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/model/LigneCommandeFournisseur.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/model/LigneVente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/model/MouvementStock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/model/RoleEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/model/Roles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/model/SourceMouvementStock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/model/SousCategorie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/model/TypeMouvementStock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/model/Vente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/model/auth/ExtendedUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/payload/request/LoginRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/payload/request/SignupRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/payload/response/JwtResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/payload/response/MessageResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/repository/ArticleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/repository/CategorieRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/repository/ClientRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/repository/CommandeClientRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/repository/CommandeFournisseurRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/repository/EntrepriseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/repository/FournisseurRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/repository/LigneCommandeClientRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/repository/LigneCommandeFournisseurRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/repository/LigneVenteRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/repository/MouvementStockRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/repository/RolesRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/repository/SousCategorieRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/repository/UsersRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/repository/VenteRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/ArticleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/CategorieService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/ClientService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/CommandeClientService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/CommandeFournisseurService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/EntrepriseService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/FlickrService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/FournisseurService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/MouvementStockService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/RolesService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/SousCategorieService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/UsersService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/VenteService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/auth/UserDetailsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/impl/ArticleServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/impl/CategorieServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/impl/ClientServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/impl/CommandeClientServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/impl/CommandeFournisseurServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/impl/EntrepriseServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/impl/FlickrServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/impl/FournisseurServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/impl/MouvementStockServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/impl/RolesServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/impl/SousCategorieServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/impl/UsersServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/impl/VenteServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/strategy/SaveArticlePhoto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/strategy/SaveClientPhoto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/strategy/SaveEntreprisePhoto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/strategy/SaveFournisseurPhoto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/strategy/SaveUsersPhoto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/strategy/Strategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/strategy/StrategyPhotoContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/utils/JwtUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/validator/AdresseValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/validator/ArticleValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/validator/CategorieValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/validator/ClientValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/validator/CommandeClientValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/validator/CommandeFournisseurValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/validator/EntrepriseValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/validator/FournisseurValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/validator/LigneCommandeClientValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/validator/LigneCommandeFournisseurValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/validator/LigneVenteValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/validator/MouvementStockValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/validator/RoleValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/validator/SousCategorieValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/validator/UserValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/validator/VenteValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/cm/belrose/stockserveur/GestionstockmvcApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/cm/belrose/stockserveur/repository/CategorieRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/cm/belrose/stockserveur/service/impl/CategorieServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/cm/belrose/stockserveur/service/impl/EntrepriseServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock-serveur.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/StockserveurApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/controller/ArticleController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/controller/CategorieController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/dto/CategorieDto.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/model/Article.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/model/Categorie.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/model/CommandeClient.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/model/MouvementStock.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/model/Vente.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/payload/request/LoginRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/payload/request/SignupRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/payload/response/JwtResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/payload/response/MessageResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/repository/ArticleRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/repository/CategorieRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/repository/CommandeClientRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/repository/MouvementStockRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/repository/VenteRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/service/ArticleService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/service/CategorieService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/service/CommandeClientService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/service/VenteService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/service/impl/ArticleServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/service/impl/CategorieServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/cm/belrose/stockserveur/GestionstockmvcApplicationTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stock-client-v2/node_modules/@angular/common/http/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../stock-client-v2/node_modules/@angular/common/http/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stock-client-v2/node_modules/@angular/forms/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../stock-client-v2/node_modules/@angular/forms/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stock-client-v2/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../stock-client-v2/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stock-client-v2/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../stock-client-v2/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stock-client-v2/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../stock-client-v2/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stock-client-v2/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../stock-client-v2/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stock-client-v2/src/app/pages/page-inscription/page-inscription.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../stock-client-v2/src/app/pages/page-inscription/page-inscription.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stock-client-v2/src/app/pages/page-inscription/page-inscription.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../stock-client-v2/src/app/pages/page-inscription/page-inscription.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stock-client-v2/src/app/pages/page-inscription/page-inscription.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../stock-client-v2/src/app/pages/page-inscription/page-inscription.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stock-client-v2/src/app/pages/page-login/page-login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../stock-client-v2/src/app/pages/page-login/page-login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stock-client-v2/src/app/pages/page-login/page-login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../stock-client-v2/src/app/pages/page-login/page-login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stock-client-v2/tslint.json" beforeDir="false" afterPath="$PROJECT_DIR$/../stock-client-v2/tslint.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/config/security/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/config/security/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/EntrepriseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/EntrepriseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/UsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/AuthenticationApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/AuthenticationApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/EntrepriseApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/EntrepriseApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/dto/AdresseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/dto/AdresseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/model/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/model/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/impl/EntrepriseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/impl/EntrepriseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/impl/UsersServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/impl/UsersServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/validator/ClientValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/validator/ClientValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/validator/EntrepriseValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/validator/EntrepriseValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/validator/FournisseurValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/validator/FournisseurValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/validator/UserValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/validator/UserValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cm/belrose/stockserveur/service/impl/EntrepriseServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cm/belrose/stockserveur/service/impl/EntrepriseServiceImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/stock-serveur.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/config/security/SecurityConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/config/security/SecurityConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/controller/AuthenticationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/controller/AuthenticationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/controller/EntrepriseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/controller/EntrepriseController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/controller/UsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/controller/UsersController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/controller/api/AuthenticationApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/controller/api/AuthenticationApi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/controller/api/EntrepriseApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/controller/api/EntrepriseApi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/controller/api/UsersApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/controller/api/UsersApi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/dto/AdresseDto$AdresseDtoBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/dto/AdresseDto$AdresseDtoBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/dto/AdresseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/dto/AdresseDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/model/Users$UsersBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/model/Users$UsersBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/model/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/model/Users.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/service/impl/CommandeClientServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/service/impl/CommandeClientServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/service/impl/EntrepriseServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/service/impl/EntrepriseServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/validator/ClientValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/validator/ClientValidator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/validator/EntrepriseValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/validator/EntrepriseValidator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/validator/FournisseurValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/validator/FournisseurValidator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/validator/UserValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/validator/UserValidator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-cm.belrose.stockserveur.GestionstockmvcApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-cm.belrose.stockserveur.GestionstockmvcApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-cm.belrose.stockserveur.repository.CategorieRepositoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-cm.belrose.stockserveur.repository.CategorieRepositoryTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-cm.belrose.stockserveur.service.impl.CategorieServiceImplTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-cm.belrose.stockserveur.service.impl.CategorieServiceImplTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/cm.belrose.stockserveur.GestionstockmvcApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/cm.belrose.stockserveur.GestionstockmvcApplicationTests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/cm.belrose.stockserveur.repository.CategorieRepositoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/cm.belrose.stockserveur.repository.CategorieRepositoryTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/cm.belrose.stockserveur.service.impl.CategorieServiceImplTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/cm.belrose.stockserveur.service.impl.CategorieServiceImplTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/cm/belrose/stockserveur/service/impl/EntrepriseServiceImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/cm/belrose/stockserveur/service/impl/EntrepriseServiceImplTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-test.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -442,13 +58,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/CommandeFournisseurController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
+            <state relative-caret-position="280">
               <caret line="26" column="98" selection-start-line="26" selection-start-column="86" selection-end-line="26" selection-end-column="98" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/PhotoController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="322">
@@ -456,6 +72,15 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application-test.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="70" lean-forward="true" selection-start-column="70" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -514,12 +139,11 @@
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/dto/LigneVenteDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/MouvementStockService.java" />
         <option value="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/model/TypeMouvementStock.java" />
         <option value="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/repository/MouvementStockRepository.java" />
@@ -570,6 +194,7 @@
         <option value="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/config/constants/Constant.java" />
         <option value="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/UsersApi.java" />
         <option value="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/ArticleApi.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application-test.properties" />
       </list>
     </option>
   </component>
@@ -615,6 +240,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -707,14 +334,19 @@
             <path>
               <item name="stock-serveur-v2" type="b2602c69:ProjectViewProjectNode" />
               <item name="stock-serveur-v2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="stock-serveur-v2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stock-serveur-v2" type="462c0819:PsiDirectoryNode" />
               <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -735,7 +367,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
@@ -973,6 +605,7 @@
       <workItem from="1621703249641" duration="19934000" />
       <workItem from="1621874244812" duration="166000" />
       <workItem from="1621879802267" duration="11976000" />
+      <workItem from="1627264072630" duration="653000" />
     </task>
     <servers />
   </component>
@@ -1009,7 +642,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="903573000" />
+    <option name="totallyTimeSpent" value="904226000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -1022,8 +655,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5090498" visible="true" weight="0.22520107" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5090498" visible="true" weight="0.22788204" />
       <window_info id="Structure" order="1" sideWeight="0.49095023" side_tool="true" weight="0.1769437" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -1143,6 +777,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
     <MESSAGE value="Creation of the super user at the start of the application" />
     <option name="LAST_COMMIT_MESSAGE" value="Creation of the super user at the start of the application" />
   </component>
@@ -1213,13 +850,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/CommandeClientApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="51" column="20" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/dto/CommandeClientDto.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1080">
@@ -1573,6 +1203,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/CommandeFournisseurController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="26" column="98" selection-start-line="26" selection-start-column="86" selection-end-line="26" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/model/EtatCommande.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
@@ -1587,13 +1224,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/CommandeFournisseurController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="26" column="98" selection-start-line="26" selection-start-column="86" selection-end-line="26" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/PhotoController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
@@ -1601,6 +1231,13 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application-test.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="70" lean-forward="true" selection-start-column="70" selection-end-column="70" />
         </state>
       </provider>
     </entry>
