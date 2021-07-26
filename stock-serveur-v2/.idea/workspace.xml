@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b1794a9-96e7-4ae5-be17-e34defd38c0c" name="Default Changelist" comment="Creation of the super user at the start of the application">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -53,11 +53,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/model/CommandeFournisseur.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="167">
               <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="40">
+                <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -129,7 +150,6 @@
         <option value="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/strategy/StrategyPhotoContext.java" />
         <option value="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/PhotoApi.java" />
         <option value="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/CommandeClientService.java" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/dto/CommandeClientDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/impl/CommandeClientServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/dto/AdresseDto.java" />
@@ -154,6 +174,7 @@
         <option value="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/UsersApi.java" />
         <option value="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/ArticleApi.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application-test.properties" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -225,51 +246,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="stock-serveur-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="stock-serveur-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="stockserveur" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="stock-serveur-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="stock-serveur-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="stockserveur" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="stock-serveur-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="stock-serveur-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="stockserveur" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="stock-serveur-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="stock-serveur-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="stockserveur" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="stock-serveur-v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="stock-serveur-v2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="stockserveur" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="stock-serveur-v2" type="b2602c69:ProjectViewProjectNode" />
@@ -545,7 +521,7 @@
       <workItem from="1621703249641" duration="19934000" />
       <workItem from="1621874244812" duration="166000" />
       <workItem from="1621879802267" duration="11976000" />
-      <workItem from="1627264072630" duration="1492000" />
+      <workItem from="1627264072630" duration="3886000" />
     </task>
     <servers />
   </component>
@@ -582,7 +558,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="905065000" />
+    <option name="totallyTimeSpent" value="907459000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -594,10 +570,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5090498" visible="true" weight="0.22788204" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5090498" visible="true" weight="0.22788204" />
       <window_info id="Structure" order="1" sideWeight="0.49095023" side_tool="true" weight="0.1769437" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -614,7 +589,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32943144" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.329429" />
       <window_info anchor="bottom" id="Java Enterprise" order="8" weight="0.32796487" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4969743" visible="true" weight="0.2251462" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.4969743" visible="true" weight="0.61988306" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50268096" side_tool="true" weight="0.5555556" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
@@ -790,26 +765,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/PhotoApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="17" column="1" selection-start-line="12" selection-end-line="17" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/strategy/StrategyPhotoContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="22" column="52" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/CommandeClientController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="413">
@@ -1174,6 +1129,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
           <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="40">
+            <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

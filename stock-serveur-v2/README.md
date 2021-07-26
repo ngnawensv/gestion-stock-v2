@@ -1,4 +1,4 @@
-## Gestion de stock avec Java 11/Hibernate/Spring Boot version 2
+## Gestion de stock avec Java 11/Hibernate/Spring Boot version 2.4.3
 ###1.**Généralités**
 
 Back-end d'une application web de gestion de stock basée sur Spring MVC. 
