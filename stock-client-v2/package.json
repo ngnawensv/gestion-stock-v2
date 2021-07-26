@@ -15,7 +15,6 @@
     "gs-api:download": "copy \\Users\\NGNAWEN\\IdeaProjects\\gestion-stock-v2\\stock-serveur-v2\\target\\stock-serveur-v2-0.0.1-SNAPSHOT.jar .\\tools\\swagger\\dist && copy \\Users\\NGNAWEN\\IdeaProjects\\gestion-stock-v2\\stock-serveur-v2\\target\\swagger.json .\\tools\\swagger\\src",
     "gs-api:extract": "node .\\tools\\swagger\\src\\swagger.json 0.0.1-SNAPSHOT",
     "gs-api:swagger-gen": ".\\node_modules\\.bin\\ng-swagger-gen -i .\\tools\\swagger\\src\\swagger.json -o src\\gs-api\\src"
-
   },
   "private": true,
   "dependencies": {
@@ -35,7 +34,7 @@
     "zone.js": "~0.11.3"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.1102.10",
+    "@angular-devkit/build-angular": "^0.1102.14",
     "@angular/cli": "~11.2.10",
     "@angular/compiler-cli": "~11.2.11",
     "@types/jasmine": "~3.6.0",

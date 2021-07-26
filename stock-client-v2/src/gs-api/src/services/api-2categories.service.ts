@@ -139,7 +139,7 @@ class Api2categoriesService extends __BaseService {
    * Cette methode permet de supprimer une categories à partir de son ID
    * @return Categorie supprimé avec succès
    */
-  deleteResponse(): __Observable<__StrictHttpResponse<CategorieDto>> {
+  deleteResponse(id?:number): __Observable<__StrictHttpResponse<CategorieDto>> {
     let __params = this.newParams();
     let __headers = new HttpHeaders();
     let __body: any = null;
@@ -164,8 +164,8 @@ class Api2categoriesService extends __BaseService {
    * Cette methode permet de supprimer une categories à partir de son ID
    * @return Categorie supprimé avec succès
    */
-  delete(): __Observable<CategorieDto> {
-    return this.deleteResponse().pipe(
+  delete(id?:number): __Observable<CategorieDto> {
+    return this.deleteResponse(id).pipe(
       __map(_r => _r.body as CategorieDto)
     );
   }

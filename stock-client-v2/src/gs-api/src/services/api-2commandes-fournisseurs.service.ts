@@ -223,7 +223,7 @@ module Api2commandesFournisseursService {
    */
   export interface UpdateFournisseurParams {
     idCommande: number;
-    idClient: number;
+    idFournisseur: number;
   }
 }
 
