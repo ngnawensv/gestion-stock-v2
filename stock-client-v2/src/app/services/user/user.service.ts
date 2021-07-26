@@ -30,17 +30,11 @@ export class UserService {
   }
 
   setAccessToken(authenticationResponse: AuthenticationResponse): void {
-    localStorage.setItem(
-      'accessToken',
-      JSON.stringify(authenticationResponse)
-    );
+    localStorage.setItem('accessToken', JSON.stringify(authenticationResponse));
   }
 
   setConnectedUser(user:UsersDto) :void{
-    localStorage.setItem(
-      'connecedUser',
-      JSON.stringify(user)
-    );
+    localStorage.setItem('connecedUser',JSON.stringify(user));
   }
 
   getConnectedUser():UsersDto{

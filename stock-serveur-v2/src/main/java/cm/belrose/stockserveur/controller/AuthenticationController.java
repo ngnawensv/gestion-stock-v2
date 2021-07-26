@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
 
 import static cm.belrose.stockserveur.config.constants.Constant.APP_ROOT;
 
-@CrossOrigin(origins = "*", maxAge = 3600)
+//@CrossOrigin(origins = "*", maxAge = 3600) centralisation dans  securityConfiguration
 @RestController
 @Slf4j
 public class AuthenticationController implements AuthenticationApi {
