@@ -13,18 +13,17 @@ export class UserService {
   constructor(
     private authenticationService: Api2authenticateService,
     private apiservice: ApiService,
+    private api2service: Api2usersService,
     private route: Router
   ) {}
 
-  login(
-    authenticationRequest: AuthenticationRequest
-  ): Observable<AuthenticationResponse> {
+  login(authenticationRequest: AuthenticationRequest): Observable<AuthenticationResponse> {
     return this.authenticationService.authenticate(authenticationRequest);
   }
 
   getUserByEmail(email?: string):Observable<UsersDto> {
     if (email!=undefined) {
-      return this.apiservice.findByEmail(email);
+      return this.api2service.findByEmail(email);
     }
     return of(); //Retourne un objet vide
   }

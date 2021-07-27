@@ -12,6 +12,7 @@ import { UsersDto } from '../models/users-dto';
   providedIn: 'root',
 })
 class Api2usersService extends __BaseService {
+  static readonly findByEmailPath = '/api2/users/find/{email}';
   static readonly findAllPath = '/api2/users';
 
   constructor(
@@ -20,6 +21,43 @@ class Api2usersService extends __BaseService {
   ) {
     super(config, http);
   }
+
+
+  /**
+   * Cette methode permet de rechercher un utilisateur par son email
+   * @return Utilisateur a été retrouvé dans la BD
+   */
+   findByEmailResponse(email:string): __Observable<__StrictHttpResponse<UsersDto>> {
+    let __params = this.newParams();
+    let __headers = new HttpHeaders();
+    let __body: any = null;
+    let req = new HttpRequest<any>(
+      'GET',
+      this.rootUrl + `/api2/users/find/${email}`,
+      __body,
+      {
+        headers: __headers,
+        params: __params,
+        responseType: 'json'
+      });
+
+    return this.http.request<any>(req).pipe(
+      __filter(_r => _r instanceof HttpResponse),
+      __map((_r) => {
+        return _r as __StrictHttpResponse<UsersDto>;
+      })
+    );
+  }
+  /**
+   * Cette methode permet de rechercher un utilisateur par son email
+   * @return Utilisateur a été retrouvé dans la BD
+   */
+  findByEmail(email:string): __Observable<UsersDto> {
+    return this.findByEmailResponse(email).pipe(
+      __map(_r => _r.body as UsersDto)
+    );
+  }
+
 
   /**
    * Cette methode permet de lister tous les utilisateurs de la BD
