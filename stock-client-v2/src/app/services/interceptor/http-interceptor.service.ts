@@ -3,6 +3,9 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AuthenticationResponse } from '../../../gs-api/src/models/authentication-response';
 
+/**
+ * Cette classe est utilisée pour intercepter toutes les requetes à destination du back-end et y ajouter le accessToken
+ */
 @Injectable({
   providedIn: 'root'
 })
