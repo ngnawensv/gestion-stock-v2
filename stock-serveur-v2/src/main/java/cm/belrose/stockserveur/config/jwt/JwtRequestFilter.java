@@ -49,7 +49,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
                     SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken);
                 }
             }
-        log.warn("Token expired....");
+        log.warn("Token expired....Inside the JwtRequestFilter class.....");
         //MDC est une classe fournie par lombok et qui permet de stocker des objet evitant ainsi de creer une classe supplementaire pour cela
         MDC.put("entrepriseId",entrepriseId);
         chain.doFilter(request, response);

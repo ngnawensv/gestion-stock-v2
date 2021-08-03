@@ -43,8 +43,7 @@ export class PageInscriptionComponent implements OnInit {
       login: this.entrepriseDto.email,
       password: 'admin'
     };
-    this.userService
-      .login(authenticationRequest)
+    this.userService.login(authenticationRequest)
       .subscribe((Response) => {
         this.userService.setAccessToken(Response);
         localStorage.setItem('origin','inscription');

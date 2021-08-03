@@ -44,6 +44,10 @@ export class UserService {
 
   }
 
+  /**
+   *
+   * @returns Cette méthode permet de recuperer l'utilisateur connecté
+   */
   //TODO
   isUserLoggedAndAccessTokenValid(): boolean {
     if (localStorage.getItem('accessToken')) {

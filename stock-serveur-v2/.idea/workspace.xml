@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b1794a9-96e7-4ae5-be17-e34defd38c0c" name="Default Changelist" comment="Creation of the super user at the start of the application">
+      <change beforePath="$PROJECT_DIR$/../stock-client-v2/src/app/services/entreprise/entreprise.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../stock-client-v2/src/app/services/entreprise/entreprise.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stock-client-v2/src/app/services/user/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../stock-client-v2/src/app/services/user/user.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/config/jwt/JwtRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/config/jwt/JwtRequestFilter.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -56,13 +59,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/AuthenticationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="39">
+            <state relative-caret-position="80">
               <caret line="19" column="87" selection-start-line="19" selection-start-column="87" selection-end-line="19" selection-end-column="87" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/config/jwt/JwtRequestFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="419">
+              <caret line="51" column="73" selection-start-line="51" selection-start-column="73" selection-end-line="51" selection-end-column="73" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/UsersController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="333">
@@ -167,8 +179,8 @@
         <option value="$PROJECT_DIR$/src/main/resources/application-test.properties" />
         <option value="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/AuthenticationController.java" />
         <option value="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/config/security/SecurityConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/config/jwt/JwtRequestFilter.java" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/config/jwt/JwtRequestFilter.java" />
       </list>
     </option>
   </component>
@@ -250,7 +262,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="jwt" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -514,7 +526,9 @@
       <workItem from="1621703249641" duration="19934000" />
       <workItem from="1621874244812" duration="166000" />
       <workItem from="1621879802267" duration="11976000" />
-      <workItem from="1627264072630" duration="12504000" />
+      <workItem from="1627264072630" duration="13701000" />
+      <workItem from="1627966189915" duration="1367000" />
+      <workItem from="1627976786764" duration="1350000" />
     </task>
     <servers />
   </component>
@@ -551,7 +565,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="916077000" />
+    <option name="totallyTimeSpent" value="919991000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -566,8 +580,8 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.50584793" visible="true" weight="0.3197051" />
-      <window_info id="Structure" order="1" sideWeight="0.49415204" side_tool="true" visible="true" weight="0.3197051" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.68274856" visible="true" weight="0.269437" />
+      <window_info id="Structure" order="1" sideWeight="0.31725147" side_tool="true" visible="true" weight="0.269437" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" sideWeight="0.49269006" side_tool="true" weight="0.22788204" />
@@ -577,7 +591,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329429" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49731904" weight="0.40204677" />
-      <window_info anchor="bottom" auto_hide="true" x="22" y="345" width="1492" height="133" id="Debug" order="3" type="SLIDING" weight="0.19444445" />
+      <window_info anchor="bottom" auto_hide="true" x="22" y="345" width="1492" height="133" id="Debug" order="3" type="SLIDING" weight="0.29239765" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32943144" />
@@ -1102,13 +1116,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/config/jwt/JwtRequestFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="31" column="69" selection-start-line="31" selection-start-column="69" selection-end-line="31" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/ClientController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -1126,13 +1133,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/AuthenticationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="19" column="87" selection-start-line="19" selection-start-column="87" selection-end-line="19" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/UsersController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="333">
@@ -1143,6 +1143,20 @@
             <element signature="e#737#738#0" expanded="true" />
             <element signature="e#796#797#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/AuthenticationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="19" column="87" selection-start-line="19" selection-start-column="87" selection-end-line="19" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/config/jwt/JwtRequestFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="51" column="73" selection-start-line="51" selection-start-column="73" selection-end-line="51" selection-end-column="73" />
         </state>
       </provider>
     </entry>
