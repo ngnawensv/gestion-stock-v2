@@ -2,22 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b1794a9-96e7-4ae5-be17-e34defd38c0c" name="Default Changelist" comment="Creation of the super user at the start of the application">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/dto/ChangerMotDePasseUserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stock-client-v2/src/app/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../stock-client-v2/src/app/header/header.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stock-client-v2/src/app/pages/page-inscription/page-inscription.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../stock-client-v2/src/app/pages/page-inscription/page-inscription.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stock-client-v2/src/app/pages/page-login/page-login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../stock-client-v2/src/app/pages/page-login/page-login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stock-client-v2/src/app/services/interceptor/http-interceptor.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../stock-client-v2/src/app/services/interceptor/http-interceptor.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stock-client-v2/src/app/services/user/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../stock-client-v2/src/app/services/user/user.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../stock-client-v2/src/app/services/categorie/categorie.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../stock-client-v2/src/app/services/categorie/categorie.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stock-client-v2/src/app/pages/categories/nouvelle-categorie/nouvelle-categorie.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../stock-client-v2/src/app/pages/categories/nouvelle-categorie/nouvelle-categorie.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stock-client-v2/src/app/pages/categories/nouvelle-categorie/nouvelle-categorie.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../stock-client-v2/src/app/pages/categories/nouvelle-categorie/nouvelle-categorie.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stock-client-v2/src/app/pages/categories/page-categories/page-categories.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../stock-client-v2/src/app/pages/categories/page-categories/page-categories.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stock-client-v2/src/app/pages/categories/page-categories/page-categories.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../stock-client-v2/src/app/pages/categories/page-categories/page-categories.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/config/jwt/JwtRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/config/jwt/JwtRequestFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/UsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/UsersApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/UsersApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/exceptions/ErrorCodes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/exceptions/ErrorCodes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/UsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/UsersService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/impl/UsersServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/impl/UsersServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/config/jwt/JwtRequestFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cm/belrose/stockserveur/config/jwt/JwtRequestFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -67,106 +58,7 @@
     <favorites_list name="stock-serveur-v2" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/AuthenticationController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="19" column="87" selection-start-line="19" selection-start-column="87" selection-end-line="19" selection-end-column="87" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/config/jwt/JwtRequestFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="38" column="54" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/dto/ChangerMotDePasseUserDto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/UsersService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/impl/UsersServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="84" column="14" lean-forward="true" selection-start-line="84" selection-start-column="14" selection-end-line="84" selection-end-column="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/UsersApi.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="32" column="49" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/exceptions/ErrorCodes.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="533">
-              <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/UsersController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="24" column="51" lean-forward="true" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
-              <folding>
-                <element signature="e#526#527#0" expanded="true" />
-                <element signature="e#571#572#0" expanded="true" />
-                <element signature="e#717#718#0" expanded="true" />
-                <element signature="e#775#776#0" expanded="true" />
-                <element signature="e#737#738#0" expanded="true" />
-                <element signature="e#796#797#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/auth/UserDetailsServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="30" column="60" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -613,7 +505,7 @@
       <workItem from="1621879802267" duration="11976000" />
       <workItem from="1627264072630" duration="13701000" />
       <workItem from="1627966189915" duration="1367000" />
-      <workItem from="1627976786764" duration="9929000" />
+      <workItem from="1627976786764" duration="11131000" />
     </task>
     <servers />
   </component>
@@ -650,7 +542,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="928570000" />
+    <option name="totallyTimeSpent" value="929772000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -663,7 +555,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.68274856" visible="true" weight="0.269437" />
       <window_info id="Structure" order="1" sideWeight="0.31725147" side_tool="true" visible="true" weight="0.269437" />
@@ -676,7 +567,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329429" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49731904" weight="0.40204677" />
-      <window_info anchor="bottom" auto_hide="true" x="22" y="345" width="1492" height="133" id="Debug" order="3" type="SLIDING" weight="0.65643275" />
+      <window_info active="true" anchor="bottom" auto_hide="true" x="22" y="345" width="1492" height="133" id="Debug" order="3" type="SLIDING" visible="true" weight="0.2631579" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32943144" />
@@ -1245,8 +1136,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/config/jwt/JwtRequestFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="38" column="54" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
+        <state relative-caret-position="91">
+          <caret line="35" column="73" lean-forward="true" selection-start-line="35" selection-start-column="73" selection-end-line="35" selection-end-column="73" />
         </state>
       </provider>
     </entry>

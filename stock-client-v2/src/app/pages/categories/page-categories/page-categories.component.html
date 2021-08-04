@@ -8,17 +8,17 @@
         </div>
     </div>
     <div card class="col m-3">
-        <div class="row mb-3 p-3  custom-border">
+        <div class="row mb-3 p-3  custom-border" *ngFor="let cat of listeCategorie">
             <div class="col-md-3 custom-border-right">
-                Code categorie
+                {{cat.code}}
             </div>
             <div class="col-md-3">
-                Description categorie
+                {{cat.libelle}}
             </div>
         </div>
     </div>
     <div class="row mb-3">
-        <div class="col-md-12 text-center">
+        <div class="col-md-12 text-center" *ngIf="listeCategorie.length>0">
             <app-pagination></app-pagination>
         </div>
     </div>
