@@ -12,6 +12,8 @@ export class PageCategoriesComponent implements OnInit {
 
 
   listeCategorie: Array<CategorieDto> = [];
+  selectedCategorieIdToDelete?= -1;
+  errorMsg = '';
 
   constructor(
     private route: Router,
@@ -42,4 +44,26 @@ export class PageCategoriesComponent implements OnInit {
     this.route.navigate(['nouvellecategorie',id])
   }
 
+  annulerSuppressionCat():void {
+    this.selectedCategorieIdToDelete = -1;
+
+  }
+
+
+  confirmerEtSupprimerCat():void {
+    if (this.selectedCategorieIdToDelete !== -1) {
+      this.categoriesService.deleteCategorie(this.selectedCategorieIdToDelete).subscribe(
+        data => {
+          console.log(data);
+          this.findAllCategorie();
+        },
+        error => {
+          this.errorMsg=error.error.message;
+        });
+    }
+  }
+
+  selectCategoriePourSupprimer(id?: number): void{
+    this.selectedCategorieIdToDelete = id;
+  }
 }

@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b1794a9-96e7-4ae5-be17-e34defd38c0c" name="Default Changelist" comment="Creation of the super user at the start of the application">
+      <change beforePath="$PROJECT_DIR$/../stock-client-v2/src/app/pages/categories/page-categories/page-categories.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../stock-client-v2/src/app/pages/categories/page-categories/page-categories.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/CategorieApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/CategorieApi.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -53,11 +55,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/impl/VenteServiceImpl.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/CategorieController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-420">
-              <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+            <state relative-caret-position="408">
+              <caret line="56" column="33" selection-start-line="56" selection-start-column="33" selection-end-line="56" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/CategorieApi.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="466">
+              <caret line="82" column="36" selection-start-line="82" selection-start-column="36" selection-end-line="82" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -103,8 +114,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/dto/MouvementStockDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/repository/LigneCommandeFournisseurRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/model/SourceMouvementStock.java" />
         <option value="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/impl/CommandeFournisseurServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/impl/VenteServiceImpl.java" />
@@ -154,6 +163,8 @@
         <option value="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/UsersApi.java" />
         <option value="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/UsersController.java" />
         <option value="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/config/jwt/JwtRequestFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/CategorieController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/CategorieApi.java" />
       </list>
     </option>
   </component>
@@ -185,7 +196,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="15" />
     <option name="y" value="535" />
     <option name="width" value="1600" />
@@ -202,7 +213,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -243,12 +253,21 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="stock-serveur-v2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stock-serveur-v2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -509,7 +528,8 @@
       <workItem from="1621879802267" duration="11976000" />
       <workItem from="1627264072630" duration="13701000" />
       <workItem from="1627966189915" duration="1367000" />
-      <workItem from="1627976786764" duration="12813000" />
+      <workItem from="1627976786764" duration="12815000" />
+      <workItem from="1628079136244" duration="2376000" />
     </task>
     <servers />
   </component>
@@ -546,7 +566,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="931454000" />
+    <option name="totallyTimeSpent" value="933832000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -558,11 +578,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.68274856" visible="true" weight="0.269437" />
-      <window_info id="Structure" order="1" sideWeight="0.31725147" side_tool="true" visible="true" weight="0.269437" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6812866" visible="true" weight="0.2727882" />
+      <window_info id="Structure" order="1" sideWeight="0.31871346" side_tool="true" visible="true" weight="0.2727882" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" sideWeight="0.49269006" side_tool="true" weight="0.22788204" />
@@ -754,30 +774,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/model/Adresse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="14" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/impl/FournisseurServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="32" column="63" selection-start-line="32" selection-start-column="59" selection-end-line="32" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/impl/SousCategorieServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -806,13 +802,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/CategorieApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="30" column="53" lean-forward="true" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -1011,13 +1000,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/CategorieController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/config/security/SecurityConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-448">
@@ -1141,8 +1123,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/impl/VenteServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-420">
+        <state relative-caret-position="-1098">
           <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/CategorieService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/impl/CategorieServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="36" column="23" lean-forward="true" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/repository/CategorieRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="26" column="95" selection-start-line="26" selection-start-column="95" selection-end-line="26" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-jpa/2.4.5/spring-data-jpa-2.4.5-sources.jar!/org/springframework/data/jpa/repository/JpaRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-700">
+          <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/CategorieController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="56" column="33" selection-start-line="56" selection-start-column="33" selection-end-line="56" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/CategorieApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="82" column="36" selection-start-line="82" selection-start-column="36" selection-end-line="82" selection-end-column="36" />
         </state>
       </provider>
     </entry>

@@ -2,7 +2,7 @@ import { CategorieDto } from './../../../gs-api/src/models/categorie-dto';
 import { Injectable } from '@angular/core';
 import { Api2categoriesService } from 'src/gs-api/src/services';
 import { UserService } from '../user/user.service';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -29,5 +29,13 @@ export class CategorieService {
 
   findAll(): Observable<CategorieDto[]>{
     return this.api2CategorieService.findAll();
+  }
+
+  deleteCategorie(id?: number): Observable<any>{
+    console.log(id);
+    if (id) {
+      return this.api2CategorieService.delete(id)
+    }
+    return of();
   }
 }
