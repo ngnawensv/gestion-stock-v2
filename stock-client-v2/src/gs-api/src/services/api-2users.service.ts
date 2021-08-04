@@ -8,12 +8,14 @@ import { Observable as __Observable } from 'rxjs';
 import { map as __map, filter as __filter } from 'rxjs/operators';
 
 import { UsersDto } from '../models/users-dto';
+import { ChangerMotDePasseUserDto } from '../models/changer-mot-de-passe-user-dto';
 @Injectable({
   providedIn: 'root',
 })
 class Api2usersService extends __BaseService {
   static readonly findByEmailPath = '/api2/users/find/{email}';
   static readonly findAllPath = '/api2/users';
+  static readonly changerMotDePassePath = '/api2/users/update/password';
 
   constructor(
     config: __Configuration,
@@ -58,6 +60,42 @@ class Api2usersService extends __BaseService {
     );
   }
 
+
+  /**
+   * @param body undefined
+   * @return successful operation
+   */
+   changerMotDePasseResponse(body?: ChangerMotDePasseUserDto): __Observable<__StrictHttpResponse<UsersDto>> {
+    let __params = this.newParams();
+    let __headers = new HttpHeaders();
+    let __body: any = null;
+    __body = body;
+    let req = new HttpRequest<any>(
+      'POST',
+      this.rootUrl + `/api2/users/update/password`,
+      __body,
+      {
+        headers: __headers,
+        params: __params,
+        responseType: 'json'
+      });
+
+    return this.http.request<any>(req).pipe(
+      __filter(_r => _r instanceof HttpResponse),
+      __map((_r) => {
+        return _r as __StrictHttpResponse<UsersDto>;
+      })
+    );
+  }
+  /**
+   * @param body undefined
+   * @return successful operation
+   */
+  changerMotDePasse(body?: ChangerMotDePasseUserDto): __Observable<UsersDto> {
+    return this.changerMotDePasseResponse(body).pipe(
+      __map(_r => _r.body as UsersDto)
+    );
+  }
 
   /**
    * Cette methode permet de lister tous les utilisateurs de la BD

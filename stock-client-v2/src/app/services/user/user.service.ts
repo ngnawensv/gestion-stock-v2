@@ -5,6 +5,7 @@ import { UsersDto } from 'src/gs-api/src/models';
 import { Api2authenticateService, Api2usersService, ApiService } from 'src/gs-api/src/services';
 import { AuthenticationRequest } from '../../../gs-api/src/models/authentication-request';
 import { AuthenticationResponse } from '../../../gs-api/src/models/authentication-response';
+import { ChangerMotDePasseUserDto } from '../../../gs-api/src/models/changer-mot-de-passe-user-dto';
 
 @Injectable({
   providedIn: 'root',
@@ -33,15 +34,19 @@ export class UserService {
   }
 
   setConnectedUser(user:UsersDto) :void{
-    localStorage.setItem('connecedUser',JSON.stringify(user));
+    localStorage.setItem('connectedUser',JSON.stringify(user));
   }
 
   getConnectedUser():UsersDto{
-    if (localStorage.getItem('connecedUser')) {
-      return JSON.parse(localStorage.getItem('connecedUser') as string);
+    if (localStorage.getItem('connectedUser')) {
+      return JSON.parse(localStorage.getItem('connectedUser') as string);
     }
     return {};// returne un objet vide
 
+  }
+
+  changerMotDePasse(changerMotDePasseDto: ChangerMotDePasseUserDto): Observable<ChangerMotDePasseUserDto>{
+    return this.api2service.changerMotDePasse(changerMotDePasseDto);
   }
 
   /**

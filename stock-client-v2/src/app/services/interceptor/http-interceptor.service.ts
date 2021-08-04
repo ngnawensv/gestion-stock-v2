@@ -16,9 +16,11 @@ export class HttpInterceptorService implements HttpInterceptor{
     let authenticationResponse: AuthenticationResponse = {};
     if (localStorage.getItem('accessToken')) {
       authenticationResponse = JSON.parse(localStorage.getItem('accessToken') as string);
-      const authReq=req.clone({ headers:new HttpHeaders({Authorization:'Bearer '+authenticationResponse.accessToken})});
+      const authReq = req.clone({ headers: new HttpHeaders({ Authorization: 'Bearer ' + authenticationResponse.accessToken }) });//Je fait une copie de la requete et j'ajoute le header
+      //Execution de la requete auquelle on a ajouter un header
       return next.handle(authReq)
     }
+    //execution normale de la requete
     return next.handle(req)
   }
 }
