@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CategorieService } from 'src/app/services/categorie/categorie.service';
 import { UserService } from 'src/app/services/user/user.service';
 import { CategorieDto } from 'src/gs-api/src/models';
@@ -17,12 +17,20 @@ export class NouvelleCategorieComponent implements OnInit {
   constructor(
     private categorieService: CategorieService,
     private userService: UserService,
-    private route: Router
+    private route: Router,
+    private activatedRoute:ActivatedRoute
   ) { }
 
   ngOnInit(): void {
+    //Recuperation de l'id de la categorie comme paramettre
+    const idCategorie = this.activatedRoute.snapshot.params.idCategorie;
+      if (idCategorie) {
+      this.categorieService.findByid(idCategorie).subscribe(
+        data => {
+          this.categorieDto = data;
+        });
+    }
   }
-
   saveCategorie(): void{
     this.categorieDto.entrepriseId = this.userService.getConnectedUser()?.entreprise?.id;
     this.categorieService.saveCategorie(this.categorieDto).subscribe(

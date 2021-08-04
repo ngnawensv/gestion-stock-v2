@@ -118,8 +118,13 @@ const routes: Routes = [
         component:PageCategoriesComponent,
         canActivate:[ApplicationGuardService]
       },
-      {
+      {//This path is use to create a new categorie
         path:'nouvellecategorie',
+        component:NouvelleCategorieComponent,
+        canActivate:[ApplicationGuardService]
+      },
+      {//This path is use to modified a category with idCategorie
+        path:'nouvellecategorie/:idCategorie',
         component:NouvelleCategorieComponent,
         canActivate:[ApplicationGuardService]
       },

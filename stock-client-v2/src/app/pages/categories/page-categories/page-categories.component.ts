@@ -34,10 +34,12 @@ export class PageCategoriesComponent implements OnInit {
     );
   }
 
-
-
   nouvelleCategorie():void{
     this.route.navigate(['nouvellecategorie']);
+  }
+
+  modifierCategorie(id?: number): void {
+    this.route.navigate(['nouvellecategorie',id])
   }
 
 }

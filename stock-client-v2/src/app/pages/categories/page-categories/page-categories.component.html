@@ -1,25 +1,40 @@
 <div class="col">
-    <div class="row m-3">
-        <div class="col-md-8 p-0">
-            <h1>Liste des catégories</h1>
-        </div>
-        <div class="col-md-4 text-right">
-            <app-bouton-action (clickEvent)="nouvelleCategorie()"></app-bouton-action>
-        </div>
+  <div class="row m-3">
+    <div class="col-md-8 p-0">
+      <h1>Liste des catégories</h1>
     </div>
-    <div card class="col m-3">
-        <div class="row mb-3 p-3  custom-border" *ngFor="let cat of listeCategorie">
-            <div class="col-md-3 custom-border-right">
-                {{cat.code}}
-            </div>
-            <div class="col-md-3">
-                {{cat.libelle}}
-            </div>
-        </div>
+    <div class="col-md-4 text-right">
+      <app-bouton-action (clickEvent)="nouvelleCategorie()"></app-bouton-action>
     </div>
-    <div class="row mb-3">
-        <div class="col-md-12 text-center" *ngIf="listeCategorie.length>0">
-            <app-pagination></app-pagination>
+  </div>
+  <div card class="col m-3">
+    <div class="row col-md-12 mb-3 p-3 custom-border" *ngFor="let cat of listeCategorie">
+      <div class="col-md-3 custom-border-right">{{ cat.code }}</div>
+      <div class="col-md-6 custom-border-right" > {{ cat.libelle }}</div>
+      <div class="row md-3">
+        <div class="row">
+          <div class="col-md-4">
+            <button type="button" class="btn btn-link" (click)="modifierCategorie(cat.id)">
+              <i class="fas fa-pencil-alt"></i>&nbsp;Modifier
+            </button>
+          </div>
+          <div class="col-md-4">
+            <button type="button" class="btn btn-link">
+              <i class="far fa-trash-alt"></i>&nbsp;Supprimer
+            </button>
+          </div>
+          <div class="col-md-4">
+            <button type="button" class="btn btn-link">
+              <i class="fas fa-list-ul"></i>&nbsp;Détails
+            </button>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-md-12 text-center" *ngIf="listeCategorie.length > 0">
+      <app-pagination></app-pagination>
+    </div>
+  </div>
 </div>

@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b1794a9-96e7-4ae5-be17-e34defd38c0c" name="Default Changelist" comment="Creation of the super user at the start of the application">
-      <change afterPath="$PROJECT_DIR$/../stock-client-v2/src/app/services/categorie/categorie.service.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../stock-client-v2/src/app/services/categorie/categorie.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stock-client-v2/src/app/pages/categories/nouvelle-categorie/nouvelle-categorie.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../stock-client-v2/src/app/pages/categories/nouvelle-categorie/nouvelle-categorie.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stock-client-v2/src/app/pages/categories/nouvelle-categorie/nouvelle-categorie.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../stock-client-v2/src/app/pages/categories/nouvelle-categorie/nouvelle-categorie.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stock-client-v2/src/app/pages/categories/page-categories/page-categories.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../stock-client-v2/src/app/pages/categories/page-categories/page-categories.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stock-client-v2/src/app/pages/categories/page-categories/page-categories.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../stock-client-v2/src/app/pages/categories/page-categories/page-categories.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
@@ -58,7 +52,17 @@
     <favorites_list name="stock-serveur-v2" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/impl/VenteServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-420">
+              <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -181,7 +185,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="15" />
     <option name="y" value="535" />
     <option name="width" value="1600" />
@@ -265,7 +269,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
@@ -505,7 +509,7 @@
       <workItem from="1621879802267" duration="11976000" />
       <workItem from="1627264072630" duration="13701000" />
       <workItem from="1627966189915" duration="1367000" />
-      <workItem from="1627976786764" duration="11131000" />
+      <workItem from="1627976786764" duration="12813000" />
     </task>
     <servers />
   </component>
@@ -542,7 +546,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="929772000" />
+    <option name="totallyTimeSpent" value="931454000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -554,9 +558,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.68274856" visible="true" weight="0.269437" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.68274856" visible="true" weight="0.269437" />
       <window_info id="Structure" order="1" sideWeight="0.31725147" side_tool="true" visible="true" weight="0.269437" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -567,7 +572,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329429" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49731904" weight="0.40204677" />
-      <window_info active="true" anchor="bottom" auto_hide="true" x="22" y="345" width="1492" height="133" id="Debug" order="3" type="SLIDING" visible="true" weight="0.2631579" />
+      <window_info anchor="bottom" auto_hide="true" x="22" y="345" width="1492" height="133" id="Debug" order="3" type="SLIDING" weight="0.2631579" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32943144" />
@@ -749,13 +754,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/cm/belrose/stockserveur/service/impl/EntrepriseServiceImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-86">
-          <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/model/Adresse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -1138,6 +1136,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="91">
           <caret line="35" column="73" lean-forward="true" selection-start-line="35" selection-start-column="73" selection-end-line="35" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/service/impl/VenteServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-420">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
         </state>
       </provider>
     </entry>
