@@ -13,10 +13,11 @@ public class ArticleValidator {
         if (dto == null) {
             errors.add("Veuillez renseigner le code de l'article");
             errors.add("Veuillez renseigner la designation de l'article");
-            errors.add("Veuillez renseigner le prix d'achat de l'article");
+            //errors.add("Veuillez renseigner le prix d'achat de l'article");
             errors.add("Veuillez renseigner le prix unitaire HT de l'article");
+            errors.add("Veuillez renseigner le prix unitaire TTC de l'article");
             errors.add("Veuillez renseigner la TVA de l'article");
-            errors.add("Veuillez renseigner le prix de vente  de l'article");
+            //errors.add("Veuillez renseigner le prix de vente  de l'article");
             errors.add("Veuillez selectionner une categorie");
             return errors;
         }
@@ -29,10 +30,6 @@ public class ArticleValidator {
             errors.add("Veuillez renseigner la designation de l'article");
         }
 
-        if (dto.getPrixAchat() == null) {
-            errors.add("Veuillez renseigner le prix d'achat de l'article");
-        }
-
         if (dto.getPrixUnitaireHt() == null) {
             errors.add("Veuillez renseigner le prix unitaire HT de l'article");
         }
@@ -41,11 +38,15 @@ public class ArticleValidator {
             errors.add("Veuillez renseigner la TVA de l'article");
         }
 
-        if (dto.getPrixVente() == null) {
-            errors.add("Veuillez renseigner lep rix de vente  de l'article");
+        if (dto.getPrixUnitaireTtc() == null) {
+            errors.add("Veuillez renseigner le prix unitaire TTC de l'article");
         }
 
-        if (dto.getCategorieDto() == null) {
+        /*if (dto.getPrixVente() == null) {
+            errors.add("Veuillez renseigner lep rix de vente  de l'article");
+        }*/
+
+        if (dto.getCategorieDto() == null||dto.getCategorieDto().getId() == null) {
             errors.add("Veuillez selectionner une categorie");
         }
         return  errors;

@@ -18,7 +18,7 @@ export class NouvelleCategorieComponent implements OnInit {
     private categorieService: CategorieService,
     private userService: UserService,
     private route: Router,
-    private activatedRoute:ActivatedRoute
+    private activatedRoute:ActivatedRoute//permet de recuperer l'id de la categorie passée en paramètre lors de l'execution de la modification
   ) { }
 
   ngOnInit(): void {
