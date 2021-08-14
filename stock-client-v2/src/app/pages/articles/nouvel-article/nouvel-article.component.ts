@@ -26,6 +26,7 @@ export class NouvelArticleComponent implements OnInit {
 
   ngOnInit(): void {
     this.findAllCategorie();
+    this.getArticleById();
   }
 
   findAllCategorie(): void{
@@ -50,6 +51,19 @@ export class NouvelArticleComponent implements OnInit {
         this.errorMsg = error.error.errors;
       }
     );
+  }
+
+  getArticleById(){
+    const idArticle=this.activatedRoute.snapshot.params.idArticle;
+    if(idArticle){
+      this.articleService.findArticleById(idArticle).subscribe(
+        data=>{
+          this.articleDto=data;
+          //we doing this test because categorieDto objet can be null
+          this.categorieDto=this.articleDto.categorieDto?this.articleDto.categorieDto:{};
+        }
+      )
+    }
   }
 
 }

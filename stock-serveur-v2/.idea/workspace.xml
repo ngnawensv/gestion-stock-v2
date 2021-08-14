@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b1794a9-96e7-4ae5-be17-e34defd38c0c" name="Default Changelist" comment="Creation of the super user at the start of the application">
+      <change beforePath="$PROJECT_DIR$/../stock-client-v2/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../stock-client-v2/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stock-client-v2/src/app/composants/detail-article/detail-article.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../stock-client-v2/src/app/composants/detail-article/detail-article.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stock-client-v2/src/app/composants/detail-article/detail-article.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../stock-client-v2/src/app/composants/detail-article/detail-article.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stock-client-v2/src/app/pages/articles/nouvel-article/nouvel-article.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../stock-client-v2/src/app/pages/articles/nouvel-article/nouvel-article.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stock-client-v2/src/app/pages/articles/page-article/page-article.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../stock-client-v2/src/app/pages/articles/page-article/page-article.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stock-client-v2/tslint.json" beforeDir="false" afterPath="$PROJECT_DIR$/../stock-client-v2/tslint.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/ArticleApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/ArticleApi.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -52,7 +59,47 @@
     <favorites_list name="stock-serveur-v2" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/cm/belrose/stockserveur/repository/CategorieRepositoryTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/ArticleController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="99">
+              <caret line="29" column="2" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/ArticleApi.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="94">
+              <caret line="54" column="41" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/cm/belrose/stockserveur/service/impl/CategorieServiceImplTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2363">
+              <caret line="153" column="1" selection-start-line="153" selection-start-column="1" selection-end-line="153" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -128,7 +175,6 @@
         <option value="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/validator/EntrepriseValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/model/Users.java" />
         <option value="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/config/constants/Constant.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/ArticleApi.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application-test.properties" />
         <option value="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/AuthenticationController.java" />
         <option value="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/config/security/SecurityConfiguration.java" />
@@ -144,6 +190,7 @@
         <option value="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/CategorieApi.java" />
         <option value="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/dto/ArticleDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/validator/ArticleValidator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/ArticleApi.java" />
       </list>
     </option>
   </component>
@@ -175,11 +222,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="15" />
-    <option name="y" value="535" />
-    <option name="width" value="1600" />
-    <option name="height" value="710" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="1365" />
+    <option name="height" value="739" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -204,6 +249,46 @@
               <item name="stock-serveur-v2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="stock-serveur-v2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stock-serveur-v2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="stock-serveur-v2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stock-serveur-v2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="stock-serveur-v2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stock-serveur-v2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="stockserveur" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="stock-serveur-v2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stock-serveur-v2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="stockserveur" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="stock-serveur-v2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stock-serveur-v2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="stockserveur" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -215,6 +300,8 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+    <property name="HOTFIX_customHotfixCommitMessage_text" value="Tagging hotfix %name%" />
+    <property name="RELEASE_customTagCommitMessage_text" value="Tagging version %name%" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -225,12 +312,12 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../microservices-communication-FeignClient/service-article" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
@@ -473,7 +560,22 @@
       <workItem from="1627976786764" duration="12815000" />
       <workItem from="1628079136244" duration="7298000" />
       <workItem from="1628370883766" duration="5750000" />
-      <workItem from="1628472550958" duration="747000" />
+      <workItem from="1628472550958" duration="1341000" />
+      <workItem from="1628623428563" duration="1688000" />
+      <workItem from="1628627436882" duration="71000" />
+      <workItem from="1628627521518" duration="36000" />
+      <workItem from="1628627590423" duration="78000" />
+      <workItem from="1628627681510" duration="44000" />
+      <workItem from="1628627740590" duration="68000" />
+      <workItem from="1628628690178" duration="80000" />
+      <workItem from="1628628790332" duration="181000" />
+      <workItem from="1628629626387" duration="1058000" />
+      <workItem from="1628630870991" duration="40000" />
+      <workItem from="1628630924037" duration="65000" />
+      <workItem from="1628632055072" duration="35000" />
+      <workItem from="1628633899940" duration="550000" />
+      <workItem from="1628634468916" duration="716000" />
+      <workItem from="1628977605917" duration="1260000" />
     </task>
     <servers />
   </component>
@@ -510,7 +612,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="945251000" />
+    <option name="totallyTimeSpent" value="951815000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -522,9 +624,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6812866" visible="true" weight="0.2808311" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6812866" visible="true" weight="0.34697986" />
       <window_info id="Structure" order="1" sideWeight="0.31871346" side_tool="true" weight="0.2727882" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -535,20 +638,20 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329429" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49731904" weight="0.40204677" />
-      <window_info active="true" anchor="bottom" x="22" y="345" width="1492" height="133" id="Debug" order="3" visible="true" weight="0.4122807" />
+      <window_info active="true" anchor="bottom" x="22" y="345" width="1492" height="133" id="Debug" order="3" visible="true" weight="0.53966004" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32943144" />
-      <window_info anchor="bottom" id="Spring" order="7" weight="0.329429" />
-      <window_info anchor="bottom" id="Java Enterprise" order="8" weight="0.32796487" />
-      <window_info anchor="bottom" auto_hide="true" id="Terminal" order="9" sideWeight="0.4969743" weight="0.6461988" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50268096" side_tool="true" weight="0.5555556" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.3286119" />
+      <window_info anchor="bottom" id="Java Enterprise" order="8" weight="0.32719547" />
+      <window_info anchor="bottom" auto_hide="true" id="Terminal" order="9" sideWeight="0.4969743" weight="0.64447594" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5033557" side_tool="true" weight="0.592068" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.49924356" weight="0.46929824" />
+      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.49924356" weight="0.4688385" />
       <window_info anchor="bottom" id="Database Console" order="14" sideWeight="0.49924356" weight="0.32943144" />
       <window_info anchor="bottom" id="Duplicates" order="15" weight="0.32943144" />
-      <window_info anchor="bottom" id="Version Control" order="16" weight="0.32894737" />
+      <window_info anchor="bottom" id="Version Control" order="16" sideWeight="0.4966443" weight="0.592068" />
       <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.3297587" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.022692889" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
@@ -615,6 +718,17 @@
               <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
                 <collection />
               </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="user">
+                    <value>
+                      <list>
+                        <option value="me" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
               <option name="COLUMN_ORDER">
                 <list>
                   <option value="0" />
@@ -637,7 +751,13 @@
         </entry>
         <entry key="User">
           <value>
-            <list />
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="me" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>
@@ -808,13 +928,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/ArticleApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="84" column="11" selection-start-line="84" selection-start-column="11" selection-end-line="84" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/CommandeFournisseurController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -857,13 +970,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
           <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/ArticleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="29" column="2" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -1065,24 +1171,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cm/belrose/stockserveur/service/impl/CategorieServiceImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="30" column="20" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/cm/belrose/stockserveur/GestionstockmvcApplicationTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cm/belrose/stockserveur/repository/CategorieRepositoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -1104,6 +1196,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cm/belrose/stockserveur/repository/CategorieRepositoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cm/belrose/stockserveur/service/impl/CategorieServiceImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2363">
+          <caret line="153" column="1" selection-start-line="153" selection-start-column="1" selection-end-line="153" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/ArticleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="29" column="2" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cm/belrose/stockserveur/controller/api/ArticleApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="54" column="41" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
         </state>
       </provider>
     </entry>

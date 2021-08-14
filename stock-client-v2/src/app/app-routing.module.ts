@@ -51,6 +51,11 @@ const routes: Routes = [
         canActivate:[ApplicationGuardService]
       },
       {
+        path:'nouvelarticle/:idArticle',
+        component:NouvelArticleComponent,
+        canActivate:[ApplicationGuardService]
+      },
+      {
         path:'mouvementstock',
         component:PageMouvementStockComponent,
         canActivate:[ApplicationGuardService]
