@@ -1,0 +1,13 @@
+# See https://www.atlassian.com/fr/git/tutorials/saving-changes/gitignore for more about ignoring files.
+
+###IDE  ###
+.idea
+/stock-serveur-v2/.idea
+/stock-serveur-v2/.mvn
+/stock-serveur-v2/target
+/stock-serveur-v2/stock-serveur.iml
+
+/stock-client-v2/.idea
+/stock-client-v2/.vscode
+/stock-client-v2/node_modules
+/stock-client-v2/tools
