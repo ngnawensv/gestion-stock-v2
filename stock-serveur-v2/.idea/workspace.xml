@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9b1794a9-96e7-4ae5-be17-e34defd38c0c" name="Default Changelist" comment="Creation of the super user at the start of the application">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/76ddfb80-979b-4fb9-8d4e-70230118d7aa.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/76ddfb80-979b-4fb9-8d4e-70230118d7aa.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="9b1794a9-96e7-4ae5-be17-e34defd38c0c" name="Default Changelist" comment="Creation of the super user at the start of the application" />
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -508,7 +505,7 @@
       <workItem from="1629515337764" duration="595000" />
       <workItem from="1629558690351" duration="594000" />
       <workItem from="1630075467539" duration="536000" />
-      <workItem from="1631211965364" duration="2450000" />
+      <workItem from="1631211965364" duration="2489000" />
     </task>
     <servers />
   </component>
@@ -545,7 +542,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="964709000" />
+    <option name="totallyTimeSpent" value="964748000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
