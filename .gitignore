@@ -6,12 +6,12 @@ credentials.cfg
 
 ###IDE  ###
 .idea
-**/.idea
-**/.mvn
+**/.idea/
+**/.mvn/
 **/target/
 **/stock-serveur.iml
 
-**/.idea
-**/.vscode
-**/node_modules
-**/tools
+**/.idea/
+**/.vscode/
+**/node_modules/
+**/tools/
