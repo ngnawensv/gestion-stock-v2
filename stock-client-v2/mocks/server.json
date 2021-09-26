@@ -1,0 +1,40 @@
+{
+  "Clients": [
+    {"id": 1,
+      "nom": "NGNAWEN",
+      "prenom": "Samuel Vermon",
+      "genre": "Masculin",
+      "dateNaissance": "17/12/86",
+      "lieuNaissance": "Baigom",
+      "email": "ngnawens@gmail.com",
+      "numeroTelephone": "55011446",
+      "photo": "",
+      "adresse": "",
+      "entrepriseId": 1
+    },
+    {"id": 2,
+      "nom": "MARE NGNAWEN",
+      "prenom": "Dan Aaron",
+      "genre": "Masculin",
+      "dateNaissance": "24/05/19",
+      "lieuNaissance": "Koutaba",
+      "email": "dan@gmail.com",
+      "numeroTelephone": "55011446",
+      "photo": "",
+      "adresse": "",
+      "entrepriseId": 1
+    },
+    {"id": 3,
+      "nom": "NDICHOUT NGNAWEN",
+      "prenom": "Sainte Cornelia",
+      "genre": "Feminin",
+      "dateNaissance": "03/04/17",
+      "lieuNaissance": "Koutaba",
+      "email": "sainte@gmail.com",
+      "numeroTelephone": "55011446",
+      "photo": "",
+      "adresse": "",
+      "entrepriseId": 1
+    }
+  ]
+}
