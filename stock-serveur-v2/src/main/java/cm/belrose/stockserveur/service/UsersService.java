@@ -20,21 +20,4 @@ public interface UsersService {
     UsersDto findUsersByEmail(String email);
 
     UsersDto changerMotDePasse(ChangerMotDePasseUserDto dto);
-
-    //void save(Users user);
-
-   // Optional<Users> findById(Long id);
-
-   // List<Users> findAll();
-
-   // Optional<Users> findUserByUsername(String username);
-
-    //Boolean existsByUsername(String username);
-
-    //Boolean existsByEmail(String email);
-
-     //JwtResponse authenticateUser(LoginRequest loginRequest);
-
-   //  MessageResponse registerUser(SignupRequest signUpRequest);
-
 }
