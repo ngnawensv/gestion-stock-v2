@@ -43,12 +43,19 @@ export class PageInscriptionComponent implements OnInit {
       login: this.entrepriseDto.email,
       password: 'admin'
     };
-    this.userService
-      .login(authenticationRequest)
+    this.userService.login(authenticationRequest)
       .subscribe((Response) => {
         this.userService.setAccessToken(Response);
+        this.getUserByEmail(authenticationRequest.login);//permet le stockage de l'utilisateur dans le localStorage apres son incription
         localStorage.setItem('origin','inscription');
         this.route.navigate(['changermotdepasse']);
+      });
+  }
+
+  getUserByEmail(email?:string): void {
+    this.userService.getUserByEmail(email)
+      .subscribe((user) => {
+        this.userService.setConnectedUser(user);
       });
   }
 }

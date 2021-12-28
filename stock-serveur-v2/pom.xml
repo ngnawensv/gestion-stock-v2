@@ -53,10 +53,10 @@
             <scope>test</scope>
         </dependency>
         <!--        <dependency>-->
-<!--            <groupId>org.hsqldb</groupId>-->
-<!--            <artifactId>hsqldb</artifactId>-->
-<!--            <scope>runtime</scope>-->
-<!--        </dependency>-->
+        <!--            <groupId>org.hsqldb</groupId>-->
+        <!--            <artifactId>hsqldb</artifactId>-->
+        <!--            <scope>runtime</scope>-->
+        <!--        </dependency>-->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -133,7 +133,42 @@
             <groupId>org.junit</groupId>
             <artifactId>junit5-engine</artifactId>
             <version>5.0.0-ALPHA</version>
+            <scope>test</scope>
         </dependency>
+
+
+        <!--        add spock framework dependency-->
+        <dependency>
+            <groupId>org.spockframework</groupId>
+            <artifactId>spock-core</artifactId>
+            <version>2.0-groovy-3.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy-all</artifactId>
+            <version>3.0.8</version>
+            <type>pom</type>
+        </dependency>
+        <!--<dependency>
+            <groupId>com.athaydes</groupId>
+            <artifactId>spock-reports</artifactId>
+            <version>2.1.1-groovy-3.0</version>
+            <scope>test</scope>
+        </dependency>-->
+        <dependency> <!-- enables mocking of classes (in addition to interfaces) -->
+            <groupId>net.bytebuddy</groupId>
+            <artifactId>byte-buddy</artifactId>
+            <version>1.12.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency><!-- enables mocking of classes without default constructor (together with CGLIB) -->
+            <groupId>org.objenesis</groupId>
+            <artifactId>objenesis</artifactId>
+            <version>3.0.1</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -182,6 +217,44 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <!--Pluging for compiling our unit tests-->
+            <plugin>
+                <groupId>org.codehaus.gmavenplus</groupId>
+                <artifactId>gmavenplus-plugin</artifactId>
+                <version>1.5</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>addTestSources</goal>
+                            <goal>testCompile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>11</source>
+                    <target>11</target>
+                </configuration>
+            </plugin>
+
+            <!--pluging for running our unit tests-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.18.1</version>
+                <configuration>
+                    <includes>
+                        <include>**/*Test.java</include>
+                        <include>**/*Spec.java</include>
+                    </includes>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
 
@@ -199,6 +272,14 @@
                 <enabled>true</enabled>
             </snapshots>
         </repository>
+
+        <!--Creating a HTML Test Repport-->
+        <!--<repository>
+            <id>jcenter</id>
+            <name>JCenter Repo</name>
+            <url>http://jcenter.bintray.com</url>
+        </repository>-->
+
     </repositories>
     <pluginRepositories>
         <pluginRepository>

@@ -140,6 +140,7 @@ C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\config\audit\AuditorAwareImpl.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\service\impl\FlickrServiceImpl.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\service\impl\FournisseurServiceImpl.java
+C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\dto\ChangerMotDePasseUserDto.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\config\initializer\InitializeDataBase.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\repository\LigneVenteRepository.java
 C:\Users\NGNAWEN\IdeaProjects\gestion-stock-v2\stock-serveur-v2\src\main\java\cm\belrose\stockserveur\controller\CategorieController.java

@@ -1,6 +1,7 @@
 package cm.belrose.stockserveur.controller;
 
 import cm.belrose.stockserveur.controller.api.UsersApi;
+import cm.belrose.stockserveur.dto.ChangerMotDePasseUserDto;
 import cm.belrose.stockserveur.dto.UsersDto;
 import cm.belrose.stockserveur.service.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,11 @@ public class UsersController implements UsersApi {
     @Override
     public UsersDto save(UsersDto dto) {
         return usersService.save(dto);
+    }
+
+    @Override
+    public UsersDto changerMotDePasse(ChangerMotDePasseUserDto dto) {
+        return usersService.changerMotDePasse(dto);
     }
 
     @Override

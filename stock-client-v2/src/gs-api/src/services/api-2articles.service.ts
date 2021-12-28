@@ -13,6 +13,8 @@ import { LigneCommandeFournisseurDto } from '../models/ligne-commande-fournisseu
   providedIn: 'root',
 })
 class Api2articlesService extends __BaseService {
+  static readonly findAllPath = '/api2/articles';
+  static readonly savePath = '/api2/articles';
   static readonly updatePath = '/api2/articles';
   static readonly findHistoriqueCommandeFournisseurPath = '/api2/articles/historique/commandefournisseur/{idArticle}';
   static readonly findByCodePath = '/api2/articles/{code}';
@@ -24,6 +26,77 @@ class Api2articlesService extends __BaseService {
     http: HttpClient
   ) {
     super(config, http);
+  }
+
+  /**
+   * Cette methode permet de rechercher et renvoyer  la liste des categorie de la base de données
+   * @return Liste des aticles / Liste vide
+   */
+   findAllResponse(): __Observable<__StrictHttpResponse<Array<ArticleDto>>> {
+    let __params = this.newParams();
+    let __headers = new HttpHeaders();
+    let __body: any = null;
+    let req = new HttpRequest<any>(
+      'GET',
+      this.rootUrl + `/api2/articles`,
+      __body,
+      {
+        headers: __headers,
+        params: __params,
+        responseType: 'json'
+      });
+
+    return this.http.request<any>(req).pipe(
+      __filter(_r => _r instanceof HttpResponse),
+      __map((_r) => {
+        return _r as __StrictHttpResponse<Array<ArticleDto>>;
+      })
+    );
+  }
+  /**
+   * Cette methode permet de rechercher et renvoyer  la liste des categorie de la base de données
+   * @return Liste des aticles / Liste vide
+   */
+  findAll(): __Observable<Array<ArticleDto>> {
+    return this.findAllResponse().pipe(
+      __map(_r => _r.body as Array<ArticleDto>)
+    );
+  }
+
+  /**
+   * Cette methode permet d'enregistrer un article
+   * @return Article créee avec succès
+   */
+  saveResponse(body?: ArticleDto): __Observable<__StrictHttpResponse<ArticleDto>> {
+    let __params = this.newParams();
+    let __headers = new HttpHeaders();
+    let __body: any = null;
+    __body = body;
+    let req = new HttpRequest<any>(
+      'POST',
+      this.rootUrl + `/api2/articles`,
+      __body,
+      {
+        headers: __headers,
+        params: __params,
+        responseType: 'json'
+      });
+
+    return this.http.request<any>(req).pipe(
+      __filter(_r => _r instanceof HttpResponse),
+      __map((_r) => {
+        return _r as __StrictHttpResponse<ArticleDto>;
+      })
+    );
+  }
+  /**
+   * Cette methode permet d'enregistrer un article
+   * @return Article créee avec succès
+   */
+  save(body?: ArticleDto): __Observable<ArticleDto> {
+    return this.saveResponse(body).pipe(
+      __map(_r => _r.body as ArticleDto)
+    );
   }
 
   /**
