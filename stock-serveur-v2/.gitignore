@@ -7,4 +7,4 @@ credentials.cfg
 .idea
 .mvn
 target
-stock-serveur.iml.idea
+../stock-serveur.iml
