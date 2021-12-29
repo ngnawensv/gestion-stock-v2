@@ -141,14 +141,14 @@
         <dependency>
             <groupId>org.spockframework</groupId>
             <artifactId>spock-core</artifactId>
-            <version>2.0-groovy-3.0</version>
+            <version>2.0-groovy-2.5</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.codehaus.groovy</groupId>
             <artifactId>groovy-all</artifactId>
-            <version>3.0.8</version>
-            <type>pom</type>
+            <version>2.4.4</version>
+            <scope>test</scope>
         </dependency>
         <!--<dependency>
             <groupId>com.athaydes</groupId>
@@ -168,6 +168,34 @@
             <version>3.0.1</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>com.athaydes</groupId>
+            <artifactId>spock-reports</artifactId>
+            <version>1.8.0</version>
+            <scope>test</scope>
+            <!-- this avoids affecting your version of Groovy/Spock -->
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- // if you don't already have slf4j-api and an implementation of it in the classpath, add this! -->
+        <!--<dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.30</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.7.30</version>
+            <scope>test</scope>
+        </dependency>-->
 
     </dependencies>
 
@@ -274,11 +302,11 @@
         </repository>
 
         <!--Creating a HTML Test Repport-->
-        <!--<repository>
+        <repository>
             <id>jcenter</id>
             <name>JCenter Repo</name>
             <url>http://jcenter.bintray.com</url>
-        </repository>-->
+        </repository>
 
     </repositories>
     <pluginRepositories>
