@@ -1,25 +1,68 @@
 <div class="col">
-    <div class="row m-3">
-        <div class="col-md-8 p-0">
-            <h1>Liste des catégories</h1>
-        </div>
-        <div class="col-md-4 text-right">
-            <app-bouton-action (clickEvent)="nouvelleCategorie()"></app-bouton-action>
-        </div>
+  <div class="row m-3">
+    <div class="col-md-8 p-0">
+      <h1>Liste des catégories</h1>
     </div>
-    <div card class="col m-3">
-        <div class="row mb-3 p-3  custom-border">
-            <div class="col-md-3 custom-border-right">
-                Code categorie
-            </div>
-            <div class="col-md-3">
-                Description categorie
-            </div>
-        </div>
+    <div class="col-md-4 text-right">
+      <app-bouton-action (clickEvent)="nouvelleCategorie()"></app-bouton-action>
     </div>
-    <div class="row mb-3">
-        <div class="col-md-12 text-center">
-            <app-pagination></app-pagination>
+  </div>
+  <div card class="col m-3">
+    <div class=" row col md-12 alert alert-danger" *ngIf="errorMsg">
+      {{errorMsg}}
+      </div>
+    <div class="row col-md-12 mb-3 p-3 custom-border" *ngFor="let cat of listeCategorie">
+      <div class="col-md-3 custom-border-right">{{ cat.code }}</div>
+      <div class="col-md-6 custom-border-right" > {{ cat.libelle }}</div>
+      <div class="row md-3">
+        <div class="row">
+          <div class="col-md-4">
+            <button type="button" class="btn btn-link" (click)="modifierCategorie(cat.id)">
+              <i class="fas fa-pencil-alt"></i>&nbsp;Modifier
+            </button>
+          </div>
+          <div class="col-md-4">
+            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#ModalDeleteCategorie" (click)="selectCategoriePourSupprimer(cat.id)">
+              <i class="far fa-trash-alt"></i>&nbsp;Supprimer
+            </button>
+          </div>
+          <div class="col-md-4">
+            <button type="button" class="btn btn-link">
+              <i class="fas fa-list-ul"></i>&nbsp;Détails
+            </button>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-md-12 text-center" *ngIf="listeCategorie.length > 0">
+      <app-pagination></app-pagination>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="ModalDeleteCategorie" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Confirmation</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Etes-vous sur de supprimer cette catégorie ?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="annulerSuppressionCat()">
+          <i class="fas fa-ban"></i>&nbsp;Annuler
+        </button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="confirmerEtSupprimerCat()">
+          <i class="far fa-trash-alt"></i>&nbsp;Supprimer
+        </button>
+      </div>
+    </div>
+  </div>
 </div>

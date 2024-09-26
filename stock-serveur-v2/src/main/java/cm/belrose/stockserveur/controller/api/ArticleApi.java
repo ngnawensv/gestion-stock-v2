@@ -52,7 +52,7 @@ public interface ArticleApi {
 
 
 
-    @GetMapping(value=ARTICLE_ENDPOINT+"/{code}")
+    @GetMapping(value=ARTICLE_ENDPOINT+"/code/{code}")
     @ApiOperation(value = "Recherche  d'un article",
             notes = "Cette methode permet de rechercher un article par son code" , response = ArticleDto.class)
     @ApiResponses(value = {

@@ -35,6 +35,7 @@ import { ChangerMotDePasseComponent } from './pages/profil/changer-mot-de-passe/
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpInterceptorService } from './services/interceptor/http-interceptor.service';
+import {TranslateModule} from "@ngx-translate/core";
 
 @NgModule({
   declarations: [
@@ -73,7 +74,8 @@ import { HttpInterceptorService } from './services/interceptor/http-interceptor.
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    TranslateModule
   ],
   providers: [{
     provide:HTTP_INTERCEPTORS,

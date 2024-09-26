@@ -14,14 +14,18 @@ import java.util.TimeZone;
 
 /**
  * @EnableJpaRepositories(...): allows integrating spring-data-envers project to your Spring Boot project
+ * <p>*
+ *     @EntityScan(basePackageClasses = {
+ * 		StockserveurApplication.class,
+ * 		Jsr310JpaConverters.class
+ * })
+ * </p>
+ * <p>
+ *      @EnableJpaAuditing
+ *      @SpringBootApplication(exclude = { SecurityAutoConfiguration.class})
+ * </p>
  */
-//@SpringBootApplication(exclude = { SecurityAutoConfiguration.class})
 @SpringBootApplication
-//@EnableJpaAuditing
-/*@EntityScan(basePackageClasses = {
-		StockserveurApplication.class,
-		Jsr310JpaConverters.class
-})*/
 @EnableJpaRepositories(repositoryFactoryBeanClass = EnversRevisionRepositoryFactoryBean.class)
 public class StockserveurApplication {
 	public static void main(String[] args) {

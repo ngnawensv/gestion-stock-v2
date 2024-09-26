@@ -8,7 +8,9 @@ import { Observable } from 'rxjs';
 })
 export class EntrepriseService {
 
-  constructor( private entrepriseSerice: Api2entreprisesService) { }
+  constructor( 
+    private entrepriseSerice: Api2entreprisesService
+    ) { }
 
   sinscrire(entrepriseDto: EntrepriseDto): Observable<EntrepriseDto>{
     return this.entrepriseSerice.save(entrepriseDto);

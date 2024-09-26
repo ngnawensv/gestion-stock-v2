@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Api2categoriesService } from 'src/gs-api/src/services';
+import { UserService } from 'src/app/services/user/user.service';
+import { ChangerMotDePasseUserDto } from '../../../../gs-api/src/models/changer-mot-de-passe-user-dto';
 
 @Component({
   selector: 'app-changer-mot-de-passe',
@@ -9,19 +10,35 @@ import { Api2categoriesService } from 'src/gs-api/src/services';
 })
 export class ChangerMotDePasseComponent implements OnInit {
 
+  changerMotDepasseDto: ChangerMotDePasseUserDto = {};
+  ancienMotDePasse = '';
+  errorMsg = '';
+
   constructor(
-    private utili:Api2categoriesService,
-    private route:Router
+    private route: Router,
+    private userService: UserService,
     ) { }
 
   ngOnInit(): void {
-    this.utili.findAll().subscribe(res=>{
-
-    })
+    if (localStorage.getItem('origin') && localStorage.getItem('origin') === 'inscription') {
+      this.ancienMotDePasse = 'admin';
+      localStorage.removeItem('origin');
+    }
   }
 
   cancelClick():void{
     this.route.navigate(['profil'])
+  }
+
+  changerMotDePasseUser(): void{
+    //On a besoin de l'id du mot de passe
+    this.changerMotDepasseDto.id = this.userService.getConnectedUser().id;
+    this.userService.changerMotDePasse(this.changerMotDepasseDto).subscribe(
+      data => {
+        this.route.navigate(['profil']);
+      }, error => {
+        this.errorMsg=error.error.message;
+    });
   }
 
 }

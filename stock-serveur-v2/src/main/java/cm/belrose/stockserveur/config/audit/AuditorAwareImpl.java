@@ -2,16 +2,12 @@ package cm.belrose.stockserveur.config.audit;
 
 
 import cm.belrose.stockserveur.model.auth.ExtendedUser;
-import cm.belrose.stockserveur.service.auth.UserDetailsServiceImpl;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
 
-import java.nio.file.attribute.UserPrincipal;
 import java.util.Optional;
 /**
  * @author Ngnawen Samuel

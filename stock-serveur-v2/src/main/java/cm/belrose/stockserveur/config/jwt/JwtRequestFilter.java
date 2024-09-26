@@ -33,10 +33,10 @@ public class JwtRequestFilter extends OncePerRequestFilter {
         String userEmail = null;
         String jwt = null;
         String entrepriseId = null;
-
             if (authHeader != null && authHeader.startsWith("Bearer ")) {
                 jwt = authHeader.substring(7);
                 userEmail = jwtUtil.extractUsername(jwt);
+                log.info("userEmail======> "+userEmail);
                 entrepriseId = jwtUtil.extractIdEntreprise(jwt);
             }
             if (userEmail != null && SecurityContextHolder.getContext().getAuthentication() == null) {
@@ -49,8 +49,10 @@ public class JwtRequestFilter extends OncePerRequestFilter {
                     );
                     SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken);
                 }
+            }else{
+                log.warn("Token expired....Inside the JwtRequestFilter class.....");
             }
-        log.warn("Token expired....");
+
         //MDC est une classe fournie par lombok et qui permet de stocker des objet evitant ainsi de creer une classe supplementaire pour cela
         MDC.put("entrepriseId",entrepriseId);
         chain.doFilter(request, response);

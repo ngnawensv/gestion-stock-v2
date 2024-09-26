@@ -4,22 +4,27 @@
             <h2>Nouvelle catégorie</h2>
         </div>
         <div class="col-md-12">
+          <div class="alert alert-danger" *ngIf="errorMsg.length>0">
+            <div *ngFor="let msg of errorMsg">
+              <span >{{msg}}</span>
+            </div>
+          </div>
             <form>
                 <div class="row mb-3">
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Code categorie">
+                        <input type="text" class="form-control" placeholder="Code categorie" [(ngModel)]="categorieDto.code" [ngModelOptions]="{standalone: true}">
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Description">
+                        <input type="text" class="form-control" placeholder="Libelle catégorie" [(ngModel)]="categorieDto.libelle" [ngModelOptions]="{standalone: true}">
                     </div>
                 </div>
             </form>
         </div>
         <div class="col-md-12 text-right">
             <button class="btn btn-danger mr-3" (click)="cancelClick()"><i class="fas fa-ban"></i>&nbsp;Annuler</button>
-            <button class="btn btn-primary"><i class="fas fa-save"></i>&nbsp;Enregister</button>
+            <button class="btn btn-primary" (click)="saveCategorie()"><i class="fas fa-save"></i>&nbsp;Enregister</button>
         </div>
 
     </div>

@@ -21,8 +21,9 @@ export class PageLoginComponent implements OnInit {
   ngOnInit(): void {}
 
   login() {
-    this.userService.login(this.authenticationRequest).subscribe(
-      (data) => {
+    this.userService.login(this.authenticationRequest)
+      .subscribe(
+        (data) => {
         this.userService.setAccessToken(data);
         this.getUserByEmail();
         this.route.navigate(['']);
@@ -37,8 +38,7 @@ export class PageLoginComponent implements OnInit {
   }
 
   getUserByEmail(): void {
-    this.userService
-      .getUserByEmail(this.authenticationRequest.login)
+    this.userService.getUserByEmail(this.authenticationRequest.login)
       .subscribe((user) => {
         this.userService.setConnectedUser(user);
       });

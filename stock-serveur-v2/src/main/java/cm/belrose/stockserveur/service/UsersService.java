@@ -1,5 +1,6 @@
 package cm.belrose.stockserveur.service;
 
+import cm.belrose.stockserveur.dto.ChangerMotDePasseUserDto;
 import cm.belrose.stockserveur.dto.UsersDto;
 
 import java.util.List;
@@ -18,20 +19,5 @@ public interface UsersService {
 
     UsersDto findUsersByEmail(String email);
 
-    //void save(Users user);
-
-   // Optional<Users> findById(Long id);
-
-   // List<Users> findAll();
-
-   // Optional<Users> findUserByUsername(String username);
-
-    //Boolean existsByUsername(String username);
-
-    //Boolean existsByEmail(String email);
-
-     //JwtResponse authenticateUser(LoginRequest loginRequest);
-
-   //  MessageResponse registerUser(SignupRequest signUpRequest);
-
+    UsersDto changerMotDePasse(ChangerMotDePasseUserDto dto);
 }

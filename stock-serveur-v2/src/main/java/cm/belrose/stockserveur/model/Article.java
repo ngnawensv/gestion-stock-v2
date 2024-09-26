@@ -41,8 +41,8 @@ public class Article extends Auditable<String> implements Serializable {
     @NotAudited
     @ManyToOne
     private Categorie categorie;
-    @NotAudited
     @OneToMany(mappedBy = "article")
+    @NotAudited
     private List<LigneVente> ligneVentes;
     @NotAudited
     @OneToMany(mappedBy = "article")
@@ -51,5 +51,7 @@ public class Article extends Auditable<String> implements Serializable {
     @OneToMany(mappedBy = "article")
     private List<LigneCommandeFournisseur> ligneCommandeFournisseurs;
 
-
+    public void setLigneVentes(List<LigneVente> ligneVentes) {
+        this.ligneVentes = ligneVentes;
+    }
 }

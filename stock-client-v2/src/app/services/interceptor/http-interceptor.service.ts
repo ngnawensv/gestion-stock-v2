@@ -3,6 +3,9 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AuthenticationResponse } from '../../../gs-api/src/models/authentication-response';
 
+/**
+ * Cette classe est utilisée pour intercepter toutes les requetes à destination du back-end et y ajouter le accessToken
+ */
 @Injectable({
   providedIn: 'root'
 })
@@ -10,15 +13,14 @@ export class HttpInterceptorService implements HttpInterceptor{
 
   constructor() { }
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    let authenticationResponse:AuthenticationResponse={};
+    let authenticationResponse: AuthenticationResponse = {};
     if (localStorage.getItem('accessToken')) {
-      authenticationResponse=JSON.parse(localStorage.getItem('accessToken') as string);
+      authenticationResponse = JSON.parse(localStorage.getItem('accessToken') as string);
+      const authReq = req.clone({ headers: new HttpHeaders({ Authorization: 'Bearer ' + authenticationResponse.accessToken }) });//Je fait une copie de la requete et j'ajoute le header
+      //Execution de la requete auquelle on a ajouter un header
+      return next.handle(authReq)
     }
-    const authReq=req.clone({
-      headers:new HttpHeaders({
-        Authorization:'Bearer '+authenticationResponse.accessToken
-      })
-    });
-    return next.handle(authReq)
+    //execution normale de la requete
+    return next.handle(req)
   }
 }

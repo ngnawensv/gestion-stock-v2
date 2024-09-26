@@ -15,9 +15,9 @@ public class ArticleDto {
     private BigDecimal prixUnitaireHt;
     private BigDecimal tauxTva;
     private BigDecimal prixUnitaireTtc;
-    private BigDecimal prixAchat;
-    private BigDecimal prixVente;
-    private double quantite;
+    //private BigDecimal prixAchat;
+   // private BigDecimal prixVente;
+   // private double quantite;
     private String photo;
     private CategorieDto categorieDto;
     private Long entrepriseId;

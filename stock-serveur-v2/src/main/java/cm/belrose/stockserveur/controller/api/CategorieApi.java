@@ -80,6 +80,6 @@ public interface CategorieApi {
     })
     //Endpoint de suppresion d'un categorie en fonction de l'id
     @DeleteMapping(value=CATEGORIE_ENDPOINT+"/{id}")
-    void delete(Long id);
+    void delete(@PathVariable("id") Long id);
 
 }

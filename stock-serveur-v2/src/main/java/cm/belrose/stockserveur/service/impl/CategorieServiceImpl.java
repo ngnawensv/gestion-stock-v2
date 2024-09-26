@@ -1,26 +1,19 @@
 package cm.belrose.stockserveur.service.impl;
 
-import cm.belrose.stockserveur.dto.ArticleDto;
 import cm.belrose.stockserveur.dto.CategorieDto;
 import cm.belrose.stockserveur.exceptions.EntityNotFoundException;
 import cm.belrose.stockserveur.exceptions.ErrorCodes;
 import cm.belrose.stockserveur.exceptions.InvalidEntityException;
-import cm.belrose.stockserveur.model.Article;
-import cm.belrose.stockserveur.model.Categorie;
 import cm.belrose.stockserveur.repository.CategorieRepository;
 import cm.belrose.stockserveur.service.CategorieService;
-import cm.belrose.stockserveur.validator.ArticleValidator;
 import cm.belrose.stockserveur.validator.CategorieValidator;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 import javax.transaction.Transactional;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**

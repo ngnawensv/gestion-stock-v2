@@ -1,0 +1,10 @@
+# See https://www.atlassian.com/fr/git/tutorials/saving-changes/gitignore for more about ignoring files.
+# See also https://gist.github.com/Yousha/6d8aeb70705e1aba749d8f30097ed077
+
+credentials.cfg
+
+###IDE  ###
+.idea
+.mvn
+target
+../stock-serveur.iml

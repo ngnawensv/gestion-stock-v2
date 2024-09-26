@@ -8,34 +8,36 @@
             <h2><i class="fas fa-info-circle blue-color"></i>&nbsp;Information de l'article</h2>
         </div>
         <div class="col-md-12">
+          <div class="alert alert-danger" *ngIf="errorMsg.length>0">
+            <div *ngFor="let msg of errorMsg">
+              <span >{{msg}}</span>
+            </div>
+          </div>
             <form>
                 <div class="row mb-3">
                   <div class="col">
-                    <input type="text" class="form-control" placeholder="Code article">
+                    <input type="text" class="form-control" name="codeArticle" placeholder="Code article" [(ngModel)]="articleDto.code" [ngModelOptions]="{standalone: true}">
                   </div>
                   <div class="col">
-                    <input type="text" class="form-control" placeholder="Désignation">
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <div class="col">
-                    <input type="text" class="form-control" placeholder="Prix unitaire HT">
-                  </div>
-                  <div class="col">
-                    <input type="text" class="form-control" placeholder="Taux TVA">
+                    <input type="text" class="form-control" name="designation" placeholder="Désignation" [(ngModel)]="articleDto.designation" [ngModelOptions]="{standalone: true}">
                   </div>
                 </div>
                 <div class="row mb-3">
                   <div class="col">
-                    <input type="text" class="form-control" placeholder="Prix unitaire TTC ">
+                    <input type="text" class="form-control" name="prixUnitaireHt" placeholder="Prix unitaire HT" [(ngModel)]="articleDto.prixUnitaireHt" [ngModelOptions]="{standalone: true}">
                   </div>
                   <div class="col">
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <input type="text" class="form-control" name="tauxTva" placeholder="Taux TVA" [(ngModel)]="articleDto.tauxTva" [ngModelOptions]="{standalone: true}">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col">
+                    <input type="text" class="form-control" name="prixUnitaireTtc" placeholder="Prix unitaire TTC" [(ngModel)]="articleDto.prixUnitaireTtc" [ngModelOptions]="{standalone: true}">
+                  </div>
+                  <div class="col">
+                    <select class="form-control" name="categorie" [(ngModel)]="categorieDto.id">
                         <option>Selctionner un catégorie</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                        <option *ngFor="let cat of listeCategorieDto" [value]="cat.id">{{cat.code}} - {{cat.libelle}}</option>
                       </select>
                   </div>
                 </div>
@@ -45,7 +47,7 @@
             <button class="btn btn-danger mr-3" (click)="cancelClick()">
                 <i class="fas fa-ban"></i>&nbsp;Annuler
             </button>
-            <button class="btn btn-primary">
+            <button class="btn btn-primary" (click)="saveArticle()">
                 <i class="fas fa-save"></i>&nbsp;Enregister
             </button>
         </div>
